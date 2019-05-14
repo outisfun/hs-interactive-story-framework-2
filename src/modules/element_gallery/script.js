@@ -64,11 +64,15 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
 };
 
 ISF_Element_Gallery.prototype.initPreview = function() {
+  this.buildPreview();
+  this.initPreviewEvents();
+};
 
+ISF_Element_Gallery.prototype.initPreviewEvents = function() {
 
+  var self = this;
 
-  // init events
-  this.preview.image.addEventListener('click', function() {
+  this.preview.nav.close.addEventListener('click', function() {
     self.closePreview();
   });
 
@@ -90,15 +94,13 @@ ISF_Element_Gallery.prototype.initPreview = function() {
       if (self.customFunctionOnTriggerClick !== undefined) {
         self.customFunctionOnTriggerClick();
       } else {
+        self.preview.indicators[self.preview.current].classList.remove('is--current');
         self.preview.current = ind;
+        self.preview.indicators[ind].classList.add('is--current');
         self.openPreview( item );
       }
     });
   });
-};
-
-ISF_Element_Gallery.prototype.initPreviewEvents = function() {
-
 };
 
 ISF_Element_Gallery.prototype.buildPreview = function() {
@@ -157,15 +159,22 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
 ISF_Element_Gallery.prototype.openPreview = function(trigger) {
 
   var self = this;
+
+  toggleScroll('disable');
+
   this.updatePreviewContent(trigger);
   setTimeout(function(){
     self.preview.el.classList.add("is--open");
   }, 600);
+
 };
 
 ISF_Element_Gallery.prototype.updatePreviewIndex = function(ind) {
+
   if ((ind >= 0) && (ind <= this.DOM.items.length -1)) {
+    this.preview.indicators[this.preview.current].classList.remove('is--current');
     this.preview.current = ind;
+    this.preview.indicators[ind].classList.add('is--current');
     if (ind === 0) {
       this.preview.nav.prev.classList.add("is--disabled");
     } else {
@@ -180,6 +189,7 @@ ISF_Element_Gallery.prototype.updatePreviewIndex = function(ind) {
   } else {
     return false;
   }
+
 };
 
 ISF_Element_Gallery.prototype.updatePreviewContent = function(trigger) {
@@ -187,18 +197,30 @@ ISF_Element_Gallery.prototype.updatePreviewContent = function(trigger) {
   var self = this;
 
   this.preview.el.classList.add('is--transitioning');
+  self.preview.image.classList.add('is--hidden');
   setTimeout(function(){
-    self.preview.image.classList.add('is--hidden');
     self.preview.image.innerHTML = trigger.innerHTML;
   }, 200);
   setTimeout(function(){
     self.preview.image.classList.remove('is--hidden');
     self.preview.el.classList.remove('is--transitioning');
-  }, 400);
+  }, 600);
 };
 
 ISF_Element_Gallery.prototype.closePreview = function() {
   this.preview.el.classList.remove("is--open");
+
+  toggleScroll('enable');
+};
+
+var toggleScroll = function(action) {
+    if(action === 'disable') {
+        document.querySelector('body').classList.add('no-scroll');
+        document.querySelector('html').classList.add('no-scroll');
+    } else if(action === 'enable') {
+        document.querySelector('body').classList.remove('no-scroll');
+        document.querySelector('html').classList.remove('no-scroll');
+    }
 };
 
 module.exports = ISF_Element_Gallery;

@@ -104,6 +104,8 @@
                 "ellesse__liamhodges__video": {
                     "elementType": "video",
                     "elementData": {
+                        "videoId": "ZOprSdhS",
+                        "playerId": "h1yC9mkW"
                     }
                 },
                 "ellesse__liamhodges__quote": {
@@ -194,6 +196,13 @@
                             { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh9.jpg" },
                             { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh18.jpg" }
                         ]
+                    }
+                },
+                "ellesse__liamhodges__video": {
+                    "elementType": "video",
+                    "elementData": {
+                        "videoId": "ZOprSdhS",
+                        "playerId": "h1yC9mkW"
                     }
                 },
                 "ellesse__liamhodges__clip": {

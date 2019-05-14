@@ -104,7 +104,7 @@
         justify-content: center;
         align-items: center;
         pointer-events: none;
-        padding: 15px;
+        padding: 45px 15px 0px;
 
         picture {
           transition: 0.2s all;
@@ -121,9 +121,9 @@
             font-size: 14px;
             line-height: 1.3em;
             opacity: 0;
-            transition: 0.1s all;
-            transition-delay: 0.2s;
+            transition: 0.2s all;
             margin-top: 0px;
+            margin-top: 20px;
             span.is--bold {
               font-weight: 600;
             }
@@ -133,7 +133,8 @@
           }
         }
         @media (min-width: 768px) {
-          .isf-el_iamge__caption {
+          padding: 15px 15px 15px;
+          .isf-el_image__caption {
             position: absolute;
           }
           picture {
@@ -202,13 +203,16 @@
           picture {
             .isf-el_image__caption {
               opacity: 1;
+              margin-top: 0px;
             }
           }
         }
+
         &.is--transitioning {
           picture {
             .isf-el_image__caption {
               opacity: 0;
+              margin-top: 20px;
               transition-delay: 0s;
             }
           }
@@ -218,4 +222,7 @@
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 
