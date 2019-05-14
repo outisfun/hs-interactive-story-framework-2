@@ -146,7 +146,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('lintall', ['eslint']);
 
-  grunt.registerTask('init-custom-module', ['shell:initCustomModule:' + story + customModule]);
+  grunt.registerTask('init-custom-module', ['shell:initCustomModule:' + story]);
   grunt.registerTask('init-story', ['shell:initStory:' + story]);
   grunt.registerTask('build-story', ['handlebars', 'shell:buildStory:' + story, 'browserify:stories', 'sass:stories', 'autoprefixer:stories', 'watch']);
 

@@ -6,7 +6,8 @@
         "ellesse__intro": {
 
             "layoutType": "simple",
-            "layoutOptions": {
+            "layoutData": {
+                "colorScheme": "dark"
             },
             "layoutContent": {
                 "ellesse__intro__text": {
@@ -91,7 +92,8 @@
         "ellesse__video": {
 
             "layoutType": "simple",
-            "layoutOptions": {
+            "layoutData": {
+                "colorScheme": "dark"
             },
             "layoutContent": {
                 "ellesse__liamhodges__text": {
@@ -154,10 +156,10 @@
                     }
                 },
                 "ellesse__liamhodges__walking": {
-                    "elementType": "image",
+                    "elementType": "video",
                     "elementData": {
-                        "src_small": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lhvideo13.jpg",
-                        "src_large": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lhvideo13.jpg"
+                        "videoId": "iH9w32Cv",
+                        "playerId": "h1yC9mkW"
                     }
                 },
                 "ellesse__liamhodges__text3": {
@@ -198,13 +200,6 @@
                         ]
                     }
                 },
-                "ellesse__liamhodges__video": {
-                    "elementType": "video",
-                    "elementData": {
-                        "videoId": "ZOprSdhS",
-                        "playerId": "h1yC9mkW"
-                    }
-                },
                 "ellesse__liamhodges__clip": {
                     "elementType": "image_group",
                     "elementData": {
@@ -219,15 +214,6 @@
                         "paragraph": "Hodges keeps his finger on the pulse of culture and one eye locked curiously on the future, but for his new project with ellesse he also had a direct link to the past, accessing and looking for inspiration in the brand’s archive in North London. Hodges has mentioned in the past that he’d been keen to work with an iconic label’s archive and this was one factor that drew him to the project. “I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, and even sold was very interesting,” he explains. The archive was stocked floor to ceiling with all manner of apparel spanning decades, each a chapter in ellesse’s history book. But, surprisingly (or not considering his typically unconventional approach), Hodges was most attracted to old sales books and technical drawings that spoke, in particular, to ellesse’s history of bringing together sportswear with traditional elements of tailoring. One classic campaign that caught Hodges’ attention was for a ski collection — the sport that ellesse was built on. Hodges knew ellesse’s ski campaigns well, explaining that fashion students bring them up every time he teaches a sportswear course at the University of Westminster (his old stomping ground), but discovering and tracing their origins shone a new light on everything he’d seen before."
                     }
                 },
-                "ellesse__liamhodges__archive": {
-                    "elementType": "image_group",
-                    "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh34.jpg" },
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_video12.jpg" }
-                        ]
-                    }
-                },
                 "ellesse__liamhodges__text6": {
                     "elementType": "text",
                     "elementData": {
@@ -235,11 +221,10 @@
                     }
                 },
                 "ellesse__liamhodges__clip2": {
-                    "elementType": "image_group",
+                    "elementType": "video",
                     "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_video15.jpg" }
-                        ]
+                        "videoId": "aRC4xreb",
+                        "playerId": "h1yC9mkW"
                     }
                 },
                 "ellesse__liamhodges__text7": {
@@ -280,11 +265,10 @@
                     }
                 },
                 "ellesse__liamhodges__cloth": {
-                    "elementType": "image_group",
+                    "elementType": "video",
                     "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_video2.jpg" }
-                        ]
+                        "videoId": "ZOprSdhS",
+                        "playerId": "h1yC9mkW"
                     }
                 },
                 "ellesse__liamhodges__text10": {
@@ -294,11 +278,10 @@
                     }
                 },
                 "ellesse__liamhodges__fin": {
-                    "elementType": "image_group",
+                    "elementType": "video",
                     "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_video12.jpg" }
-                        ]
+                        "videoId": "Nxy2bpi2",
+                        "playerId": "h1yC9mkW"
                     }
                 }
             }

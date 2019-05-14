@@ -2,7 +2,7 @@ var args = process.argv.slice(2);
 var storyFolder = args[0];
 var moduleName = args[1];
 
-console.log(storyFolder, moduleName);
+console.log(storyFolder, moduleName, args);
 
 var fs = require('fs');
 var mkdirp = require('mkdirp');
