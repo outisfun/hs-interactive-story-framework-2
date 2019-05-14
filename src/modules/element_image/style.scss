@@ -1,0 +1,22 @@
+.isf-el_image {
+    display: block;
+    overflow: hidden;
+}
+
+.isf-width--half {
+  display: inline-block;
+  @media (min-width: 768px) {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+
+.isf-width--third {
+  display: inline-block;
+  @media (min-width: 768px) {
+    width: 33.33%;
+  }
+  @media (min-width: 992px) {
+    width: 33.33%;
+  }
+}

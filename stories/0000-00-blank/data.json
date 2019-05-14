@@ -1,0 +1,25 @@
+{
+    "index": {
+        "0000-00-SECTIONID": {
+            "layoutType": "simple",
+            "layoutOptions": {
+            },
+            "layoutContent": {
+                "0000-00-SECTIONID_1": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Just look through your window, look who sits outside, Little me is waiting, standing through the night",
+                        "paragraph": "Just look through your window, look who sits outside, Little me is waiting, standing through the night"
+                    }
+                },
+                "0000-00-SECTIONID_2": {
+                    "elementType": "image",
+                    "elementData": {
+                        "highlight": "Just look through your window, look who sits outside, Little me is waiting, standing through the night",
+                        "paragraph": "Just look through your window, look who sits outside, Little me is waiting, standing through the night"
+                    }
+                }
+            }
+        }
+    }
+}

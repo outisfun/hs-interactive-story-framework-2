@@ -1,0 +1,12 @@
+<div class = "isf-{{ container }} isf-el_image_group isf-el_image_group--{{style}}" id = "{{ modId }}">
+	<div class = "isf-el_image_group__inner">
+
+		{{#each images}}
+            <picture class = "isf-el_image js--image isf-el_gallery__item js--gallery__item">
+                <source srcset="{{ src }}" media="(min-width: 768px)">
+                <img src="{{ src }}" />
+            </picture>
+        {{/each}}
+
+	</div>
+</div>

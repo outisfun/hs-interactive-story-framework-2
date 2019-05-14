@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>comment-dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="comment-dark" fill="#000000">
+            <path d="M20,2 C8.95348148,2 0,8.03911111 0,17.3842963 C0,22.4746667 2.66903704,26.5742222 6.87288889,29.2592593 C6.63881481,32.5321481 5.37718519,35.2728889 3.43762963,37.3031111 C8.11140741,36.9238519 12.2038519,35.1437037 14.9351111,32.3075556 C16.5558519,32.6020741 18.2453333,32.7685926 20,32.7685926 C31.0465185,32.7685926 40,26.7288889 40,17.3842963 C40,8.04148148 31.0465185,2 20,2 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

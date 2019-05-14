@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "<%= font_name %>";
+  src:url("fonts/<%= font_name %>.eot");
+  src:url("fonts/<%= font_name %>.eot?#iefix") format("embedded-opentype"),
+    url("data:application/font-woff;base64,<%= woff_base64 %>") format("woff"),
+    url("fonts/<%= font_name %>.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$icons: (
+<% @glyphs.each do |name, value| %>  "<%= name.to_s %>": "\<%= value[:codepoint].to_s(16) %>",
+<% end %>
+);
+
+@function icon-char($name) {
+  @if not map-has-key($icons, $name) {
+    @warn "No icon found in $icons for `#{$name}`. Property omitted.";
+  }
+
+  @return map-get($icons, $name);
+}

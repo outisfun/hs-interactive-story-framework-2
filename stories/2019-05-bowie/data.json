@@ -1,0 +1,55 @@
+{
+    "2019-05-bowie__intro": {
+
+        "layoutType": "simple",
+        "layoutOptions": {
+        },
+        "layoutContent": {
+            "2019-05-bowie__intro__text": {
+                "elementType": "text",
+                "elementData": {
+                    "highlight": "This is an example of an interactive story generated with a JSON file.",
+                    "paragraph": "See the file used for this one here: https://interactive-development.hsnb.io/hsnbisf/assets/data.json. A script runs and builds the story markup based on precompiled Handlebars templates. It also builds the SCSS and the JS files based on which modules are used, thogh that might not be very necessary. A grunt task compiles them to static files."
+                }
+            }
+        }
+    },
+    "2019-05-bowie__chapter": {
+
+        "layoutType": "chapter",
+        "layoutOptions": {
+            "colorScheme": "dark",
+            "chapterStyle": "ralph-lauren",
+            "chapterBackground": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg",
+            "chapterTitle": "Space Oddities"
+        },
+
+        "layoutContent": {
+            "2019-05-bowie__chapter__gallery": {
+                "elementType": "gallery_preview",
+                "elementData": {
+                    "src_small_1": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie4.jpg",
+                    "src_large_1": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie4.jpg",
+                    "src_small_2": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie5.jpg",
+                    "src_large_2": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie5.jpg",
+                    "src_small_3": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie7.jpg",
+                    "src_large_3": "https://interactive-development.hsnb.io/hsnbisf/assets/bowie7.jpg"
+                }
+            }
+        }
+    },
+    "2019-05-bowie__conclusion": {
+
+        "layoutType": "simple",
+        "layoutOptions": {
+        },
+        "layoutContent": {
+            "2019-05-bowie__conclusion__text": {
+                "elementType": "text",
+                "elementData": {
+                    "highlight": "See repo here: https://github.com/outisfun/hsisfnu"
+                }
+            }
+        }
+    }
+}

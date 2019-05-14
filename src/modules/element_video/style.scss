@@ -1,0 +1,13 @@
+.isf-el_video {
+  width: 100%;
+  &__wrapper{
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      iframe{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+      }
+  }
+}

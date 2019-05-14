@@ -1,0 +1,15 @@
+<div class = "isf-el_gallery js--gallery" id = "{{ modId }}" data-layout = "{{ galleryLayout }}" data-preview = "{{ galleryPreview }}">
+    <div class = "isf-el_gallery__inner js--gallery__inner">
+        
+        {{#each galleryImages}}
+            <picture class = "isf-el_image js--image isf-el_gallery__item js--gallery__item" data-x_animate_on_page_enter = "{{ galleryEffectOnPageEnter }}">
+                <source srcset="{{ src }}" media="(min-width: 768px)">
+                <img src="{{ src }}" />
+                {{#if caption}}
+                	<p class = "isf-el_image__caption">{{ caption }}</p>
+                {{/if}}
+            </picture>
+        {{/each}}
+
+    </div>
+</div>

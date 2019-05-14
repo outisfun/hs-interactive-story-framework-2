@@ -1,0 +1,13 @@
+.isf-animate {
+  opacity: 0;
+  transition: 0.4s all;
+
+/*  &.isf-animate--fade-in-random {
+    transition-delay: random() + s;
+  }*/
+
+  &.is--animated {
+    opacity: 1;
+  }
+}
+

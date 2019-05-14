@@ -1,0 +1,15 @@
+.DS_Store
+
+# Ignore the node modules folder
+node_modules
+
+# also sass-cache
+.sass-cache
+.sass-cache/*
+
+# those are generative
+stories/**/build
+stories/**/dist
+src/templates.js
+
+build-files__old.js

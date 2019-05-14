@@ -1,0 +1,81 @@
+
+#isf-interactive-story {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    p {
+        font-size: .9411764706rem;
+        line-height: 1.5;
+        margin-bottom: .7647058824rem;
+        @media(min-width: #{$bp-tablet}){
+            font-size: 1.1176470588rem;
+            margin-bottom: 1.5294117647rem;
+        }
+    }
+
+    h1{
+        font-size: 2.1117647059rem;
+        line-height: 1.3;
+        margin-bottom: 1.1764705882rem;
+        font-weight: 600;
+        @media(min-width: #{$bp-tablet}){
+            font-size: 2.3529411765rem;
+            margin-bottom: 2.2352941176rem;
+        }
+        @media(min-width: #{$bp-desktop}){
+            font-size: 3.2352941176rem;
+        }
+    }
+
+    h2{
+        font-size: 1.3529411765rem;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-bottom: .8823529412rem;
+        padding-top: .5882352941rem;
+        text-transform: uppercase;
+        @media(min-width: #{$bp-tablet}){
+            font-size: 1.7647058824rem;
+            margin-bottom: 1.7058823529rem;
+            padding-top: 1.7058823529rem;
+        }
+    }
+
+    h3{
+        font-size: 1.3rem;
+        line-height: 1.5;
+        font-weight: 600;
+        margin-bottom: 1.5294117647rem;
+        @media(min-width: #{$bp-tablet}){
+            font-size: 2.706rem;
+            line-height: 1.3;
+        }
+    }
+
+    h4{
+        font-weight: 600;
+        font-size: 1.1411764706rem;
+        line-height: 1.5;
+        margin-bottom: .7647058824rem;
+        @media(min-width: #{$bp-tablet}){
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    small{
+        display: block;
+        font-size: 0.9rem;
+    }
+}

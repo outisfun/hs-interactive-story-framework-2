@@ -1,0 +1,275 @@
+/* SPACINGS */
+
+$spacing-xs: 5px;
+
+$spacing-lg: 45px;
+$spacing-md: 30px;
+$spacing-sm: 15px;
+
+$spacing-lg--tablet: 60px;
+$spacing-md--tablet: 45px;
+$spacing-sm--tablet: 30px;
+
+$spacing-lg--tablet-wide: 60px;
+$spacing-md--tablet-wide: 45px;
+$spacing-sm--tablet-wide: 30px;
+
+$spacing-lg--desktop: 90px;
+$spacing-md--desktop: 60px;
+$spacing-sm--desktop: 30px;
+
+$spacing-xl: 60px;
+$spacing-xl--tablet: 90px;
+$spacing-xl--tablet-wide: 120px;
+$spacing-xl--desktop: 180px;
+
+
+@mixin isf-margin-b-sm{
+    margin-bottom: $spacing-sm;
+    @media(min-width: $bp-tablet){
+        margin-bottom: $spacing-sm--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-bottom: $spacing-sm--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-bottom: $spacing-sm--desktop;
+    }
+}
+
+@mixin isf-margin-t-sm{
+    margin-top: $spacing-sm;
+    @media(min-width: $bp-tablet){
+        margin-top: $spacing-sm--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-top: $spacing-sm--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-top: $spacing-sm--desktop;
+    }
+}
+
+@mixin isf-margin-b-md{
+    margin-bottom: $spacing-md;
+    @media(min-width: $bp-tablet){
+        margin-bottom: $spacing-md--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-bottom: $spacing-md--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-bottom: $spacing-md--desktop;
+    }
+}
+
+@mixin isf-margin-t-md{
+    margin-top: $spacing-md;
+    @media(min-width: $bp-tablet){
+        margin-top: $spacing-md--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-top: $spacing-md--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-top: $spacing-md--desktop;
+    }
+}
+
+@mixin isf-margin-b-lg{
+    margin-bottom: $spacing-lg;
+    @media(min-width: $bp-tablet){
+        margin-bottom: $spacing-lg--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-bottom: $spacing-lg--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-bottom: $spacing-lg--desktop;
+    }
+}
+
+@mixin isf-margin-b-xl{
+    margin-bottom: $spacing-xl;
+    @media(min-width: $bp-tablet){
+        margin-bottom: $spacing-xl--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        margin-bottom: $spacing-xl--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        margin-bottom: $spacing-xl--desktop;
+    }
+}
+
+@mixin isf-padding-tb-sm{
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    @media(min-width: $bp-tablet){
+        padding-top: $spacing-sm--tablet;
+        padding-bottom: $spacing-sm--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding-top: $spacing-sm--tablet-wide;
+        padding-bottom: $spacing-sm--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding-top: $spacing-sm--desktop;
+        padding-bottom: $spacing-sm--desktop;
+    }
+}
+
+@mixin isf-padding-tb-md{
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+    @media(min-width: $bp-tablet){
+        padding-top: $spacing-md--tablet;
+        padding-bottom: $spacing-md--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding-top: $spacing-md--tablet-wide;
+        padding-bottom: $spacing-md--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding-top: $spacing-md--desktop;
+        padding-bottom: $spacing-md--desktop;
+    }
+}
+
+@mixin isf-padding-tb-lg{
+    padding-top: $spacing-lg;
+    padding-bottom: $spacing-lg;
+    @media(min-width: $bp-tablet){
+        padding-top: $spacing-lg--tablet;
+        padding-bottom: $spacing-lg--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding-top: $spacing-lg--tablet-wide;
+        padding-bottom: $spacing-lg--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding-top: $spacing-lg--desktop;
+        padding-bottom: $spacing-lg--desktop;
+    }
+}
+
+@mixin isf-padding-tb-xl{
+    padding-top: $spacing-xl;
+    padding-bottom: $spacing-xl;
+    @media(min-width: $bp-tablet){
+        padding-top: $spacing-xl--tablet;
+        padding-bottom: $spacing-xl--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding-top: $spacing-xl--tablet-wide;
+        padding-bottom: $spacing-xl--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding-top: $spacing-xl--desktop;
+        padding-bottom: $spacing-xl--desktop;
+    }
+}
+
+@mixin isf-padding-sm{
+    padding: $spacing-sm;
+    @media(min-width: $bp-tablet){
+        padding: $spacing-sm--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding: $spacing-sm--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding: $spacing-sm--desktop;
+    }
+}
+
+@mixin isf-padding-md{
+    padding: $spacing-md;
+    @media(min-width: $bp-tablet){
+        padding: $spacing-md--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding: $spacing-md--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding: $spacing-md--desktop;
+    }
+}
+
+@mixin isf-padding-lg{
+    padding: $spacing-lg;
+    @media(min-width: $bp-tablet){
+        padding: $spacing-lg--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding: $spacing-lg--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding: $spacing-lg--desktop;
+    }
+}
+
+@mixin isf-padding-xl{
+    padding: $spacing-xl;
+    @media(min-width: $bp-tablet){
+        padding: $spacing-xl--tablet;
+    }
+    @media(min-width: $bp-tablet--lg){
+        padding: $spacing-xl--tablet-wide;
+    }
+    @media(min-width: $bp-desktop){
+        padding: $spacing-xl--desktop;
+    }
+}
+
+/* Padding top bottom */
+.isf-padding-tb-sm{
+    @include isf-padding-tb-sm;
+}
+
+.isf-padding-tb-md{
+    @include isf-padding-tb-md;
+}
+
+.isf-padding-tb-lg{
+    @include isf-padding-tb-lg;
+}
+
+.isf-padding-tb-xl{
+    @include isf-padding-tb-xl;
+}
+
+/* Padding */
+.isf-padding-sm{
+    @include isf-padding-sm;
+}
+
+.isf-padding-md{
+    @include isf-padding-md;
+}
+
+.isf-padding-lg{
+    @include isf-padding-lg;
+}
+
+.isf-padding-xl{
+    @include isf-padding-xl;
+}
+
+/* Margin bottom */
+.isf-margin-b-sm{
+    @include isf-margin-b-sm;
+}
+
+.isf-margin-b-md{
+    @include isf-margin-b-md;
+}
+
+.isf-margin-b-lg{
+    @include isf-margin-b-lg;
+}
+
+.isf-margin-b-xl{
+    @include isf-margin-b-xl;
+}
+

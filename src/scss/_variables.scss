@@ -1,0 +1,11 @@
+
+/* Transitions */
+
+$t-quick: 0.1s;
+$t-normal: 0.25s;
+$t-slow: 0.5s;
+
+.isf-animate {
+  opacity: 0;
+  transition: $t-quick all;
+}

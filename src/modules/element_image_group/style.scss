@@ -1,0 +1,15 @@
+.isf-el_image {
+    display: block;
+    overflow: hidden;
+}
+
+.isf-el_image_group {
+  &__inner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+  .isf-el_image {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,78 @@
+@import 'ellie';
+@import 'ralph';
+
+.isf-layout_chapter {
+    position: relative;
+    color: white;
+}
+
+.isf-layout_chapter__header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .isf-layout_chapter__title {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        z-index: 5;
+        padding: 15px;
+    }
+}
+
+.isf-layout_chapter__content {
+  position: relative;
+  z-index: 5;
+  @include isf-padding-tb-lg;
+}
+
+.isf-layout_chapter__img{
+    /* rel to the chapter element */
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    .isf-layout_chapter__mask{
+        .isf-layout_chapter__background-img__wrapper{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            .isf-layout_chapter__background-img{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                object-fit: cover;
+                background-size: cover;
+                background-position: center top;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+.isf-layout_chapter.is--fixed{
+    .isf-layout_chapter__img{
+        position: fixed;
+        top: 0;
+    }
+}
+
+.is--bottom{
+    .isf-layout_chapter__img{
+        bottom: 0;
+        top: auto;
+        position: absolute;
+    }
+}
+
+
+
