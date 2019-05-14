@@ -26,15 +26,13 @@ function ISF_Element_Gallery(el, controller) {
   this.options = {};
   this.options.layout = this.DOM.el.dataset.layout;
   this.options.preview = this.DOM.el.dataset.preview || false;
-
-  console.log(this);
 }
 
 ISF_Element_Gallery.prototype.init = function() {
 
   this.buildLayout();
   if (this.options.preview) {
-    this.buildPreview();
+    this.initPreview();
   }
 };
 
@@ -65,40 +63,12 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
   }
 };
 
-ISF_Element_Gallery.prototype.buildPreview = function() {
+ISF_Element_Gallery.prototype.initPreview = function() {
 
-  var self = this;
 
-  // build preview el
-  this.preview = {};
-  this.preview.el = document.createElement('div');
-  this.preview.el.classList.add("isf-el_gallery__preview");
-  this.preview.el.classList.add("js--gallery__preview");
 
-  this.preview.image = document.createElement('picture');
-  this.preview.el.appendChild(this.preview.image);
-
-  this.preview.nav = {};
-
-  var prev = document.createElement('button');
-  prev.classList.add('js--preview__nav');
-  prev.classList.add('js--preview__nav--prev');
-  this.preview.nav.prev = prev;
-
-  var next = document.createElement('button');
-  next.classList.add('js--preview__nav');
-  next.classList.add('js--preview__nav--next');
-  this.preview.nav.next = next;
-
-  this.preview.el.appendChild(this.preview.nav.prev);
-  this.preview.el.appendChild(this.preview.nav.next);
-
-  this.preview.current = 0;
-
-  this.DOM.el.appendChild(this.preview.el);
-
+  // init events
   this.preview.image.addEventListener('click', function() {
-    console.log('preview click');
     self.closePreview();
   });
 
@@ -114,9 +84,7 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
     }
   });
 
-  // add click event listeners
   this.DOM.items.forEach(function(item, ind) {
-
     item.addEventListener('click', function() {
       // document this.
       if (self.customFunctionOnTriggerClick !== undefined) {
@@ -127,7 +95,63 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
       }
     });
   });
+};
 
+ISF_Element_Gallery.prototype.initPreviewEvents = function() {
+
+};
+
+ISF_Element_Gallery.prototype.buildPreview = function() {
+
+  var self = this;
+
+  // build preview el
+  this.preview = {};
+  this.preview.el = document.createElement('div');
+  this.preview.el.classList.add("isf-el_gallery__preview");
+  this.preview.el.classList.add("js--gallery__preview");
+
+  // build preview image
+  this.preview.image = document.createElement('picture');
+  this.preview.el.appendChild(this.preview.image);
+
+  // build preview nav
+  this.preview.nav = {};
+
+  var prev = document.createElement('button');
+  prev.classList.add('js--preview__nav', 'js--preview__nav--prev');
+  this.preview.nav.prev = prev;
+
+  var next = document.createElement('button');
+  next.classList.add('js--preview__nav', 'js--preview__nav--next');
+  this.preview.nav.next = next;
+
+  var close = document.createElement('button');
+  close.classList.add('js--preview__nav', 'js--preview__nav--close');
+  this.preview.nav.close = close;
+
+  this.preview.el.appendChild(this.preview.nav.prev);
+  this.preview.el.appendChild(this.preview.nav.next);
+  this.preview.el.appendChild(this.preview.nav.close);
+
+  // build indicators
+  this.preview.indicators = [];
+  var indicatorsUl = document.createElement('ul');
+  indicatorsUl.classList.add('js--preview__indicators');
+  this.DOM.items.forEach(function(item, ind) {
+    var indicator = document.createElement('li');
+    indicator.classList.add('js--preview__indicator', 'js--preview__indicator--' + ind);
+    self.preview.indicators.push(indicator);
+    indicatorsUl.appendChild(indicator);
+  });
+  this.preview.el.appendChild(indicatorsUl);
+  this.preview.indicators[0].classList.add('is--current');
+
+  // set current
+  this.preview.current = 0;
+
+  // add preview to gallery
+  this.DOM.el.appendChild(this.preview.el);
 };
 
 ISF_Element_Gallery.prototype.openPreview = function(trigger) {
