@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
-  var target = grunt.option('target') || 'preview'; // if no story is specified, run on the
+  var story = grunt.option('story') || 'preview'; // if no story is specified, run on the
+  var customModule = grunt.option('customModule') || ''; // if no story is specified, run on the
 
   grunt.initConfig({
 
@@ -11,10 +12,13 @@ module.exports = function(grunt) {
         stderr: false
       },
       buildStory: {
-        command: target => `node build-story ${target}`
+        command: story => `node build-story ${story}`
       },
       initStory: {
-        command: target => `node init-story ${target}`
+        command: story => `node init-story ${story}`
+      },
+      initCustomModule: {
+        command: story => `node init-custom-module ${story} ${customModule}`
       }
     },
 
@@ -27,7 +31,7 @@ module.exports = function(grunt) {
       stories: {
         files: [{
             cwd: './',
-            src: './stories/' + target + '/build/*.js',
+            src: './stories/' + story + '/build/*.js',
             expand: true,
             rename: function(dest, src) {
                 var newPath = src.replace('build', 'dist');
@@ -61,7 +65,7 @@ module.exports = function(grunt) {
       },
       stories: {
         cwd: './',
-        src: './stories/' + target + '/build/styles.scss',
+        src: './stories/' + story + '/build/styles.scss',
         expand: true,
         rename: function(dest, src) {
           var newPath = src.replace('build', 'dist');
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
         configFile: '.eslintrc.json',
         fix: true
       },
-      target: ['./build-files.js', '.src/frameworkdata.js', './src/modules/**/script.js']
+      story: ['./build-files.js', '.src/frameworkdata.js', './src/modules/**/script.js']
     },
 
     watch: {
@@ -114,17 +118,17 @@ module.exports = function(grunt) {
       // rebuild template after changes in data
       data: {
         files: ['./stories/**/data.json'],
-        tasks: ['shell:buildStory:' + target]
+        tasks: ['shell:buildStory:' + story]
       },
       // recompile handlebars after a change in templates, then rebuild story files
       hbs: {
         files: ['./src/modules/**/template.hbs', './stories/**/**/template.hbs'],
-        tasks: ['handlebars', 'shell:buildStory:' + target]
+        tasks: ['handlebars', 'shell:buildStory:' + story]
       }
     },
 
     serve: {
-      'path': './stories/' + target + '/dist/index.html'
+      'path': './stories/' + story + '/dist/index.html'
     }
 
   });
@@ -142,10 +146,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('lintall', ['eslint']);
 
-  grunt.registerTask('build-dist', ['browserify:stories', 'sass:stories', 'autoprefixer:stories']);
-
-  grunt.registerTask('init-story', ['shell:initStory:' + target]);
-  grunt.registerTask('build-story', ['handlebars', 'shell:buildStory:' + target, 'build-dist', 'watch']);
+  grunt.registerTask('init-custom-module', ['shell:initCustomModule:' + story + customModule]);
+  grunt.registerTask('init-story', ['shell:initStory:' + story]);
+  grunt.registerTask('build-story', ['handlebars', 'shell:buildStory:' + story, 'browserify:stories', 'sass:stories', 'autoprefixer:stories', 'watch']);
 
   grunt.registerTask('default', ['watch']); //test
 };

@@ -14,7 +14,7 @@ $ npm install -g grunt-cli
 ## Creating a story
 
 ```
-$ grunt init-story --target=YYYY-MM-projectName
+$ grunt init-story --story=YYYY-MM-projectName
 ```
 
 The task creates a folder with build and dist subfolders, and an empty json file, which would contain the structure of your story.
@@ -22,17 +22,18 @@ To start building the page, add elements in the json. // provide examples
 Then build the story:
 
 ```
-$ grunt build-story --target=YYYY-MM-projectName
+$ grunt build-story --story=YYYY-MM-projectName
 ```
 
 This compiles the json file into a layout with styles and scripts, and starts a watch task looking for changes in the build/script.js and build/style.scss files.
 To run the watch task standalone, use:
 
 ```
-$ grunt --target=YYYY-MM-projectName
+$ grunt --story=YYYY-MM-projectName
 ```
 
 Stories consist of three levels of data: pages (for interactive stories that have more than one page), layouts (sections), and elements inside a section:
+
 ```
 - page 1
     - slayout 1.1
@@ -82,8 +83,37 @@ Adding a section looks like this:
 ```
 
 
-## Adding Modules
+### Adding Custom Modules to a Story
 
-// Add an effect ?
-// Syntax: data-x_animate_on_page_enter
-// "fade_in", // fade_in_random
+Sometimes you would need to add a section or an element that does not exist in the framework. If it doesn't make sense to include it as a module for future use (e.g. it's too custom), run:
+```
+$ init-custom-module --story=YYYY-MM-projectName --customModule=moduleName
+```
+The task creates a folder custom_moduleName in the story folder, and adds an empty .hbs file. Add a Handlebars template there, for example:
+```
+<nav class = "{{ customClass }}">
+    {{ #each liEls }}
+        <li><a href = "{{ liUrl }}">{{ liText }}</a></li>
+    {{/ each }}
+</nav>
+```
+
+...and use the module in your main data.json like this (it's important that the object attributes match the variables in the template).
+```
+'custom_moduleName': {
+    'customClass': 'nav--something',
+    'liEls': [
+        { 'liUrl':'www.test.com', liText:'text for nav' },
+        { 'liUrl':'www.proba.com', liText:'something else' } // and so on
+    ]
+}
+```
+
+
+
+
+
+
+
+
+

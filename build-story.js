@@ -124,7 +124,6 @@ ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
     // code els
     if (moduleId.includes('code')) {
       var targetObj = { 'codetext': moduleObj };
-      //return TEMPLATES.element_code({"code" : JSON.stringify(targetObj, null, 4) });
     } else {
       var markup = TEMPLATES[moduleId]( moduleObj );
       return markup;
