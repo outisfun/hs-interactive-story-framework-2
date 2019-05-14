@@ -118,7 +118,7 @@ The task creates a folder custom_moduleName in the story folder, and adds an emp
 
 ### Adding Elements
 
-### Adding Effects
+### Adding Effectss
 
 
 
