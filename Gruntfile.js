@@ -147,5 +147,5 @@ module.exports = function(grunt) {
   grunt.registerTask('init-story', ['shell:initStory:' + target]);
   grunt.registerTask('build-story', ['handlebars', 'shell:buildStory:' + target, 'build-dist', 'watch']);
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['watch']); //test
 };
