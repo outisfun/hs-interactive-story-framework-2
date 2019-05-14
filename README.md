@@ -32,6 +32,8 @@ To run the watch task standalone, use:
 $ grunt --story=YYYY-MM-projectName
 ```
 
+### Adding Framework Modules to a Story
+
 Stories consist of three levels of data: pages (for interactive stories that have more than one page), layouts (sections), and elements inside a section:
 
 ```
@@ -110,9 +112,13 @@ The task creates a folder custom_moduleName in the story folder, and adds an emp
 ```
 
 
+## Adding Modules to the Framework
 
+### Adding Layouts
 
+### Adding Elements
 
+### Adding Effects
 
 
 
