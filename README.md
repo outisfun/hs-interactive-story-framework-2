@@ -4,41 +4,47 @@ A framework to speed up development of Tier 1 Interactive Stories.
 
 ## Getting Started
 
-Clone & install dependencies:
+Clone & install dependencies & grunt:
 
 ```
 $ npm install 
+$ npm install -g grunt-cli
 ```
 
 ## Creating a story
 
-Create a new folder with the template name YYYY-MM-projectName, or copy and rename the 0000-00-blank template folder in /stories, and add or edit the data.json file.
+```
+$ grunt init-story --target=YYYY-MM-projectName
+```
+
+The task creates a folder with build and dist subfolders, and an empty json file, which would contain the structure of your story.
+To start building the page, add elements in the json. // provide examples
+Then build the story:
+
 ```
 $ grunt build-story --target=YYYY-MM-projectName
 ```
 
-Default watch task:
+This compiles the json file into a layout with styles and scripts, and starts a watch task looking for changes in the build/script.js and build/style.scss files.
+To run the watch task standalone, use:
+
 ```
-$ grunt build-story --target=YYYY-MM-projectName
+$ grunt --target=YYYY-MM-projectName
 ```
 
-Stories consist of three levels of data: pages, sections, and content groups within a section.
-The structure looks like this:
+Stories consist of three levels of data: pages (for interactive stories that have more than one page), layouts (sections), and elements inside a section:
 ```
 - page 1
-    - section 1.1
+    - slayout 1.1
         - element 1.1.1
         - element 1.1.2
         - element 1.1.3
-    - section 1.2
+    - layout 1.2
         - element 1.2.1
         - element 1.2.2
 - page 2 // and so on.
 
 ```
-Sections have two properties: layout (for example 'chapter' or 'interactive scroller' with layout-specific options) and content inside the layout element (text, images, galleries, etc).
-
-// TO DO: Descriptions and READMEs of available elements and layouts
 
 Adding a section looks like this:
 
@@ -75,13 +81,8 @@ Adding a section looks like this:
 
 ```
 
-Once the data structure is set, run the Grunt task for compiling script and style files and see how it looks! The task also turns the watcher on for any changes in scss/js files. Open the story at stories/YYYY-MM-projectName/dist.
-```
-$ grunt init --target='YYYY-MM-projectName'
-```
 
-
-## Effects
+## Adding Modules
 
 // Add an effect ?
 // Syntax: data-x_animate_on_page_enter
