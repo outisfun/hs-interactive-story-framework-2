@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        loadPath: ['./src/scss', './src/modules/']
+        loadPath: ['./src/scss', './src/modules/', './stories/']
       },
       stories: {
         cwd: './',

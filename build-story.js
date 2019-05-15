@@ -1,4 +1,6 @@
 
+// use as node build-story --story=YYYY-MM-storyName
+
 var args = process.argv.slice(2);
 var storyFolder = args[0];
 
@@ -9,15 +11,12 @@ var Handlebars = require('handlebars');
 var TEMPLATES = require('./src/templates.js'); // reconsider namespace?
 var FRAMEWORKDATA = require('./src/frameworkdata.js');
 
-// basic templates to insert custom content
+// baswe templates to insert custom content
 var htmlFile = fs.readFileSync('./src/helpers/index.html');
 var jsFile = fs.readFileSync('./src/helpers/script.js');
 var scssFile = fs.readFileSync('./src/helpers/style.scss');
 
-// check if data file exists and make an empty one if not.]
-var rawdata = fs.readFileSync('./stories/' + storyFolder +'/data.json');
-
-var storydata = JSON.parse(rawdata);
+var storydata = JSON.parse( fs.readFileSync('./stories/' + storyFolder +'/data.json') );
 
 function ISF_StoryBuilder(){
 
@@ -57,20 +56,20 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
           var elemId = elem;
           var elemObj = layoutContentObj[elem];
 
-          if (isCustom(elemId)) {
+          if (!isCustom(elemId)) {
+            var element = self.buildModule( elemId, elemObj );
+            layoutContentHtml += element.moduleHTML;
+          } else {
             if (elemId.includes('code_')) {
               // again. move this somewhere else, as it's only relevant for the preview
               var tId = layoutContentObj[elemId];
               var tObj = layoutContentObj[tId];
               layoutContentHtml += this.buildCodeModule(tObj); // returns markup
+            } else {
+              layoutContentHtml += this.buildCustomModule(elemId, elemObj).moduleHtml;
             }
-          } else {
-            //
-            var element = self.buildModule( elemId, elemObj );
-            layoutContentHtml += element.moduleHTML;
           }
         }
-
         layoutHtml = layoutHtml.replace("<!-- content -->", layoutContentHtml);
         pageHtml +=layoutHtml;
       } else {
@@ -80,7 +79,7 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
           var targetObj = pageSections[targetId];
           pageHtml += TEMPLATES.custom_code({"codetext" : JSON.stringify(targetObj, null, 4) });
         } else {
-          pageHtml += this.buildCustomModule(layoutId, layoutObj); // returns html markup
+          pageHtml += this.buildCustomModule(layoutId, layoutObj).moduleHtml;
         }
       }
     }
@@ -119,21 +118,29 @@ ISF_StoryBuilder.prototype.buildCodeModule = function(targetObj) {
 };
 
 ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
+
+  var oCustom = {};
+
   // build markup
   if (TEMPLATES[moduleId]) {
     // code els
     if (moduleId.includes('code')) {
       var targetObj = { 'codetext': moduleObj };
     } else {
-      var markup = TEMPLATES[moduleId]( moduleObj );
-      return markup;
+      oCustom.moduleHtml = TEMPLATES[moduleId]( moduleObj );
     }
   } else {
-    console.log('Template for ' + moduleId + ' does not exist!' );
+    console.log('Template for ' + moduleId + ' does not exist.' );
     return false;
   }
 
-  this.styles[moduleId] = '@import "' + moduleId + '/style.scss";';
+  // import custom styles for module (if they exist)
+  if (fs.existsSync('./stories/' + storyFolder + '/' + moduleId + '/style.scss')) {
+    this.styles[moduleId] = '@import "' + storyFolder + '/' + moduleId + '/style.scss";';
+  }
+
+  return oCustom;
+
 };
 
 ISF_StoryBuilder.prototype.buildModule = function(moduleId, moduleObj){

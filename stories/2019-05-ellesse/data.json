@@ -1,8 +1,5 @@
 {
     "index": {
-        "custom__banner": {
-            
-        },
         "ellesse__intro": {
 
             "layoutType": "simple",
@@ -249,14 +246,10 @@
                         "paragraph": "Something Hodges knew ellesse would support based on their history with tailoring was the introduction of new fits and cuts. It was ellesse after all that first introduced many of the design innovations to sportswear during the ‘60s and ‘70s that we’re familiar with today. Hodges reiterates that this was never going to be a heritage collection and he wasn’t going to pull and copy stuff directly, but simply playing with fits and cuts in his own way is a subtle nod to the archive considering what we know about ellesse’s past. He examined old samples and pictures thoroughly but he put the physical references aside when he started drawing, “it’s always a new thing then, right? Because it’s my memory of it rather than this carbon copy. ”Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to ellesse’s ski heritage."
                     }
                 },
-                "ellesse__liamhodges__sneaker": {
-                    "elementType": "image_group",
-                    "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh26.jpg" },
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_video9.jpg" }
-                        ]
-                    }
+                "custom_two-piece": {
+                    "imgsrc": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh26.jpg",
+                    "videoId": "8gEzTVc2",
+                    "playerId": "h1yC9mkW"
                 },
                 "ellesse__liamhodges__text9": {
                     "elementType": "text",
