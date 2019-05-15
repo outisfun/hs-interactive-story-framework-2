@@ -8,9 +8,9 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 
 // build main folder
-mkdirp('./stories/' + storyFolder + '/custom_' + moduleName, function (err) {
+mkdirp('./stories/' + storyFolder + '/' + moduleName, function (err) {
   // add json file
-  fs.writeFile('./stories/' + storyFolder + '/custom_' + moduleName +'/template.hbs', '', function() {
+  fs.writeFile('./stories/' + storyFolder + '/' + moduleName +'/template.hbs', '', function() {
     console.log('Custom module ' + moduleName + ' for story ' + storyFolder + ' added.');
   });
 });
