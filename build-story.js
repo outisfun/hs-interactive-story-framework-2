@@ -46,7 +46,7 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
 
       if (!isCustom(layoutId)) {
         // build layout markup
-        var layoutHtml = self.buildModule(layoutId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
+        var layoutHtml = self.buildModule(layout.customModuleId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
         var layoutContentObj = layoutObj.layoutContent;
         var layoutContentHtml = '';
 
@@ -66,10 +66,12 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
               var tObj = layoutContentObj[tId];
               layoutContentHtml += this.buildCodeModule(tObj); // returns markup
             } else {
-              layoutContentHtml += this.buildCustomModule(elemId, elemObj).moduleHtml;
+              console.log("it's custom", elemObj);
+              layoutContentHtml += this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml;
             }
           }
         }
+
         layoutHtml = layoutHtml.replace("<!-- content -->", layoutContentHtml);
         pageHtml +=layoutHtml;
       } else {
@@ -118,7 +120,7 @@ ISF_StoryBuilder.prototype.buildCodeModule = function(targetObj) {
 };
 
 ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
-
+  console.log(moduleId, moduleObj);
   var oCustom = {};
 
   // build markup
@@ -138,7 +140,7 @@ ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
   if (fs.existsSync('./stories/' + storyFolder + '/' + moduleId + '/style.scss')) {
     this.styles[moduleId] = '@import "' + storyFolder + '/' + moduleId + '/style.scss";';
   }
-
+  console.log(oCustom);
   return oCustom;
 
 };
