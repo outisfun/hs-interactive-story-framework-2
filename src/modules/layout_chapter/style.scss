@@ -29,34 +29,34 @@
 }
 
 .isf-layout_chapter__img{
-    /* rel to the chapter element */
-    position: absolute;
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    .isf-layout_chapter__mask{
-        .isf-layout_chapter__background-img__wrapper{
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-            .isf-layout_chapter__background-img{
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                object-fit: cover;
-                background-size: cover;
-                background-position: center top;
-                top: 0;
-                left: 0;
-            }
-        }
+  /* rel to the chapter element */
+  position: absolute;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .isf-layout_chapter__mask{
+    .isf-layout_chapter__background-img__wrapper{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0);
+      .isf-layout_chapter__background-img{
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center top;
+          top: 0;
+          left: 0;
+      }
     }
+  }
 }
 
 .isf-layout_chapter.is--fixed{

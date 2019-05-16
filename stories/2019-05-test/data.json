@@ -1,0 +1,42 @@
+{
+    "index": {
+        "ellesse__intro": {
+
+            "layoutType": "chapter",
+            "layoutData": {
+                "colorScheme": "dark",
+                "chapterStyle": "ellie",
+                "chapterBackground": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Scan.jpg",
+                "chapterTitle": "ellesse: Then & Now"
+            },
+            "layoutContent": {
+                "ellesse__intro__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "paragraph": "ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — was a way for its founder to scratch his own itch. Born into a family of textile merchants, Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. With nothing satisfying available, Servadio decided to apply his knowledge to redefining sportswear and, with that, ellesse was born."
+                    }
+                },
+                "ellesse__intro__text2": {
+                    "elementType": "text",
+                    "elementData": {
+                        "paragraph": "ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — was a way for its founder to scratch his own itch. Born into a family of textile merchants, Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. With nothing satisfying available, Servadio decided to apply his knowledge to redefining sportswear and, with that, ellesse was born."
+                    }
+                },
+                "ellesse__liamhodges__video": {
+                    "elementType": "video",
+                    "elementData": {
+                        "videoId": "ZOprSdhS",
+                        "playerId": "h1yC9mkW"
+                    }
+                },
+                "ellesse__liamhodges__quote": {
+                    "elementType": "quote",
+                    "elementData": {
+                        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "source": "Liam Hodges"
+                    }
+                }
+            }
+        }
+    }
+}

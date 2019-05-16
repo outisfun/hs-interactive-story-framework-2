@@ -34,7 +34,7 @@
 
       @media (min-width: 1200px) {
         .isf-el_gallery__item {
-          width: 24%;
+          width: 25%;
         }
       }
     }
@@ -112,7 +112,7 @@
           /*cursor: url("../../../src/img/icons/add-light.svg") 20 20, auto;*/
           img {
             width: auto;
-            cursor: url("../../../src/img/icons/add-light.svg") 20 20, auto;
+            cursor: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/add-light.svg") 20 20, auto;
           }
           .isf-el_image__caption {
             //position: absolute;
@@ -160,16 +160,16 @@
           margin-top: -30px;
           &.js--preview__nav--prev {
             left: 0;
-            background-image: url("../../../src/img/icons/arrow-left-light.svg");
+            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/arrow-left-light.svg");
           }
           &.js--preview__nav--next {
             right: 0;
-            background-image: url("../../../src/img/icons/arrow-right-light.svg");
+            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/arrow-right-light.svg");
           }
           &.js--preview__nav--close {
             top: 0;
             right: 0;
-            background-image: url("../../../src/img/icons/close-light.svg");
+            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/close-light.svg");
             margin-top: 0px;
           }
           &.is--disabled {

@@ -1,0 +1,127 @@
+{
+    "index": {
+        "mercedes__intro": {
+            "layoutType": "simple",
+            "layoutData": {
+                "colorScheme": "dark",
+                "container": "container"
+            },
+            "layoutContent": {
+                "mercedes__intro__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Among humanities greatest achievements, our shift from horse-drawn carriages to engine-driven vehicles is one that has revolutionized the way we live.",
+                        "paragraph": "It’s been over one hundred thirty-three years since Carl Benz patented the first automobile in Berlin, Germany in 1886, and we’re still feeling its effects. It struck the world like a lightning bolt, reimagining how we travel and connect, and put what would become the Mercedes-Benz company on the map. There aren’t many ways to outflex the invention of the automobile. Yet, somehow, Mercedes-Benz has made lightning strike twice — this time almost literally. After a century of paving the way with automobiles renowned for their quality and comfort, they’ve raced into a new dawn in the driver’s seat of the fully electric Mercedes-Benz EQC Edition 1886. Packing 133 years of history into the seamless, LED-outfitted chassis, the limited edition model of the new Mercedes-Benz EQC 400 4MATIC line is a window into the past and future of cars. It’s at once both a time capsule to the birth of the automobile and a gleaming look at a future driven by Mercedes-Benz’ new electric mobility brand, Electric Intelligence (EQ). The EQC line is designed to make us enjoy again and find our passion — whether it be birdwatching, beach-bumming, or something else entirely. With tech-packed interiors and engines as quiet as a monk’s chambers, it certainly makes the case for being an antidote to the loud shout of the modern world. But, before we can look to the future of driving, it’s essential we go back to the beginning and tell the story of how Carl Benz changed the world forever. "
+                    }
+                },
+                "mercedes__intro__gallery": {
+                    "elementType": "image_group",
+                    "elementData": {
+                        "images": [
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/00_01.jpg" },
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/00_02.jpg" }
+                        ]
+                    }
+                }
+            }
+        },
+        "mercedes__history": {
+            "layoutType": "chapter",
+            "layoutData": {
+                "colorScheme": "dark",
+                "chapterStyle": "ellie",
+                "chapterVideo": "ZOprSdhS",
+                "chapterTitle": "From 1886 to the First Spark",
+                "container": "container"
+            },
+            "layoutContent": {
+                "mercedes__history__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Behind ever great origin story is a dream and a path paved with small achievements. For Carl Benz, that dream came to him in 1877 in the form of a “vehicle without horses.”",
+                        "paragraph": "Sparked by the thought, he toiled away for a year on a gas-driven, two-stroke engine capable of revolutionizing transportation. It would take months of failure and tinkering but, on New Year’s Eve in 1878, he got his engine running for the first time — providing the fuel needed to keep fighting for his vision. Five years after that fateful day, Benz launched a two-stroke “System Benz” engine fit for the market but too big and heavy to be installed into any vehicle at the time. In a move born out of necessity, he built an entirely new automobile fit with a four-stroke engine. With his dream turned into a reality at last, he braved the cold winter air and left Berlin’s German Imperial Patent Office on 29 January 1886 with the birth certificate for a “gas-powered vehicle” that changed the world forever."
+                    }
+                },
+                "mercedes__history__gallery": {
+                    "elementType": "image_group",
+                    "elementData": {
+                        "images": [
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/01_01.jpg" },
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/01_02.jpg" }
+                        ]
+                    }
+                }
+            }
+        },
+        "mercedes__announce": {
+            "layoutType": "simple",
+            "layoutData": {
+                "colorScheme": "dark",
+                "container": "container"
+            },
+            "layoutContent": {
+                "mercedes__announce__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "paragraph": "One hundred thirty-three years after Patent Number 37435 brought individual mobility to the auto industry, the ethos of the OG Motorwagen has been stitched into the spirit (and seats) of the Mercedes-Benz EQC Edition 1886. It’s a new dawn for the company and the concept of electric mobility and, this time, we’re along for the ride."
+                    }
+                },
+                "mercedes__announce__video": {
+                    "elementType": "video",
+                    "elementData": {
+                        "videoId": "iH9w32Cv",
+                        "playerId": "h1yC9mkW"
+                    }
+                }
+            }
+        },
+        "mercedes__newdawn": {
+            "layoutType": "chapter",
+            "layoutData": {
+                "colorScheme": "dark",
+                "chapterStyle": "ellie",
+                "chapterBackground": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_01.jpg",
+                "chapterTitle": "A New Dawn for Driving",
+                "container": "container"
+            },
+            "layoutContent": {
+                "mercedes__newdawn__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean magna ligula, placerat et odio non, pellentesque maximus libero. Morbi est enim, commodo id mollis quis, imperdiet vel massa.",
+                        "paragraph": "Vestibulum vitae est mollis, mattis metus eu, volutpat elit. Nulla quis gravida sapien. Mauris pretium viverra justo, vitae ornare libero semper sed. Nunc bibendum ac est eu pretium. Fusce tincidunt orci non varius eleifend. Donec euismod, mi dapibus ultricies sagittis, risus ante mollis urna, vel hendrerit ex risus finibus ipsum. Ut interdum nisi at auctor cursus. Fusce enim leo, venenatis ullamcorper risus id, lobortis aliquet est. Duis neque ex, iaculis quis sagittis non, ultricies eget nunc."
+                    }
+                },
+                "mercedes__newdawn__image": {
+                    "elementType": "image_group",
+                    "elementData": {
+                        "images": [
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_02.jpg" }
+                        ]
+                    }
+                },
+                "mercedes__newdawn__text2": {
+                    "elementType": "text",
+                    "elementData": {
+                        "paragraph": "It’s fitting that Mercedes Benz is making electric cars as reliable, simple, and exciting as they looked in the Saturday morning cartoons of our childhood. The truth is, electric mobility isn’t as inspiring when you’re out of charge and stranded on the Autobahn."
+                    }
+                },
+                "mercedes__newdawn__quote": {
+                    "elementType": "quote",
+                    "elementData": {
+                        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae est mollis, mattis metus eu, volutpat elit.",
+                        "source": "Carl Benz"
+                    }
+                },
+                "mercedes__newdawn__image2": {
+                    "elementType": "image_group",
+                    "elementData": {
+                        "images": [
+                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_03.jpg" }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

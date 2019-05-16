@@ -4,13 +4,13 @@
 
             "layoutType": "simple",
             "layoutData": {
-                "colorScheme": "dark"
+                "colorScheme": "dark",
+                "container": "container"
             },
             "layoutContent": {
                 "ellesse__intro__text": {
                     "elementType": "text",
                     "elementData": {
-                        "highlight": "Here's how an Italian tailor & ellesse changed sportswear forever",
                         "paragraph": "ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — was a way for its founder to scratch his own itch. Born into a family of textile merchants, Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. With nothing satisfying available, Servadio decided to apply his knowledge to redefining sportswear and, with that, ellesse was born."
                     }
                 }
@@ -46,40 +46,40 @@
                                 "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
                             },
                             { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg", 
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse10.jpg", 
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                            },
+                            { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse2.jpg", 
                                 "caption": "T-Shirt (SS19): Tennis tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, and dual branding reference ellesse heritage pieces. Ski Trousers (1960s): ellesse’s first product featuring the original penguin logo, quilted knees, and jet stripe. " 
-                            },
-                            { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg", 
-                                "caption": "Tracktop (SS19): Reflective and with dual branding like the ski jacket it’s alongside. Ski Jacket: This archival piece features quilting and an embroider-applied logo, such ideas came from founder Leonardo Servadio’s tailoring background." 
-                            },
-                            { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg", 
-                                "caption": "Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper. Tennis Jacket (1980s): A white jacket with color pops on the sleeves and the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the dual-branded yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name is printed on the back of the neck." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg", 
                                 "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes down the leg. We see these colors used on the new SS19 range. Tracksuit Pants (SS19): Shellpants reminiscent of the brand’s iconic 80s tracksuits." 
                             },
                             { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg", 
-                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
-                            },
-                            { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg", 
                                 "caption": "Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper." 
                             },
                             { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg", 
-                                "caption": "Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s." 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg", 
+                                "caption": "Tracktop (SS19): Reflective and with dual branding like the ski jacket it’s alongside. Ski Jacket: This archival piece features quilting and an embroider-applied logo, such ideas came from founder Leonardo Servadio’s tailoring background." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse9.jpg", 
                                 "caption": "Downhill Racing Ski Suit (1980s): This archival piece features protective padded knee guards adorned with the semi palla logo and color panels that tailored to fit the wearer's form." 
                             },
                             { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse10.jpg", 
-                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg", 
+                                "caption": "Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper. Tennis Jacket (1980s): A white jacket with color pops on the sleeves and the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the dual-branded yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name is printed on the back of the neck." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg", 
+                                "caption": "Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s." 
                             }
                         ]
                     }
@@ -236,20 +236,16 @@
                         "paragraph": "Something Hodges knew ellesse would support based on their history with tailoring was the introduction of new fits and cuts. It was ellesse after all that first introduced many of the design innovations to sportswear during the ‘60s and ‘70s that we’re familiar with today. Hodges reiterates that this was never going to be a heritage collection and he wasn’t going to pull and copy stuff directly, but simply playing with fits and cuts in his own way is a subtle nod to the archive considering what we know about ellesse’s past. He examined old samples and pictures thoroughly but he put the physical references aside when he started drawing, “it’s always a new thing then, right? Because it’s my memory of it rather than this carbon copy. ”Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to ellesse’s ski heritage."
                     }
                 },
-                "ellesse__liamhodges__blues": {
-                    "elementType": "image_group",
-                    "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh22.jpg" },
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh21.jpg" },
-                            { "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh73.jpg" }
-                        ]
-                    }
+                "custom__liamhodges__blues": {
+                    "customModuleId": "ellesse_three-piece",
+                    "imgsrc_1": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh22.jpg",
+                    "imgsrc_2": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh21.jpg",
+                    "imgsrc_3": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh73.jpg"
                 },
                 "ellesse__liamhodges__text8": {
                     "elementType": "text",
                     "elementData": {
-                        "paragraph": "Something Hodges knew ellesse would support based on their history with tailoring was the introduction of new fits and cuts. It was ellesse after all that first introduced many of the design innovations to sportswear during the ‘60s and ‘70s that we’re familiar with today. Hodges reiterates that this was never going to be a heritage collection and he wasn’t going to pull and copy stuff directly, but simply playing with fits and cuts in his own way is a subtle nod to the archive considering what we know about ellesse’s past. He examined old samples and pictures thoroughly but he put the physical references aside when he started drawing, “it’s always a new thing then, right? Because it’s my memory of it rather than this carbon copy. ”Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to ellesse’s ski heritage."
+                        "paragraph": "Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to ellesse’s ski heritage."
                     }
                 },
                 "custom__liamhodges__sneaker": {

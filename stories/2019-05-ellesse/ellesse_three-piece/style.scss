@@ -1,0 +1,24 @@
+.ellesse_three-piece {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  &__quarter {
+    width: 25%;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__half {
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    height: 100px;
+  }
+  @media (min-width: 768px) {
+    height: 600px;
+    &__quarter,
+    &__half {
+      height: 600px;
+    }
+  }
+}

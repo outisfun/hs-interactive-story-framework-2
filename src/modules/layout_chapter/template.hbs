@@ -5,8 +5,15 @@
         <div class = "isf-layout_chapter__img">
             <div class = "isf-layout_chapter__mask">
                 <div class = "isf-layout_chapter__background-img__wrapper">
-                    <div class="isf-layout_chapter__background-img" style="background-image: url('{{ chapterBackground }}')">
-                    </div>
+                    {{#if chapterBackground}}
+                        <div class="isf-layout_chapter__background-img" style="background-image: url('{{ chapterBackground }}')">
+                        </div>
+                    {{/if}}
+                    {{#if chapterVideo}}
+                        <div class="isf-el_video__wrapper isf-el_video__wrapper-iframe">
+                            <iframe src="https://content.jwplatform.com/players/{{ chapterVideo }}-h1yC9mkW.html" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen="" style="position:absolute;"></iframe>
+                        </div>
+                    {{/if}}
                 </div>
             </div>
         </div>
@@ -18,7 +25,7 @@
     </div>
 
     <div class = "isf-layout_chapter__content js--chapter__content js--content">
-        <div class = "isf-container-fluid">
+        <div class = "isf-container-fluid isf-{{ container }}">
             <!-- content -->
         </div>
     </div>
