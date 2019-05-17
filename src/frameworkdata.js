@@ -48,6 +48,14 @@ var frameworkData = {
         },
         CONSTRUCTOR: 'ISF_Layout_Chapter'
       },
+      layout_horizontal : {
+        CLASSES: {
+          EL: '.js--horizontal',
+          BACKGROUND: '.js--horizontal__background',
+          CONTENT: '.js--horizontal__content'
+        },
+        CONSTRUCTOR: 'ISF_Layout_Chapter'
+      },
       layout_split_sticky : {
         CLASSES: {
           EL: '.js--split-sticky',

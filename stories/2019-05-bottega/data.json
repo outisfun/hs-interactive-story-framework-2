@@ -1,0 +1,117 @@
+{
+    "index": {
+        "custom__header": {
+            "customModuleId": "header"
+        },
+        "bottega__grid": {
+            "layoutType": "simple",
+            "layoutData": {
+                "container": "container"
+            },
+            "layoutContent": {
+                "bottega__grid__text": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    }
+                },
+                "bottega__grid__gallery": {
+                    "elementType": "gallery",
+                    "elementData": {
+                        "galleryLayout": "grid",
+                        "galleryPreview": true,
+                        "galleryImages": [
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/5.jpg", 
+                                "type": "portrait",
+                                "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/8.jpg", 
+                                "type": "portrait",
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/9.jpg", 
+                                "type": "portrait",
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/6.jpeg", 
+                                "type": "landscape",
+                                "caption": "T-Shirt (SS19): Tennis tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, and dual branding reference ellesse heritage pieces. Ski Trousers (1960s): ellesse’s first product featuring the original penguin logo, quilted knees, and jet stripe. " 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/10.jpg", 
+                                "type": "landscape",
+                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes down the leg. We see these colors used on the new SS19 range. Tracksuit Pants (SS19): Shellpants reminiscent of the brand’s iconic 80s tracksuits." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/5.jpg", 
+                                "type": "portrait",
+                                "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/8.jpg", 
+                                "type": "portrait",
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/9.jpg", 
+                                "type": "portrait",
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                            }
+                        ]
+                    }
+                },
+                "bottega__grid__text2": {
+                    "elementType": "text",
+                    "elementData": {
+                        "highlight": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+                        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    }
+                },
+                "bottega__grid__gallery2": {
+                    "elementType": "gallery",
+                    "elementData": {
+                        "galleryLayout": "grid",
+                        "galleryPreview": true,
+                        "galleryImages": [
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/5.jpg", 
+                                "type": "portrait",
+                                "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/8.jpg", 
+                                "type": "portrait",
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/9.jpg", 
+                                "type": "portrait",
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/5.jpg", 
+                                "type": "portrait",
+                                "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/8.jpg", 
+                                "type": "portrait",
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-bottega/9.jpg", 
+                                "type": "portrait",
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

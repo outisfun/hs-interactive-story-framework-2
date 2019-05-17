@@ -81,7 +81,9 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
           var targetObj = pageSections[targetId];
           pageHtml += TEMPLATES.custom_code({"codetext" : JSON.stringify(targetObj, null, 4) });
         } else {
-          pageHtml += this.buildCustomModule(layoutId, layoutObj).moduleHtml;
+          console.log("custom layout");
+          pageHtml += this.buildCustomModule(layoutObj.customModuleId, layoutObj).moduleHtml;
+          console.log(pageHtml);
         }
       }
     }
@@ -140,7 +142,6 @@ ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
   if (fs.existsSync('./stories/' + storyFolder + '/' + moduleId + '/style.scss')) {
     this.styles[moduleId] = '@import "' + storyFolder + '/' + moduleId + '/style.scss";';
   }
-  console.log(oCustom);
   return oCustom;
 
 };

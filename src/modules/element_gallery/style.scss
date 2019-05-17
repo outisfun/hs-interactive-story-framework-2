@@ -39,6 +39,50 @@
       }
     }
 
+    &[data-layout = "grid"] {
+
+      .isf-el_gallery__inner {
+        //display: flex;
+        overflow: hidden;
+      }
+
+      .isf-el_image {
+        overflow: hidden;
+        padding: 9px;
+        float: left;
+        &__wrap {
+          transform: scale3d(1, 1, 1);
+          transition: transform 350ms cubic-bezier(.165,.84,.44,1);
+          transform-origin: center;
+          overflow: hidden;
+        }
+        &__figure {
+          margin: 0px;
+          transform: scale3d(1, 1, 1);
+          transition: transform 750ms cubic-bezier(.165,.84,.44,1);
+          transform-origin: center;
+          overflow: hidden;
+          img {
+            float: left;
+          }
+        }
+        &--portrait {
+          width: calc(33.33%);
+        }
+        &--landscape {
+          width: calc(50%);
+        }
+        &:hover {
+          .isf-el_image__wrap {
+            //transform: scale3d(.93, .93, 1);
+          }
+          .isf-el_image__figure {
+            transform: scale3d(1.15, 1.15, 1);
+          }
+        }
+      }
+    }
+
     &[data-layout = "horizontal"] {
 
       height: 100vh;
@@ -109,27 +153,33 @@
         picture {
           transition: 0.2s all;
           position: relative;
+          display: block;
           /*cursor: url("../../../src/img/icons/add-light.svg") 20 20, auto;*/
           img {
             width: auto;
             cursor: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/add-light.svg") 20 20, auto;
           }
-          .isf-el_image__caption {
-            //position: absolute;
-            max-width: 100%;
-            opacity: 1;
-            font-size: 14px;
-            line-height: 1.3em;
-            opacity: 0;
-            transition: 0.2s all;
-            margin-top: 0px;
-            margin-top: 20px;
-            span.is--bold {
-              font-weight: 600;
-            }
-          }
+
           &.is--hidden {
             opacity: 0;
+          }
+        }
+        .isf-el_image__wrap {
+          overflow: visible;
+          transition: 0.2s all;
+        }
+        .isf-el_image__caption {
+          //position: absolute;
+          max-width: 100%;
+          opacity: 1;
+          font-size: 14px;
+          line-height: 1.3em;
+          opacity: 0;
+          transition: 0.2s all;
+          margin-top: 20px;
+          top: calc(100% + 20px);
+          span.is--bold {
+            font-weight: 600;
           }
         }
         @media (min-width: 768px) {
@@ -199,22 +249,26 @@
         &.is--open {
           opacity: 1;
           pointer-events: all;
-
-          picture {
-            .isf-el_image__caption {
-              opacity: 1;
-              margin-top: 0px;
-            }
+          .isf-el_image__wrap {
+            opacity: 1;
+            margin-top: 0px;
+          }
+          .isf-el_image__caption {
+            opacity: 1;
+            margin-top: 0px;
           }
         }
 
         &.is--transitioning {
-          picture {
-            .isf-el_image__caption {
-              opacity: 0;
-              margin-top: 20px;
-              transition-delay: 0s;
-            }
+
+          .isf-el_image__wrap {
+            opacity: 0;
+            margin-top: -20px;
+          }
+          .isf-el_image__caption {
+            opacity: 0;
+            margin-top: 20px;
+            transition-delay: 0s;
           }
         }
       }

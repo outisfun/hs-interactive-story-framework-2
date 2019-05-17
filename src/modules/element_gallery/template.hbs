@@ -2,13 +2,27 @@
     <div class = "isf-el_gallery__inner js--gallery__inner">
         
         {{#each galleryImages}}
-            <picture class = "isf-el_image js--image isf-el_gallery__item js--gallery__item" data-x_animate_on_page_enter = "{{ galleryEffectOnPageEnter }}">
-                <source srcset="{{ src }}" media="(min-width: 768px)">
-                <img src="{{ src }}" />
-                {{#if caption}}
-                	<p class = "isf-el_image__caption">{{ caption }}</p>
-                {{/if}}
-            </picture>
+            {{#if src}}
+            <div class = "isf-el_image js--image isf-el_gallery__item js--gallery__item isf-el_image--{{ type }}" data-x_animate_on_page_enter = "{{ galleryEffectOnPageEnter }}">
+                <div class = "isf-el_image__wrap">
+                    <figure class = "isf-el_image__figure">
+                        <picture class = "isf-el_image__picture">
+                            <source srcset="{{ src }}" media="(min-width: 768px)">
+                            <img class = "isf-el_image__picture" src="{{ src }}" />
+                        </picture>
+                    </figure>
+                    {{#if caption}}
+                        <p class = "isf-el_image__caption">{{ caption }}</p>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+            {{#if bgsrc}}
+            <div class = "isf-el_gallery__item js--gallery__item">
+                <div class = "isf-el_image--bg js--image-bg" style = "background-image: url({{ bgsrc }});">
+                </div>
+            </div>
+            {{/if}}
         {{/each}}
 
     </div>

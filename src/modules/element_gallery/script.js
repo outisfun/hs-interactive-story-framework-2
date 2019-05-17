@@ -44,6 +44,8 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
         itemSelector: '.js--gallery__item'
       });
       break;
+    case 'grid':
+      break;
     case 'horizontal':
       var contentRect = this.DOM.inner.getBoundingClientRect();
       var move = contentRect.width - ww;
@@ -114,7 +116,8 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
   this.preview.el.classList.add("js--gallery__preview");
 
   // build preview image
-  this.preview.image = document.createElement('picture');
+  this.preview.image = document.createElement('div');
+  this.preview.image.classList.add('isf-el_image__wrap');
   this.preview.el.appendChild(this.preview.image);
 
   // build preview nav
@@ -151,6 +154,10 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
 
   // set current
   this.preview.current = 0;
+
+  this.preview.ball = document.createElement('div');
+  this.preview.ball.classList.add('ball');
+  this.preview.el.appendChild(this.preview.ball);
 
   // add preview to gallery
   this.DOM.el.appendChild(this.preview.el);
@@ -199,7 +206,7 @@ ISF_Element_Gallery.prototype.updatePreviewContent = function(trigger) {
   this.preview.el.classList.add('is--transitioning');
   self.preview.image.classList.add('is--hidden');
   setTimeout(function(){
-    self.preview.image.innerHTML = trigger.innerHTML;
+    self.preview.image.innerHTML = trigger.querySelector('.isf-el_image__wrap').innerHTML;
   }, 200);
   setTimeout(function(){
     self.preview.image.classList.remove('is--hidden');
