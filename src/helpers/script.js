@@ -11,6 +11,9 @@
 
     /* require effects */
 
+    // custom scripts
+    require('./custom.js');
+
     var X_AnimateOnPageEnter = require('modules/effect_animate_on_page_enter/script.js');
 
     var interactiveStory;

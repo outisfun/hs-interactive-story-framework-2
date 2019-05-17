@@ -88,32 +88,41 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
       }
     }
 
-    var htmlString = String(htmlFile).replace("<!-- story -->", pageHtml);
-    fs.writeFile("./stories/" + storyFolder + "/dist/" + pageName + ".html", htmlString, function() {
-      console.log(pageName + ".html was built!");
-    });
+
+    this.buildFile('index.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
   }
 
+  /* Build SCSS & JS files */
   var js = '';
   for (var cons in this.constructors) {
     js += this.constructors[cons] + "\r\n"; // add line break
   }
 
-  var jsString = String(jsFile).replace("/* require modules */", js);
-  fs.writeFile("./stories/" + storyFolder + "/build/scripts.js", jsString, function() {
-    console.log("scripts.js was built!");
-  });
-
   var scss = '';
   for (var styl in this.styles) {
     scss += this.styles[styl] + "\r\n"; // add line break
   }
-  var scssString = String(scssFile).replace("/* import styles */", scss);
-  fs.writeFile("./stories/" + storyFolder + "/build/styles.scss", scssString, function() {
-    console.log("styles.scss was built!");
-  });
+
+  this.buildFile('scripts.js', 'build', String(jsFile).replace("/* require modules */", js));
+  this.buildFile('styles.scss', 'build', String(scssFile).replace("/* import styles */", scss));
+
+  // build custom files (only if they don't exist, to avoid rewriting)
+  if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.js')) {
+    this.buildFile('custom.js', 'build', '');
+    console.log('added custom.js');
+  }
+
+  if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.scss')) {
+    this.buildFile('custom.scss', 'build', '');
+    console.log('added custom.scss');
+  }
 };
 
+ISF_StoryBuilder.prototype.buildFile = function(fileName, fileFolder, fileContents){
+  fs.writeFile('./stories/' + storyFolder + '/' + fileFolder + '/' + fileName, fileContents, function() {
+      console.log(storyFolder + ': ' + fileName + ' was built!');
+  });
+};
 
 
 ISF_StoryBuilder.prototype.buildCodeModule = function(targetObj) {
