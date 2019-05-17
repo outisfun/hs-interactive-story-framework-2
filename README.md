@@ -84,7 +84,6 @@ Adding a section looks like this:
 
 ```
 
-
 ### Adding Custom Modules to a Story
 
 Sometimes you would need to add a section or an element that does not exist in the framework. If it doesn't make sense to include it as a module for future use (e.g. it's too custom), run:
@@ -110,6 +109,10 @@ The task creates a folder custom_moduleName in the story folder, and adds an emp
     ]
 }
 ```
+
+### Adding Custom Styles & Scripts
+
+!Important: Add custom code only in custom.js and custom.scss to avoid overwriting when rebuilding story.
 
 
 ## Adding Modules to the Framework

@@ -155,10 +155,6 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
   // set current
   this.preview.current = 0;
 
-  this.preview.ball = document.createElement('div');
-  this.preview.ball.classList.add('ball');
-  this.preview.el.appendChild(this.preview.ball);
-
   // add preview to gallery
   this.DOM.el.appendChild(this.preview.el);
 };

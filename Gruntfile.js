@@ -28,16 +28,28 @@ module.exports = function(grunt) {
           paths: [ './', './src', './stories' ]
         }
       },
+      builder: {
+        files: [{
+          cwd: './',
+          src: './builder/script_build.js',
+          expand: true,
+          rename: function(dest, src) {
+              var newPath = src.replace('_build', '');
+              var customDest = this.cwd + newPath;
+              return customDest;
+          }
+        }]
+      },
       stories: {
         files: [{
-            cwd: './',
-            src: './stories/' + story + '/build/*.js',
-            expand: true,
-            rename: function(dest, src) {
-                var newPath = src.replace('build', 'dist');
-                var customDest = this.cwd + newPath;
-                return customDest;
-            }
+          cwd: './',
+          src: './stories/' + story + '/build/*.js',
+          expand: true,
+          rename: function(dest, src) {
+              var newPath = src.replace('build', 'dist');
+              var customDest = this.cwd + newPath;
+              return customDest;
+          }
         }]
       },
     },
@@ -70,6 +82,15 @@ module.exports = function(grunt) {
         rename: function(dest, src) {
           var newPath = src.replace('build', 'dist');
           var customDest = this.cwd + newPath.replace('scss', 'css');
+          return customDest;
+        }
+      },
+      builder: {
+        cwd: './',
+        src: './builder/style.scss',
+        expand: true,
+        rename: function(dest, src) {
+          var customDest = this.cwd + src.replace('scss', 'css');
           return customDest;
         }
       }
@@ -108,12 +129,12 @@ module.exports = function(grunt) {
 
     watch: {
       sass: {
-        files: ['./stories/**/build/*.scss', './src/scss/style.scss', './src/modules/**/style.scss'],
-        tasks: ['sass:stories']
+        files: ['./stories/**/build/*.scss', './src/scss/style.scss', './src/modules/**/style.scss', './builder/style.scss'],
+        tasks: ['sass:stories', 'sass:builder']
       },
       js: {
-        files: ['./src/*.js', './stories/**/build/*.js' ],
-        tasks: ['browserify:stories']
+        files: ['./src/*.js', './stories/**/build/*.js', './builder/script_build.js' ],
+        tasks: ['browserify:stories', 'browserify:builder']
       },
       // rebuild template after changes in data
       data: {
