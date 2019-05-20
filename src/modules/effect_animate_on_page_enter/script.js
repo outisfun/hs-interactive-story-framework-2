@@ -15,17 +15,17 @@ module.exports = function(el, effectValue, controller) {
   el.style.transitionDelay = Math.random() + "s";
 
   switch (effectValue) { // fade-in, fade-in-random
-    case 'fade-in-random':
-      var xscene = new ScrollMagic.Scene({
-        triggerElement: el,
-        triggerHook: 0.6
+  case 'fade-in-random':
+    var xscene = new ScrollMagic.Scene({
+      triggerElement: el,
+      triggerHook: 0.6
+    })
+      .on('enter', function() {
+        el.classList.add('is--animated');
       })
-        .on('enter', function() {
-          el.classList.add('is--animated');
-        })
-        .addTo(controller);
-      break;
-    default:
-      break;
+      .addTo(controller);
+    break;
+  default:
+    break;
   }
 };

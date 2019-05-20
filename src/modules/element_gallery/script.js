@@ -39,29 +39,29 @@ ISF_Element_Gallery.prototype.init = function() {
 ISF_Element_Gallery.prototype.buildLayout = function() {
 
   switch (this.options.layout) {
-    case 'masonry':
-      this.msnry = new Masonry( this.DOM.inner, {
-        itemSelector: '.js--gallery__item'
-      });
-      break;
-    case 'grid':
-      break;
-    case 'horizontal':
-      var contentRect = this.DOM.inner.getBoundingClientRect();
-      var move = contentRect.width - ww;
-      var wipeOut = new TimelineMax()
-          .to(this.DOM.inner, 4, {x: -move});
+  case 'masonry':
+    this.msnry = new Masonry( this.DOM.inner, {
+      itemSelector: '.js--gallery__item'
+    });
+    break;
+  case 'grid':
+    break;
+  case 'horizontal':
+    var contentRect = this.DOM.inner.getBoundingClientRect();
+    var move = contentRect.width - ww;
+    var wipeOut = new TimelineMax()
+      .to(this.DOM.inner, 4, {x: -move});
 
-      this.scene = new ScrollMagic.Scene({
-          triggerElement: this.DOM.el,
-          triggerHook: 0,
-          duration: contentRect.width - 2*contentRect.left
-      })
-          .setPin(this.DOM.el)
-          .addTo(this.controller);
-      break;
-    default:
-      break;
+    this.scene = new ScrollMagic.Scene({
+      triggerElement: this.DOM.el,
+      triggerHook: 0,
+      duration: contentRect.width - 2*contentRect.left
+    })
+      .setPin(this.DOM.el)
+      .addTo(this.controller);
+    break;
+  default:
+    break;
   }
 };
 
@@ -96,10 +96,9 @@ ISF_Element_Gallery.prototype.initPreviewEvents = function() {
       if (self.customFunctionOnTriggerClick !== undefined) {
         self.customFunctionOnTriggerClick();
       } else {
-        self.preview.indicators[self.preview.current].classList.remove('is--current');
-        self.preview.current = ind;
-        self.preview.indicators[ind].classList.add('is--current');
-        self.openPreview( item );
+        if (self.updatePreviewIndex( ind)) {
+          self.openPreview( item );
+        }
       }
     });
   });
@@ -217,13 +216,13 @@ ISF_Element_Gallery.prototype.closePreview = function() {
 };
 
 var toggleScroll = function(action) {
-    if(action === 'disable') {
-        document.querySelector('body').classList.add('no-scroll');
-        document.querySelector('html').classList.add('no-scroll');
-    } else if(action === 'enable') {
-        document.querySelector('body').classList.remove('no-scroll');
-        document.querySelector('html').classList.remove('no-scroll');
-    }
+  if(action === 'disable') {
+    document.querySelector('body').classList.add('no-scroll');
+    document.querySelector('html').classList.add('no-scroll');
+  } else if(action === 'enable') {
+    document.querySelector('body').classList.remove('no-scroll');
+    document.querySelector('html').classList.remove('no-scroll');
+  }
 };
 
 module.exports = ISF_Element_Gallery;
