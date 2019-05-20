@@ -1,0 +1,32 @@
+{
+    "ELEMENTS": {
+        "GALLERY": {
+            "CLASSES": {
+                "EL": "js--gallery",
+                "INNER": "js--gallery__inner",
+                "ITEM": "js--gallery__item"
+            },
+            "CONSTRUCTOR": "ISF_Element_Gallery",
+            "DATA": {
+                "galleryLayout": {
+                    "typeof": "valueSelector",
+                    "values": [
+                        "masonry",
+                        "grid",
+                        "preview"
+                    ]
+                },
+                "galleryPreview": {
+                    "typeof": "boolean"
+                },
+                "galleryImages": {
+                    "typeof": "arrayOfObjects",
+                    "objectProperties": {
+                        "img": "string",
+                        "src": "string"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+---
+# HSNBISF Framework Data #######################################################
+################################################################################
+
+ELEMENTS :
+  
+  # ISF_Element_Gallery
+  GALLERY : 
+    CLASSES :
+      EL : js--gallery
+      INNER : js--gallery__inner
+      ITEM : js--gallery__item
+    CONSTRUCTOR : ISF_Element_Gallery
+    DATA : 
+      galleryLayout : 
+        typeof: valueSelector # is a string
+        values: 
+          - masonry
+          - grid
+          - preview
+      galleryPreview : 
+        typeof: boolean
+      galleryImages : 
+        typeof: arrayOfObjects
+        objectProperties: 
+          img : string
+          src : string

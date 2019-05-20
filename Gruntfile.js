@@ -127,6 +127,24 @@ module.exports = function(grunt) {
       story: ['./build-files.js', '.src/frameworkdata.js', './src/modules/**/script.js']
     },
 
+    yaml: {
+      builder: {
+        options: {
+          ignored: /^_/,
+          space: 4
+        },
+        files: [
+          {
+            expand: true,
+            src: ['./src/*.yml'],
+            rename: function(dest, src) {
+              return src.replace('yml', 'json');
+            }
+          }
+        ]
+      },
+    },
+
     watch: {
       sass: {
         files: ['./stories/**/build/*.scss', './src/scss/style.scss', './src/modules/**/style.scss', './builder/style.scss'],
@@ -164,6 +182,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-yaml');
 
   grunt.registerTask('lintall', ['eslint']);
 
