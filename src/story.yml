@@ -10,9 +10,7 @@ index :
     layoutData : 
       container : container
       colorScheme : dark
-      lovers : [
-        {'img': 'test', 'src': 'what'}
-      ]
+      lovers : 
     layoutContent : 
 
 

@@ -163,6 +163,10 @@ module.exports = function(grunt) {
       hbs: {
         files: ['./src/modules/**/template.hbs', './stories/**/**/template.hbs'],
         tasks: ['handlebars', 'shell:buildStory:' + story]
+      },
+      yml: {
+        files: ['./src/*.yml', './src/*.yaml'],
+        tasks: ['yaml']
       }
     },
 

@@ -9,50 +9,157 @@
 // ---- init layout content
 
 const yaml = require('js-yaml');
-var fs = require('fs');
+var fs = require('browserify-fs');
 var resolve = require('resolve');
 
+YAML = require('yamljs');
 
-function processFile() {
-    console.log(content);
-}
+// parse frameworkdata as js and require it.
+var FD = YAML.load('../src/fd.yml');
+
+
+
+// parse YAML string
+// nativeObject = YAML.parse(yamlString);
+
+// // Generate YAML
+// yamlString = YAML.stringify(nativeObject, 4);
+
+// Load yaml file using YAML.load
+var nativeObject = YAML.load('../src/fd.yml');
+console.log(nativeObject.ELEMENTS);
+
+var test = YAML.stringify({'index':'hotspot', 'retro': ['test', 'onetwomany']});
+console.log(test);
+
+// fs.mkdir('/temp', function() {
+//   fs.writeFile('/temp/temp.yml', 'Hello world!\n', function() {
+//     fs.readFile('/temp/temp.yml', 'utf-8', function(err, data) {
+//       console.log(data);
+//       document.querySelector('#links').href = '/temp/temp.yml';
+//     });
+//   });
+// });
 
 ( function(window) {
 
   'use strict';
 
   var _ = require('lodash');
-  var FRAMEWORKDATA = require('frameworkdata.js');
 
   function ISFLayoutManager(el) {
 
     this.DOM = {el: el};
-    this.DOM.layoutsContainer = this.DOM.el.querySelector('.isf-builder__layouts');
-    this.DOM.layouts = [];
+    this.DOM.layoutConstructors = this.DOM.el.querySelector('.isf-builder__layouts');
+    this.layoutConstructors = [];
 
-    this.layouts = _.pickBy(FRAMEWORKDATA.MODULES, function(value, key) {
-      return _.includes(key, 'layout_');
-    });
+    // an object to store modules added to the story
+    this.DOM.story = {};
+    this.DOM.story.layouts = [];
 
     var self = this;
 
-    _.forOwn(this.layouts, function(value, key) {
-      var l = buildEl('isf-lm__layout', key.replace('layout_', ''), '<h6>' + key.replace('layout_', '') + '</h6>');
-      //console.log(layer);
-      console.log(value);
-      self.DOM.layouts.push(l);
-      self.DOM.layoutsContainer.appendChild(l);
+    // build layout buttons
+    _.forOwn(FD.LAYOUTS, function(layout, key) {
+
+      var lc = new ISFLayoutConstructor(key);
+
+      self.layoutConstructors.push(lc);
+      self.DOM.layoutConstructors.appendChild(lc.DOM.el);
+
+      lc.DOM.el.addEventListener('click', function(e) {
+
+        lc.initLayout('test_id');
+
+        console.log(YAML.stringify(data));
+      });
+    });
+  }
+
+  ISFLayoutManager.prototype.add = function(layoutId, layoutType) {
+    //
+    var _FDLayoutData = FD.LAYOUTS[layoutType].DATA;
+    var layoutData = {};
+    var yml = '';
+
+    // Iterate over available layouts and build setup elements
+    _.forOwn(_FDLayoutData, function(prop, key) {
+       // is type correct?
+      if (typeof layoutData[key] !== _FDLayoutData[key].DATA_TYPEOF && layoutData[key] !== undefined) {
+        logError('In ' + _FDLayoutType + ' ' + key + ' should be ' + _FDLayout.DATA[key].DATA_TYPEOF + ' and not ' + typeof layout.layoutData[key]);
+      }
+      // check values for the property
+      if (_.get(_FDLayout.DATA[key], 'DATA_VALUES', undefined)) {
+
+        // manager values differently depending on TYPEOF
+        switch (_FDLayoutData[key].DATA_TYPEOF) {
+          case 'string':
+            if (!_.includes(_FDLayoutData[key].DATA_VALUES, layoutData[key]) || _.includes(_FDLayoutData[key].DATA_VALUES, undefined)) {
+              logError(key + ' should be one of those: ' + _FDLayoutData[key].DATA_VALUES);
+            }
+            break;
+          case 'boolean':
+            break;
+          case 'objectsArray':
+            // check if the structure of the object matches the one in the json file
+            // compare keys
+            var _propertyKeys = _.keys(_FDLayoutData[key].DATA_VALUES);
+            var propertyKeys = _.keys(layoutData[key][0]);
+            if (_.isEqual(propertyKeys, _propertyKeys)) {
+
+            }
+            break;
+          default:
+            break;
+        }
+      }
+
     });
 
+    return yml;
+  };
+
+  ISFLayoutManager.prototype.buildModuleYAML = function(moduleId, moduleType, moduleData) {
+
+  };
+
+  function ISFLayoutConstructor(layoutType) {
+
+    this.layoutType = layoutType;
+    this.layoutData = _.get(FD.LAYOUTS[layoutType], 'DATA', undefined);
+
+    var markup = buildEl( layoutType, '<h6>' + layoutType + '</h6>', ['isf-layout_constructor'] );
+    this.DOM = {el: markup};
+
+    this.init();
   }
+
+  ISFLayoutConstructor.prototype.init = function() {
+    // add event listeners;
+    this.DOM.el.addEventListener('click', function() {
+
+    });
+  };
+
+  ISFLayoutConstructor.prototype.initLayout = function( layoutId ) {
+
+    // build layout markup
+    this.initLayoutMarkup();
+  };
+
+  ISFLayoutConstructor.prototype.initLayoutMarkup = function() {
+    // build layout markup -> add later
+  };
 
   var lm = new ISFLayoutManager(document.querySelector('.isf-builder--section'));
 
-  function buildEl(typeClass, elId, markup) {
+  function buildEl(type, markup, classlist) {
     var el = document.createElement('button');
     el.innerHTML = markup;
-    el.classList.add(typeClass);
-    el.dataset.layout = elId;
+    el.dataset.layout = type;
+    _.forEach(classlist, function(clss, ind) {
+      el.classList.add(clss);
+    });
     return el;
   }
 

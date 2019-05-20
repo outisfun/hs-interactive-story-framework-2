@@ -1,0 +1,13 @@
+{
+    "index": {
+        "ellesse_intro": {
+            "layoutType": "simple",
+            "layoutData": {
+                "container": "container",
+                "colorScheme": "dark",
+                "lovers": null
+            },
+            "layoutContent": null
+        }
+    }
+}
