@@ -2,8 +2,15 @@
 # HSNBISF Framework Data #######################################################
 ################################################################################
 
+# DATA : 
+#   id :  string | boolean | objectsArray
+#     DATA_TYPEOF : string | boolean | objectsArray | array
+#     DATA_VALUES : [ array ]    // if data values is not specified, all values are accepted
+#     DATA_VALUES - process differently depending on data_typeof
+# 
+
 ELEMENTS :
-  
+
   # ISF_Element_Gallery
   GALLERY : 
     CLASSES :
@@ -12,16 +19,48 @@ ELEMENTS :
       ITEM : js--gallery__item
     CONSTRUCTOR : ISF_Element_Gallery
     DATA : 
+      # for each data, we provide 2 specs: data type and data values
       galleryLayout : 
-        typeof: valueSelector # is a string
-        values: 
+        DATA_TYPEOF : string 
+        DATA_VALUES : # if data values is not specified, like for example in element text, then that's fine
           - masonry
           - grid
           - preview
+        DATA_USAGE: # add data usage specs
+
       galleryPreview : 
-        typeof: boolean
+        DATA_TYPEOF : boolean
+
       galleryImages : 
-        typeof: arrayOfObjects
-        objectProperties: 
+        DATA_TYPEOF : objectsArray
+        DATA_VALUES :
+          img : string
+          src : string
+
+
+LAYOUTS : 
+
+  # ISF_Layout_Simple
+  SIMPLE : 
+    CLASSES :
+      EL : js--layout_simple
+      CONTENT : js--content
+    DATA : 
+      # for each data, we provide 2 specs: data type and data values
+      colorScheme : 
+        DATA_TYPEOF : string 
+        DATA_VALUES : # if data values is not specified, like for example in element text, then that's fine
+          - dark
+          - null
+
+      container : 
+        DATA_TYPEOF : string
+        DATA_VALUES :
+          - container
+          - container-fluid
+
+      lovers :
+        DATA_TYPEOF : objectsArray
+        DATA_VALUES :
           img : string
           src : string

@@ -1,0 +1,18 @@
+---
+# HSNBISF Sample story #######################################################
+################################################################################
+
+# index.html
+
+index : 
+  ellesse_intro : 
+    layoutType : simple
+    layoutData : 
+      container : container
+      colorScheme : dark
+      lovers : [
+        {'img': 'test', 'src': 'what'}
+      ]
+    layoutContent : 
+
+
