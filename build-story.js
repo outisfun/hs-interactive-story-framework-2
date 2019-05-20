@@ -23,7 +23,6 @@ function ISF_StoryBuilder(){
   // store scss imports & require modules
   this.constructors = {};
   this.styles = {};
-  //this.buildFolders();
   this.buildFiles();
 }
 

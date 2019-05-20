@@ -43,27 +43,27 @@
                         "galleryImages": [
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg", 
-                                "caption": "Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear." 
+                                "caption": "Ski Jacket (1970s): ellesse defied convention with a fashion-forward, oversized, and less streamlined fit." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg", 
-                                "caption": "Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding." 
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with Italian flag colors. White Sneaker (SS19): Inspired by 80s running silhouettes with original rubberized logos." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse10.jpg", 
-                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors." 
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became an iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe. T-Shirt (1980s): Another tailoring inspired design with original embroidered badging and pinstripes ellesse colors." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse2.jpg", 
-                                "caption": "T-Shirt (SS19): Tennis tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, and dual branding reference ellesse heritage pieces. Ski Trousers (1960s): ellesse’s first product featuring the original penguin logo, quilted knees, and jet stripe. " 
+                                "caption": "T-Shirt (SS19): Tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, & dual branding reference ellesse heritage pieces. Ski Trousers (1960s): The first product to feature the penguin logo, quilted knees, and jet stripe." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg", 
-                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes down the leg. We see these colors used on the new SS19 range. Tracksuit Pants (SS19): Shellpants reminiscent of the brand’s iconic 80s tracksuits." 
+                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes. Tracksuit Pants (SS19): Shell pants reminiscent of ellese’s iconic 80s tracksuits." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg", 
-                                "caption": "Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper." 
+                                "caption": "Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg", 
@@ -71,15 +71,15 @@
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse9.jpg", 
-                                "caption": "Downhill Racing Ski Suit (1980s): This archival piece features protective padded knee guards adorned with the semi palla logo and color panels that tailored to fit the wearer's form." 
+                                "caption": "Downhill Racing Ski Suit (1980s): Featuring protective padded knee guards adorned with the semi palla logo and color panels that tailor to the wearer's form." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg", 
-                                "caption": "Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper. Tennis Jacket (1980s): A white jacket with color pops on the sleeves and the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the dual-branded yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name is printed on the back of the neck." 
+                                "caption": "Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper. Tennis Jacket (1980s): A white jacket with the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name features on the back of the neck.."
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg", 
-                                "caption": "Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s." 
+                                "caption": "Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe." 
                             }
                         ]
                     }
@@ -90,14 +90,15 @@
 
             "layoutType": "simple",
             "layoutData": {
-                "colorScheme": "dark"
+                "colorScheme": "dark",
+                "container": "container"
             },
             "layoutContent": {
                 "ellesse__liamhodges__text": {
                     "elementType": "text",
                     "elementData": {
                         "headline": "A meeting of styles",
-                        "paragraph": "ellesse was a pioneer in bringing tailoring techniques to the design and manufacturing of sportswear. Yet, six decades on, these two styles of apparel still appear antithetical to some. In this video interview, stylist and artist Ayishat Akanbi breaks down the stylistic, technical, and cultural crossover between tailoring and sportswear."
+                        "paragraph": "ellesse was a pioneer in bringing tailoring techniques to the design and manufacturing of sportswear. Yet, six decades on, these two styles of apparel still appear antithetical to some. In this video interview, stylist and writer Ayishat Akanbi breaks down the stylistic, technical, and cultural crossover between tailoring and sportswear."
                     }
                 },
                 "ellesse__liamhodges__video": {
@@ -110,8 +111,7 @@
                 "ellesse__liamhodges__quote": {
                     "elementType": "quote",
                     "elementData": {
-                        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                        "source": "Liam Hodges"
+                        "quote": "The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. No longer are you restricted to having to stick to tailoring or to stick to sportswear."
                     }
                 }
             }
@@ -122,7 +122,7 @@
             "layoutData": {
                 "colorScheme": "dark",
                 "chapterStyle": "ellie",
-                "chapterBackground": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_chapter.jpg",
+                "chapterBackground": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/liamhodges.jpg",
                 "chapterTitle": "A Conversation With ellesse Collaborator Liam Hodges"
             },
             "layoutContent": {
@@ -148,7 +148,7 @@
                 "ellesse__liamhodges__quote": {
                     "elementType": "quote",
                     "elementData": {
-                        "quote": "“I think, nowadays, there’s much more value in relevance and knowledge.”",
+                        "quote": "I think, nowadays, there’s much more value in relevance and knowledge.",
                         "source": "Liam Hodges"
                     }
                 },
@@ -184,7 +184,7 @@
                 "ellesse__liamhodges__quote2": {
                     "elementType": "quote",
                     "elementData": {
-                        "quote": "“I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, and even sold was very interesting.”",
+                        "quote": "I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, and even sold was very interesting.",
                         "source": "Liam Hodges"
                     }
                 },
