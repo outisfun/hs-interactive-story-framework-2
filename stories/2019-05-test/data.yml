@@ -1,0 +1,18 @@
+index:
+  ellesse_intro: !!map
+    layoutStyle : chapter
+    layoutData : 
+      colorScheme : dark
+      chapterStyle : ralph-lauren
+      chapterBackground : https://interactive-development.hsnb.io/2019-04-ellesse/assets/Scan.jpg
+      chapterTitle : ellesse - then and now
+    layoutContent : 
+      ellesse_intro__text : 
+       elementType : text
+       elementData : 
+        paragraph : ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, 
+                    Italy. Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. —  
+                    was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                    Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. 
+                    With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                    sportswear and, with that, ellesse was born.
