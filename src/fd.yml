@@ -87,7 +87,7 @@ LAYOUTS :
           MANDATORY : true
 
       chapterBackground : 
-        DATA_TYPEOF : string
+        DATA_TYPEOF : imgsrc
         MANDATORY : true
 
       chapterTitle : 

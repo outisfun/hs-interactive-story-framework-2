@@ -10,6 +10,7 @@
     "browsernizr": "^2.3.0",
     "charming": "^2.2.4",
     "compass": "^0.1.1",
+    "forms": "^1.3.1",
     "fs": "0.0.1-security",
     "gsap": "^2.0.2",
     "hammerjs": "^2.0.8",

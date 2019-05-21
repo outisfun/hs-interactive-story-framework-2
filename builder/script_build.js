@@ -1,65 +1,37 @@
-
-
-// logic:
-// init layout manager on build layout area
-// on click
-// -- open layout types -> click
-// -- init layout builder
-// ---- init layout options
-// ---- init layout content
-
-const yaml = require('js-yaml');
-var fs = require('browserify-fs');
-var resolve = require('resolve');
-
-YAML = require('yamljs');
+var yaml = require('js-yaml');
+var AML = require('yamljs');
+var _ = require('lodash');
 
 // parse frameworkdata as js and require it.
 var FD = YAML.load('../src/fd.yml');
 
+var TEMPLATES = require('../src/templates.js'); // reconsider namespace?
 
-
-// parse YAML string
-// nativeObject = YAML.parse(yamlString);
-
-// // Generate YAML
-// yamlString = YAML.stringify(nativeObject, 4);
-
-// Load yaml file using YAML.load
-var nativeObject = YAML.load('../src/fd.yml');
-console.log(nativeObject.ELEMENTS);
-
-var test = YAML.stringify({'index':'hotspot', 'retro': ['test', 'onetwomany']});
-console.log(test);
-
-// fs.mkdir('/temp', function() {
-//   fs.writeFile('/temp/temp.yml', 'Hello world!\n', function() {
-//     fs.readFile('/temp/temp.yml', 'utf-8', function(err, data) {
-//       console.log(data);
-//       document.querySelector('#links').href = '/temp/temp.yml';
-//     });
-//   });
-// });
+var forms = require('forms');
+var fields = forms.fields;
+var validators = forms.validators;
 
 ( function(window) {
 
   'use strict';
 
-  var _ = require('lodash');
-
   function ISFLayoutManager(el) {
 
     this.DOM = {el: el};
-    this.DOM.layoutConstructors = this.DOM.el.querySelector('.isf-builder__layouts');
-    this.layoutConstructors = [];
+    this.DOM.dashboard = this.DOM.el.querySelector('.isf-builder__dashboard');
+    this.DOM.layoutConstructors = this.DOM.el.querySelector('.isf-builder__dashboard__layout-constructors');
+    this.DOM.preview = this.DOM.el.querySelector('.isf-builder__preview');
 
     // an object to store modules added to the story
     this.DOM.story = {};
     this.DOM.story.layouts = [];
 
+    this.layoutConstructors = [];
+    this.layouts = [];
+
     var self = this;
 
-    // build layout buttons
+    // Iterate over Framework layouts and add triggers for each type
     _.forOwn(FD.LAYOUTS, function(layout, key) {
 
       var lc = new ISFLayoutConstructor(key);
@@ -67,88 +39,115 @@ console.log(test);
       self.layoutConstructors.push(lc);
       self.DOM.layoutConstructors.appendChild(lc.DOM.el);
 
+      // manage layout constructor events through layout manager
       lc.DOM.el.addEventListener('click', function(e) {
-
-        lc.initLayout('test_id');
-
-        console.log(YAML.stringify(data));
+        var l = lc.initLayout('test_id');
+        self.DOM.preview.appendChild(l.DOM.el);
+        self.DOM.story.layouts.push(l);
       });
     });
   }
 
-  ISFLayoutManager.prototype.add = function(layoutId, layoutType) {
-    //
-    var _FDLayoutData = FD.LAYOUTS[layoutType].DATA;
-    var layoutData = {};
-    var yml = '';
-
-    // Iterate over available layouts and build setup elements
-    _.forOwn(_FDLayoutData, function(prop, key) {
-       // is type correct?
-      if (typeof layoutData[key] !== _FDLayoutData[key].DATA_TYPEOF && layoutData[key] !== undefined) {
-        logError('In ' + _FDLayoutType + ' ' + key + ' should be ' + _FDLayout.DATA[key].DATA_TYPEOF + ' and not ' + typeof layout.layoutData[key]);
-      }
-      // check values for the property
-      if (_.get(_FDLayout.DATA[key], 'DATA_VALUES', undefined)) {
-
-        // manager values differently depending on TYPEOF
-        switch (_FDLayoutData[key].DATA_TYPEOF) {
-          case 'string':
-            if (!_.includes(_FDLayoutData[key].DATA_VALUES, layoutData[key]) || _.includes(_FDLayoutData[key].DATA_VALUES, undefined)) {
-              logError(key + ' should be one of those: ' + _FDLayoutData[key].DATA_VALUES);
-            }
-            break;
-          case 'boolean':
-            break;
-          case 'objectsArray':
-            // check if the structure of the object matches the one in the json file
-            // compare keys
-            var _propertyKeys = _.keys(_FDLayoutData[key].DATA_VALUES);
-            var propertyKeys = _.keys(layoutData[key][0]);
-            if (_.isEqual(propertyKeys, _propertyKeys)) {
-
-            }
-            break;
-          default:
-            break;
-        }
-      }
-
-    });
-
-    return yml;
-  };
-
-  ISFLayoutManager.prototype.buildModuleYAML = function(moduleId, moduleType, moduleData) {
-
-  };
-
   function ISFLayoutConstructor(layoutType) {
-
-    this.layoutType = layoutType;
-    this.layoutData = _.get(FD.LAYOUTS[layoutType], 'DATA', undefined);
 
     var markup = buildEl( layoutType, '<h6>' + layoutType + '</h6>', ['isf-layout_constructor'] );
     this.DOM = {el: markup};
 
-    this.init();
+    this.layoutType = layoutType;
+
+    var _fdLayoutData = _.get(FD.LAYOUTS[layoutType], 'DATA', undefined);
+    this._fdLayoutData = _fdLayoutData;
+
+    var self = this;
+
+    // add sample content based on property types
+    // _.forOwn(FD.LAYOUTS[layoutType].DATA, function(property, key) {
+
+    //   // assign sample content
+    //   switch (property.DATA_TYPEOF) {
+    //     case 'string':
+    //       self.layoutData[key] = 'The sorrows of pain and regret are left to the dead and the dying.';
+    //       break;
+    //     case 'imgsrc':
+    //       self.layoutData[key] = 'http://placehold.it/1600x800';
+    //       break;
+    //     case 'boolean':
+    //       self.layoutData[key] = false;
+    //       break;
+    //     default:
+    //       break;
+    //   }
+    // });
   }
 
-  ISFLayoutConstructor.prototype.init = function() {
-    // add event listeners;
-    this.DOM.el.addEventListener('click', function() {
+  ISFLayoutConstructor.prototype.initLayout = function(layoutId) {
+    //this.revealOptions();
+    return new ISFLayout(this.layoutType, this._fdLayoutData);
+  };
 
+  ISFLayoutConstructor.revealOptions = function() {
+
+  };
+
+  function ISFLayout(layoutType, _fdData) {
+
+    this.DOM = {};
+    this.DOM.el = document.createElement('div');
+
+    this.layoutData = {};
+    this.layoutControls = {};
+    var self = this;
+    // add sample content based on property types
+    _.forOwn( _fdData, function(property, key) {
+
+      var layoutControlsObj = {};
+      // assign sample content
+      switch (property.DATA_TYPEOF) {
+        case 'string':
+          self.layoutData[key] = 'The sorrows of pain and regret are left to the dead and the dying.';
+          break;
+        case 'imgsrc':
+          self.layoutData[key] = 'http://placehold.it/1600x800';
+          break;
+        case 'boolean':
+          self.layoutData[key] = false;
+          break;
+        default:
+          break;
+      }
+      // build controls
+      self.layoutControls[key] = self.buildControls(property.DATA_TYPEOF);
     });
-  };
 
-  ISFLayoutConstructor.prototype.initLayout = function( layoutId ) {
+    var layoutMarkup = TEMPLATES['layout_' + _.lowerCase(layoutType)]( this.layoutData );
+    this.DOM.el.innerHTML = layoutMarkup;
+    //this.id = id;
 
-    // build layout markup
-    this.initLayoutMarkup();
-  };
+    // init options
+    //this.layoutData = layoutData;
+    // this.layoutControls = {};
 
-  ISFLayoutConstructor.prototype.initLayoutMarkup = function() {
-    // build layout markup -> add later
+    // iterate over props and construct options
+    var layoutControlsEl = document.createElement('div');
+    // generate controls for each property
+    _.forOwn(this.layoutData, function(property, key) {
+      self.layoutControls[key] = document.createElement('button');
+      layoutControlsEl.appendChild( self.layoutControls[key] );
+    });
+    this.DOM.el.appendChild(layoutControlsEl);
+  }
+
+  ISFLayout.prototype.buildControls = function( controlId, controlOptions ){
+    var reg_form = forms.create({
+        username: fields.string({ required: true }),
+        password: fields.password({ required: validators.required('You definitely want a password') }),
+        confirm:  fields.password({
+            required: validators.required('don\'t you know your own password?'),
+            validators: [validators.matchField('password')]
+        }),
+        email: fields.email()
+    });
+    console.log( reg_form.toHTML() );
   };
 
   var lm = new ISFLayoutManager(document.querySelector('.isf-builder--section'));
