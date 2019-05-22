@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     browserify: {
       options: {
         browserifyOptions: {
-          paths: [ './', './src', './stories' ]
+          paths: [ './', './src', './stories', './src/modules/layouts', './src/modules/elements' ]
         }
       },
       builder: {
@@ -66,14 +66,14 @@ module.exports = function(grunt) {
           node: true
         },
         files: {
-          'src/templates.js': ['./src/modules/**/*.hbs', './stories/**/**/template.hbs'],
+          'src/templates.js': ['./src/modules/layouts/**/*.hbs', './src/modules/elements/**/*.hbs', './stories/**/*.hbs'],
         }
       }
     },
 
     sass: {
       options: {
-        loadPath: ['./src/scss', './src/modules/', './stories/']
+        loadPath: ['./src/scss', './src/modules', './src/modules/elements', './src/modules/layouts', './stories/']
       },
       stories: {
         cwd: './',
@@ -127,6 +127,24 @@ module.exports = function(grunt) {
       story: ['./build-files.js', '.src/frameworkdata.js', './src/modules/**/script.js']
     },
 
+    yaml: {
+      builder: {
+        options: {
+          ignored: /^_/,
+          space: 4
+        },
+        files: [
+          {
+            expand: true,
+            src: ['./src/*.yml'],
+            rename: function(dest, src) {
+              return src.replace('yml', 'json');
+            }
+          }
+        ]
+      },
+    },
+
     watch: {
       sass: {
         files: ['./stories/**/build/*.scss', './src/scss/style.scss', './src/modules/**/style.scss', './builder/style.scss'],
@@ -145,6 +163,10 @@ module.exports = function(grunt) {
       hbs: {
         files: ['./src/modules/**/template.hbs', './stories/**/**/template.hbs'],
         tasks: ['handlebars', 'shell:buildStory:' + story]
+      },
+      yml: {
+        files: ['./src/*.yml', './stories/**/*.yml', './src/*.yaml'],
+        tasks: ['shell:buildStory:' + story]
       }
     },
 
@@ -164,6 +186,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-yaml');
 
   grunt.registerTask('lintall', ['eslint']);
 

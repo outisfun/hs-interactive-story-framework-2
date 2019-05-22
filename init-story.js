@@ -7,9 +7,9 @@ var mkdirp = require('mkdirp');
 // build main folder
 mkdirp('./stories/' + storyFolder, function (err) {
   // add json file
-  if (!fs.existsSync('./stories/' + storyFolder +'/data.json')) {
-    fs.writeFile('./stories/' + storyFolder +'/data.json', '', function() {
-      console.log('All good. Now add content to the data.json file and build story!');
+  if (!fs.existsSync('./stories/' + storyFolder +'/data.yml')) {
+    fs.writeFile('./stories/' + storyFolder +'/data.yml', '', function() {
+      console.log('All good. Now add content to the data.yml file and build story!');
     });
   }
 });

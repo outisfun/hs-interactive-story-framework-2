@@ -1,0 +1,362 @@
+---
+# HSNBISF: 2019 05 ELLESSE #######################################################
+
+index :
+
+  # LAYOUT INTRO
+  ellesse__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
+                      Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
+                      was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                      Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                      sportswear and, with that, ellesse was born.
+
+  # LAYOUT ARCHIVE
+  ellesse__archive: 
+    layoutType: CHAPTER
+    layoutData:
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Scan.jpg
+      chapterTitle: 'ellesse: Then & Now'
+    layoutContent: 
+      # Intro text
+      ellesse__archive__text:
+        elementType: text
+        elementData: 
+          highlight:  'In the beginning, ellesse made apparel for two quintessentially Italian sports: 
+                      skiing and tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant 
+                      which was included at a celebration of Italian design at the Pompidou Centre in 1979.'
+
+          paragraph:  'Fast forward 60 years, however, and while tennis and ski live on in ellesse’s designs 
+                      and logo, the label is as much a fashion brand as it is a sporting one. Here’s a look 
+                      back at some of ellesse’s most memorable designs and how they continue to influence 
+                      today’s collections.'
+      # Archive Gallery
+      test__intro__gallery:
+        elementType: GALLERY
+        elementData: 
+          galleryLayout: masonry
+          galleryPreview: true
+          galleryImages: 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg
+              caption: 'Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear.' 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg
+              caption: 'Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding.'
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse10.jpg
+              caption: 'Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors.' 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse2.jpg
+              caption: 'Shirt (SS19): Tennis tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, and dual branding reference ellesse heritage pieces. Ski Trousers (1960s): ellesse’s first product featuring the original penguin logo, quilted knees, and jet stripe.'          
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg
+              caption: 'Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes down the leg. We see these colors used on the new SS19 range. Tracksuit Pants (SS19): Shellpants reminiscent of the brand’s iconic 80s tracksuits.'                  
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg
+              caption: 'Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper.'          
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg
+              caption: 'Tracktop (SS19): Reflective and with dual branding like the ski jacket it’s alongside. Ski Jacket: This archival piece features quilting and an embroider-applied logo, such ideas came from founder Leonardo Servadio’s tailoring background.'  
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse9.jpg
+              caption: "Downhill Racing Ski Suit (1980s): This archival piece features protective padded knee guards adorned with the semi palla logo and color panels that tailored to fit the wearer's form."   
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg  
+              caption: 'Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper. Tennis Jacket (1980s): A white jacket with color pops on the sleeves and the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the dual-branded yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name is printed on the back of the neck.'  
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg
+              caption: 'Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s.'          
+
+  # LAYOUT VIDEO
+  ellesse__video: 
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+    layoutContent: 
+      # Intro
+      ellesse__video__text:
+        elementType: text
+        elementData: 
+          headline:  A meeting of styles
+          paragraph:  'ellesse was a pioneer in bringing tailoring techniques to the design and manufacturing of sportswear. 
+                      Yet, six decades on, these two styles of apparel still appear antithetical to some. In this video interview, 
+                      stylist and artist Ayishat Akanbi breaks down the stylistic, technical, and cultural crossover between 
+                      tailoring and sportswear.'
+      # Video
+      ellesse__video__video:
+        elementType: video
+        elementData: 
+          videoId:  M7KADWuo
+          playerId: bUaBxxgc
+      # Quote
+      ellesse__video__quote:
+        elementType: quote
+        elementData: 
+          quote:  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                  consequat.
+          source: Ayishat Akanbi
+
+  # LAYOUT LIAM HODGES
+  ellesse__liamhodges: 
+    layoutType: CHAPTER
+    layoutData:
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_chapter.jpg
+      chapterTitle: A Conversation With ellesse Collaborator Liam Hodges
+    layoutContent: 
+      # Intro
+      ellesse__liamhodges__intro:
+        elementType: text
+        elementData: 
+          paragraph:  ellesse has teamed up with rapidly rising British fashion designer Liam Hodges on an archive-inspired 
+                      Fall/Winter 2019 collection. To find out more, we visited Hodges for a conversation at his East London studio to 
+                      iscuss ellesse’s rich history and how it’s inspired their partnership.
+      # LH Portrait
+      ellesse__liamhodges__portrait:
+        elementType: image
+        elementData: 
+          src_small: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lhportrait.jpg
+          src_large: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lhportrait.jpg
+
+      # LH Unconventional
+      ellesse__liamhodges__unconventional:
+        elementType: text
+        elementData: 
+          paragraph: "It’s been said before but it can’t be understated: Liam Hodges is not a conventional fashion designer.<br><br>
+                    Always plain-spoken and never pretentious, he’s frank from the minute we meet, “I was really hungover this morning. 
+                    We’ve just been dicking around today really.” After spending the previous evening in a London pub — a somewhat second 
+                    home for Hodges having worked in one up until just a couple of years ago — it had been a somewhat slow start to the day. 
+                    Now the afternoon, we were meeting to discuss his new collaboration with ellesse that was first teased back in January 
+                    during his London Fashion Week Men’s Fall/Winter 2019 show."
+
+      # Quote
+      ellesse__liamhodges__quote:
+        elementType: quote
+        elementData: 
+          quote:  I think, nowadays, there’s much more value in relevance and knowledge.
+          source: Liam Hodges
+
+      # LH Studio Space
+      ellesse__liamhodges__studiospace:
+        elementType: text
+        elementData: 
+          paragraph: "Hodges and his team work from a studio space in Newham, East London, and despite a penchant for mischief and play, 
+                      together they’ve helped grow the Liam Hodges brand exponentially over the last five years. Still in its youth, 
+                      the brand evolves each season, but every collection aims to redefine the meaning of aspirational with positive, 
+                      forward-looking statements inspired by Hodges’ ceaseless curiosity towards music, film, and books. “There’s this 
+                      old, archaic version of aspirational, the early 2000s version of cars and money and stuff like that,” he explains. 
+                      “And I think, nowadays, there’s much more value in relevance and knowledge.” The Liam Hodges mission statement has 
+                      led its namesake designer to turn some aspects of running a fashion business on their head. In the past, Hodges 
+                      has created zines rather than putting out traditional advertising and partnered with avante-garde music artists 
+                      such as GAIKA to soundtrack his shows. In doing so, he’s attracted the attention of Drake and Stormzy, amongst 
+                      others, but in truth, Hodges admits to just designing clothes that his mates would wear."
+
+      # Image Group : Red thing
+      ellesse__liamhodges__redthing:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh49.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh51.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh52.jpg
+
+      # LH Mental Library
+      ellesse__liamhodges__mentallibrary:
+        elementType: text
+        elementData: 
+          paragraph: "Hodges’ mental library touches upon everything from popular culture to more esoteric topics. It is, in part, the 
+                      reason his work is so diverse and his appeal so cross-cultural. In 2016 he described an obsession with Adam Curtis’ 
+                      yperNormalisation; his SS19 collection was directly influenced by his reading of Donna Tartt’s 2013 novel <i>The Goldfinch</i>; 
+                      oday, on his desk, I spot a copy of Yuval Noah Harari’s <i>21 Lessons for the 21st Century</i>. Case in point: Hodges is a 
+                      sponge for knowledge. <br><br> “That’s kind of where inspiration comes from, isn’t it, it’s from books and museums and stuff. 
+                      It’s not like I just go ‘ding’, and have it all right there. When I was doing the last collection I got really into a book 
+                      called Alone Together which is a study of how technology has changed people, changed how we communicate, and what we think 
+                      we are. Then there’s The Shallows which looks at how technology has changed the way our brains work, not needing to remember 
+                      things in the same way anymore, for example. But I guess that’s just what excites me, books, and comics books. And music. 
+                      I’m going to see Tommy Cash on Friday and I’ve been listening to Ho99o9 a lot recently when cycling to work, it helps me 
+                      get there faster.”"
+
+      # Quote
+      ellesse__liamhodges__quote2:
+        elementType: quote
+        elementData: 
+          quote:  I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, and even sold was very interesting.
+          source: Liam Hodges
+
+      # Image Group : Sewing Machine
+      ellesse__liamhodges__sewingmachine:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh9.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh18.jpg
+
+      # Image Group : Clip
+      ellesse__liamhodges__clip:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh63.jpg
+
+      # LH Pulse
+      ellesse__liamhodges__pulse:
+        elementType: text
+        elementData: 
+          paragraph:  Hodges keeps his finger on the pulse of culture and one eye locked curiously on the future, but for his new project 
+                      with ellesse he also had a direct link to the past, accessing and looking for inspiration in the brand’s archive in North 
+                      London. Hodges has mentioned in the past that he’d been keen to work with an iconic label’s archive and this was one factor 
+                      that drew him to the project. “I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, 
+                      and even sold was very interesting,” he explains. The archive was stocked floor to ceiling with all manner of apparel spanning 
+                      ecades, each a chapter in ellesse’s history book. But, surprisingly (or not considering his typically unconventional approach), 
+                      Hodges was most attracted to old sales books and technical drawings that spoke, in particular, to ellesse’s history of bringing 
+                      together sportswear with traditional elements of tailoring. One classic campaign that caught Hodges’ attention was for a ski 
+                      collection — the sport that ellesse was built on. Hodges knew ellesse’s ski campaigns well, explaining that fashion students 
+                      bring them up every time he teaches a sportswear course at the University of Westminster (his old stomping ground), but 
+                      discovering and tracing their origins shone a new light on everything he’d seen before.
+      # LH Custom 
+      custom__liamhodges__archive:
+        customModuleId: ellesse_twopiece
+        imgsrc: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh34.jpg
+        videoId: l2OGRWmf
+        playerId: h1yC9mkW
+
+      # LH ellesse
+      ellesse__liamhodges__ellesse:
+        elementType: text
+        elementData: 
+          paragraph:  ellesse was born in 1959 when founder Leonardo Servadio decided to bring his tailoring background to sportswear, 
+                      changing the category forever into one that could be fashionable as well as highly functional. For some years, ellesse 
+                      focused predominantly on ski gear and Servadio’s understanding of tailoring informed iconic designs like the Jet Pant — 
+                      a ski pant with padded knees and a wide lower leg that fit over a ski boot — and quilted jackets. Not long after and 
+                      building on the success of its ski apparel, ellesse began making clothing for tennis and with this, the brand’s two 
+                      ounding pillars were put firmly in place. Servadio proved that tailoring techniques could be of benefit to a performance 
+                      piece’s purpose but in improving the overall design aesthetic, also discovered that sportswear could have fashion appeal. 
+                      The Jet Pant was such a breakthrough that in 1979 it featured at an event at the Pompidou Centre in Paris celebrating 
+                      Italian design. Given its history and the rising popularity of modern interpretations of tailoring today, it’s no wonder 
+                      that Hodges wanted ellesse’s old ski gear to form the framework of their collaboration. “We didn’t want to do a heritage 
+                      collaboration. Because that’s crap, we’ve seen that a million times” Hodges explains. “For this one, it felt more about 
+                      it being of the moment. Something that felt relevant to them and to us, representative of both brands, rather than too 
+                      much one way or the other.” In his eyes, there’s no point in working with another label just to make the same clothes 
+                      that he puts on the catwalk but, equally, he saw it as his responsibility to persuade ellesse to travel in directions 
+                      they might usually avoid. Hodges got permission to play with their logo and branding, for example; he was adamant on 
+                      using certain materials and fabrics that he knew would elevate the collection, like rubber on the sneakers. “Chopping 
+                      a brand’s logo up is something that brands normally wouldn’t let you do. They really supported me and my ideas, and they 
+                      let me get on with it,” he says."
+    
+      # LH ellesse video
+      ellesse__video__video:
+        elementType: video
+        elementData: 
+          videoId:  aRC4xreb
+          playerId: h1yC9mkW
+
+      # LH ellesse support
+      ellesse__liamhodges__support:
+        elementType: text
+        elementData: 
+          paragraph: Something Hodges knew ellesse would support based on their history with tailoring was the introduction of new fits and cuts. 
+                      It was ellesse after all that first introduced many of the design innovations to sportswear during the ‘60s and ‘70s 
+                      that we’re familiar with today. Hodges reiterates that this was never going to be a heritage collection and he wasn’t 
+                      going to pull and copy stuff directly, but simply playing with fits and cuts in his own way is a subtle nod to the archive 
+                      considering what we know about ellesse’s past. He examined old samples and pictures thoroughly but he put the physical 
+                      references aside when he started drawing, “it’s always a new thing then, right? Because it’s my memory of it rather than 
+                      this carbon copy. ”Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or 
+                      conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s 
+                      heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the 
+                      collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip 
+                      pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse 
+                      archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ 
+                      logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to 
+                      ellesse’s ski heritage.
+
+      # LH Custom Three
+      custom__liamhodges__three:
+        customModuleId: ellesse_three-piece
+        imgsrc_1: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh22.jpg
+        imgsrc_2: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh21.jpg
+        imgsrc_3: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh73.jpg
+
+      # LH ellesse approach
+      ellesse__liamhodges__approach:
+        elementType: text
+        elementData: 
+          paragraph: Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or conceptual mark on 
+                      them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s heritage lies. For us 
+                      to update them in our way, mixing the fabrics and adding the print that goes across most of the collection, was really fun,” 
+                      e explains. “We really went into the details, so on the tracksuits, we’ve got special zip pulls and stuff, then we’ve added 
+                      these wavy lines and played with the colors. Another thing I loved from the ellesse archive was there use of double branding, 
+                      so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ logo on the other.” The print Hodges mentions 
+                      is the ice and salt crystal graphic that’s another abstract reference to ellesse’s ski heritage.
+
+      # LH Custom 
+      custom__liamhodges__sneaker:
+        customModuleId: ellesse_twopiece
+        imgsrc: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh26.jpg
+        videoId: 8gEzTVc2
+        playerId: h1yC9mkW
+
+      # LH future
+      ellesse__liamhodges__future:
+        elementType: text
+        elementData: 
+          paragraph: Considering Hodges’ reading list and his brand's forward-thinking philosophy, it’s unsurprising that he wanted to incorporate 
+                      visions of the future into the collaboration. Besides, ellesse themselves have brought a progressive approach to design since 
+                      Servadio founded the label in the ‘50s. In order to incorporate both a vision of the future and the ellesse archive though, 
+                      Hodges approached the collection with a retrofuturist mindset. “It’s a view of the future from the nineties!” he explained. 
+                      “I’ve got this picture of my dad from when I was super young and he’s got these silver running shorts on, so we were adamant 
+                      that there had to be silver, there was something about silver sportswear that just felt like the future back then.”
+
+      # LH ellesse video
+      ellesse__liamhodges__cloth:
+        elementType: video
+        elementData: 
+          videoId:  ZOprSdhS
+          playerId: h1yC9mkW
+
+      # LH handwriting
+      ellesse__liamhodges__handwriting:
+        elementType: text
+        elementData: 
+          paragraph: "In the end, Hodges describes the collection in simple terms, “It feels very ellesse but it’s definitely got our handwriting 
+                      all over it.” In part, it’s this nonchalance and refusal to complicate things that make him and his team such a formidable 
+                      force. It’s also why the ellesse collaboration works so well — both brands give one another the space and respect they 
+                      deserve. Liam Hodges is a brand with clear intent: it’s aspirational, forward-looking, and positive. Likewise, ellesse has 
+                      never veered too far from its founder’s original mission to create stylish sportswear with the help of specialist tailoring 
+                      techniques. These are the type of credible values that people crave from brands today and unsurprisingly the collection has 
+                      been met with praise. As a result, the pair are already working on a Spring/Summer 2020 collection — Hodges wouldn’t show or 
+                      ell me anything about it other than that it’s informed by the other half of ellesse’s bedrock: tennis. Until then though, if 
+                      there’s one important lesson we can all learn from Liam Hodges and his team it’s that you can run a successful luxury fashion 
+                      label and still piss off to the pub in the middle of the day with your mates."
+                    
+      # LH ellesse video
+      ellesse__liamhodges__fin:
+        elementType: video
+        elementData: 
+          videoId:  Nxy2bpi2
+          playerId: h1yC9mkW
+                    
+                    
+
+
+
+
+

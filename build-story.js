@@ -8,15 +8,18 @@ var fs = require('fs');
 var mkdirp = require('mkdirp');
 var Handlebars = require('handlebars');
 
+var yaml = require('js-yaml');
+var YAML = require('yamljs');
+var _ = require('lodash');
+
+var FD = YAML.load('./src/fd.yml');
 var TEMPLATES = require('./src/templates.js'); // reconsider namespace?
-var FRAMEWORKDATA = require('./src/frameworkdata.js');
+var storydata = YAML.load('./stories/' + storyFolder + '/data.yml' );
 
 // baswe templates to insert custom content
 var htmlFile = fs.readFileSync('./src/helpers/index.html');
 var jsFile = fs.readFileSync('./src/helpers/script.js');
 var scssFile = fs.readFileSync('./src/helpers/style.scss');
-
-var storydata = JSON.parse( fs.readFileSync('./stories/' + storyFolder +'/data.json') );
 
 function ISF_StoryBuilder(){
 
@@ -28,92 +31,99 @@ function ISF_StoryBuilder(){
 
 ISF_StoryBuilder.prototype.buildFiles = function(){
 
-  var self = this;
+  if (storydata !== undefined) {
 
-  // iterate through pages
-  for (var page in storydata) {
+    var self = this;
 
-    var pageHtml = '';
-    var pageName = page;
-    var pageSections = storydata[page];
+    // iterate through pages
+    for (var page in storydata) {
 
-    // iterate through sections, build layout and add content els
-    for (var layout in pageSections) {
+      var pageHtml = '';
+      var pageName = page;
+      var pageSections = storydata[page];
 
-      var layoutId = layout;
-      var layoutObj = pageSections[layoutId];
+      // iterate through sections, build layout and add content els
+      for (var layout in pageSections) {
 
-      if (!isCustom(layoutId)) {
-        // build layout markup
-        var layoutHtml = self.buildModule(layoutId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
-        var layoutContentObj = layoutObj.layoutContent;
-        var layoutContentHtml = '';
+        var layoutId = layout;
+        var layoutObj = pageSections[layoutId];
 
-        // build layout content
-        for (var elem in layoutContentObj) {
+        if (!isCustom(layoutId)) {
+          // build layout markup
+          var layoutHtml = self.buildModule(layoutId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
+          var layoutContentObj = layoutObj.layoutContent;
+          var layoutContentHtml = '';
 
-          var elemId = elem;
-          var elemObj = layoutContentObj[elem];
-          if (!isCustom(elemId)) {
-            var element = self.buildModule( elemId, elemObj );
-            layoutContentHtml += element.moduleHTML;
-          } else {
-            if (elemId.includes('code_')) {
-              // again. move this somewhere else, as it's only relevant for the preview
-              var tId = layoutContentObj[elemId];
-              var tObj = layoutContentObj[tId];
-              layoutContentHtml += this.buildCodeModule(tObj); // returns markup
+
+          // build layout content
+          for (var elem in layoutContentObj) {
+
+            var elemId = elem;
+            var elemObj = layoutContentObj[elem];
+
+            if (!isCustom(elemId)) {
+              console.log(elemId + ' is not custom');
+              var element = self.buildModule( elemId, elemObj );
+              layoutContentHtml += element.moduleHTML;
             } else {
-              console.log("it's custom", elemObj);
-              layoutContentHtml += this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml;
+              if (elemId.includes('code_')) {
+                // again. move this somewhere else, as it's only relevant for the preview
+                var tId = layoutContentObj[elemId];
+                var tObj = layoutContentObj[tId];
+                layoutContentHtml += this.buildCodeModule(tObj); // returns markup
+              } else {
+                console.log(elemId + ' is custom');
+                layoutContentHtml += this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml;
+                console.log('modhtml' + this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml);
+              }
             }
           }
-        }
 
-        layoutHtml = layoutHtml.replace("<!-- content -->", layoutContentHtml);
-        pageHtml +=layoutHtml;
-      } else {
-        // in case it's a code block. relevant only for the preview, so move somewhere else
-        if (layoutId.includes('code_')) {
-          var targetId = layoutObj;
-          var targetObj = pageSections[targetId];
-          pageHtml += TEMPLATES.custom_code({"codetext" : JSON.stringify(targetObj, null, 4) });
+          layoutHtml = layoutHtml.replace("<!-- content -->", layoutContentHtml);
+          pageHtml +=layoutHtml;
+
         } else {
-          console.log("custom layout");
-          pageHtml += this.buildCustomModule(layoutObj.customModuleId, layoutObj).moduleHtml;
-          console.log(pageHtml);
+          // in case it's a code block. relevant only for the preview, so move somewhere else
+          if (layoutId.includes('code_')) {
+            var targetId = layoutObj;
+            var targetObj = pageSections[targetId];
+            pageHtml += TEMPLATES.custom_code({"codetext" : JSON.stringify(targetObj, null, 4) });
+          } else {
+            pageHtml += this.buildCustomModule(layoutObj.customModuleId, layoutObj).moduleHtml;
+          }
         }
       }
+
+
+      this.buildFile('index.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
     }
 
+    /* Build SCSS & JS files */
+    var js = '';
+    for (var cons in this.constructors) {
+      js += this.constructors[cons] + "\r\n"; // add line break
+    }
 
-    this.buildFile('index.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
+    var scss = '';
+    for (var styl in this.styles) {
+      scss += this.styles[styl] + "\r\n"; // add line break
+    }
+
+    this.buildFile('scripts.js', 'build', String(jsFile).replace("/* require modules */", js));
+    this.buildFile('styles.scss', 'build', String(scssFile).replace("/* import styles */", scss));
+
+    // build custom files (only if they don't exist, to avoid rewriting)
+    if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.js')) {
+      this.buildFile('custom.js', 'build', '');
+      console.log('added custom.js');
+    }
+
+    if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.scss')) {
+      this.buildFile('custom.scss', 'build', '');
+      console.log('added custom.scss');
+    }
   }
 
-  /* Build SCSS & JS files */
-  var js = '';
-  for (var cons in this.constructors) {
-    js += this.constructors[cons] + "\r\n"; // add line break
-  }
-
-  var scss = '';
-  for (var styl in this.styles) {
-    scss += this.styles[styl] + "\r\n"; // add line break
-  }
-
-  this.buildFile('scripts.js', 'build', String(jsFile).replace("/* require modules */", js));
-  this.buildFile('styles.scss', 'build', String(scssFile).replace("/* import styles */", scss));
-
-  // build custom files (only if they don't exist, to avoid rewriting)
-  if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.js')) {
-    this.buildFile('custom.js', 'build', '');
-    console.log('added custom.js');
-  }
-
-  if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.scss')) {
-    this.buildFile('custom.scss', 'build', '');
-    console.log('added custom.scss');
-  }
 };
 
 ISF_StoryBuilder.prototype.buildFile = function(fileName, fileFolder, fileContents){
@@ -122,16 +132,15 @@ ISF_StoryBuilder.prototype.buildFile = function(fileName, fileFolder, fileConten
   });
 };
 
-
 ISF_StoryBuilder.prototype.buildCodeModule = function(targetObj) {
   // build markup
-  return TEMPLATES.element_code({"code" : JSON.stringify(targetObj, null, 4) });
+  return TEMPLATES.code({"code" : JSON.stringify(targetObj, null, 4) });
 };
 
 ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
-  console.log(moduleId, moduleObj);
-  var oCustom = {};
 
+  var oCustom = {};
+  console.log(typeof TEMPLATES[moduleId]);
   // build markup
   if (TEMPLATES[moduleId]) {
     // code els
@@ -157,66 +166,68 @@ ISF_StoryBuilder.prototype.buildModule = function(moduleId, moduleObj){
 
   var o = {}; // store strings
 
-  var moduleClass = (moduleObj.hasOwnProperty('layoutType')) ? 'layout' : 'element';
-  var moduleType = (moduleClass === 'layout') ? moduleObj.layoutType : moduleObj.elementType;
-  var moduleData = (moduleClass === 'layout') ? moduleObj.layoutData : moduleObj.elementData;
-  var moduleSlug = moduleClass + '_' + moduleType;
+  var moduleType = moduleObj.layoutType || moduleObj.elementType;
+  var moduleData = moduleObj.layoutData || moduleObj.elementData;
 
   if (moduleData) {
      moduleData.modId = moduleId;
   }
 
   // build js
-  if (!this.constructors[moduleSlug]) {
-    var requireConstructor = this.requireModuleConstructor( moduleSlug );
+  if (!this.constructors[moduleType]) {
+    var requireConstructor = this.requireModuleConstructor( moduleType );
     if( requireConstructor !== undefined ) {
-      this.constructors[moduleSlug] = requireConstructor;
+      this.constructors[moduleType] = requireConstructor;
     }
   }
 
   // build sass
-  if (!this.styles[moduleSlug]) {
-    var importStyle = this.importModuleStyle( moduleSlug );
+  if (!this.styles[moduleType]) {
+    var importStyle = this.importModuleStyle( moduleType );
     if( importStyle !== undefined ) {
-      this.styles[moduleSlug] = importStyle;
+      this.styles[moduleType] = importStyle;
     }
   }
 
+<<<<<<< HEAD
   moduleData.modId = moduleId;
   console.log(moduleData);
   o.moduleHTML = this.buildModuleHTML(moduleSlug, moduleData);
+=======
+  o.moduleHTML = this.buildModuleHTML(moduleType, moduleData);
+>>>>>>> dev-builder
 
   return o;
 };
 
-ISF_StoryBuilder.prototype.buildModuleHTML = function(moduleSlug, moduleData){
-  // build markup
-  if ( TEMPLATES[moduleSlug] ) {
-    var markup = TEMPLATES[moduleSlug](moduleData);
-    return markup;
+ISF_StoryBuilder.prototype.buildModuleHTML = function(moduleType, moduleData){
+  // compile module markup
+  if (TEMPLATES[ _.lowerCase(moduleType) ]) {
+    return TEMPLATES[_.lowerCase(moduleType)](moduleData);
   } else {
-    console.log('Template for ' + moduleSlug + ' does not exist.' );
+    console.log('Template for ' + moduleType + ' does not exist.' );
     return false;
   }
 };
 
-ISF_StoryBuilder.prototype.importModuleStyle = function(moduleSlug) {
-  var importString = '@import "' + moduleSlug + '/style.scss";';
+ISF_StoryBuilder.prototype.importModuleStyle = function(moduleType) {
+  var importString = '@import "' + moduleType + '/style.scss";';
   return importString;
 };
 
-ISF_StoryBuilder.prototype.requireModuleConstructor = function(moduleSlug){
-  if (!this.constructors.hasOwnProperty(moduleSlug)) { // make sure it's not already added
-    if (FRAMEWORKDATA.MODULES[moduleSlug] !== undefined) {
+ISF_StoryBuilder.prototype.requireModuleConstructor = function(moduleType){
+
+  if (!this.constructors.hasOwnProperty(moduleType)) { // make sure it's not already added
+    if (FD[ _.upperCase(moduleType) ] !== undefined) {
       // check if it has a constructor - some modules don't.
-      if (FRAMEWORKDATA.MODULES[moduleSlug].CONSTRUCTOR !== undefined) {
-        var requireModule = "var " + FRAMEWORKDATA.MODULES[moduleSlug].CONSTRUCTOR + " = require('modules/" + moduleSlug + "/script.js'); ";
-        var addToObject = 'constructors["' + moduleSlug + '"] = ' + FRAMEWORKDATA.MODULES[moduleSlug].CONSTRUCTOR + '; ';
-        this.constructors[moduleSlug] = requireModule + addToObject;
-        return this.constructors[moduleSlug];
+      if (FD[ _.upperCase(moduleType) ].CONSTRUCTOR !== undefined) {
+        var requireModule = "var " + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + " = require('" + moduleType + "/script.js'); ";
+        var addToObject = 'constructors["' + moduleType + '"] = ' + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + '; ';
+        this.constructors[moduleType] = requireModule + addToObject;
+        return this.constructors[moduleType];
       }
     } else {
-      console.log( moduleSlug + ' is not a valid module.');
+      console.log( moduleType + ' is not a valid module.');
       return false;
     }
   }

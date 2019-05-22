@@ -1,7 +1,7 @@
 
 // Plugins
 var ScrollMagic = require('scrollmagic');
-var FRAMEWORKDATA = require('src/frameworkdata.js');
+var FD = YAML.load('../../../src/fd.yml');
 
 var ww = window.innerWidth;
 var wh = window.innerHeight;
@@ -10,8 +10,8 @@ function ISF_Layout_Chapter(el, controller) {
 
   this.controller = controller;
   this.DOM = { el : el };
-  this.DOM.header = this.DOM.el.querySelector( FRAMEWORKDATA.MODULES.layout_chapter.CLASSES.HEADER );
-  this.DOM.contents = this.DOM.el.querySelector( FRAMEWORKDATA.MODULES.layout_chapter.CLASSES.CONTENT );
+  this.DOM.header = this.DOM.el.querySelector('.' + FD.CHAPTER.CLASSES.HEADER);
+  this.DOM.contents = this.DOM.el.querySelector('.' + FD.CHAPTER.CLASSES.CONTENT);
   this.chapterContentGroupScenes = [];
 }
 
@@ -36,4 +36,3 @@ ISF_Layout_Chapter.prototype.fixHeader = function () {
 };
 
 module.exports = ISF_Layout_Chapter;
-
