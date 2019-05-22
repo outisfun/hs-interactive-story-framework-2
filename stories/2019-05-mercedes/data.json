@@ -18,14 +18,6 @@
                         "highlight": "Among humanities greatest achievements, our shift from horse-drawn carriages to engine-driven vehicles is one that has revolutionized the way we live.",
                         "paragraph": "It’s been over one hundred thirty-three years since Carl Benz patented the first automobile in Berlin, Germany in 1886, and we’re still feeling its effects. It struck the world like a lightning bolt, reimagining how we travel and connect, and put what would become the Mercedes-Benz company on the map.<br><br>There aren’t many ways to outflex the invention of the automobile. Yet, somehow, Mercedes-Benz has made lightning strike twice — this time almost literally. After a century of paving the way with automobiles renowned for their quality and comfort, they’ve raced into a new dawn in the driver’s seat of the fully electric Mercedes-Benz EQC Edition 1886. Packing 133 years of history into the seamless, LED-outfitted chassis, the limited edition model of the new Mercedes-Benz EQC 400 4MATIC line is a window into the past and future of cars. It’s at once both a time capsule to the birth of the automobile and a gleaming look at a future driven by Mercedes-Benz’ new electric mobility brand, Electric Intelligence (EQ).<br><br>The EQC line is designed to make us enjoy again and find our passion — whether it be birdwatching, beach-bumming, or something else entirely. With tech-packed interiors and engines as quiet as a monk’s chambers, it certainly makes the case for being an antidote to the loud shout of the modern world. But, before we can look to the future of driving, it’s essential we go back to the beginning and tell the story of how Carl Benz changed the world forever. "
                     }
-                },
-                "mercedes__intro__gallery": {
-                    "elementType": "image_group",
-                    "elementData": {
-                        "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/00_02.jpg" }
-                        ]
-                    }
                 }
             }
         },
@@ -42,7 +34,7 @@
                 "mercedes__history__text": {
                     "elementType": "text",
                     "elementData": {
-                        "highlight": "Behind ever great origin story is a dream and a path paved with small achievements. For Carl Benz, that dream came to him in 1877 in the form of a “vehicle without horses.”",
+                        "highlight": "Behind every great origin story is a dream and a path paved with small achievements. For Carl Benz, that dream came to him in 1877 in the form of a “vehicle without horses.”",
                         "paragraph": "Sparked by the thought, he toiled away for a year on a gas-driven, two-stroke engine capable of revolutionizing transportation. It would take months of failure and tinkering but, on New Year’s Eve in 1878, he got his engine running for the first time — providing the fuel needed to keep fighting for his vision.<br><br>Five years after that fateful day, Benz launched a two-stroke “System Benz” engine fit for the market but too big and heavy to be installed into any vehicle at the time. In a move born out of necessity, he built an entirely new automobile fit with a four-stroke engine. With his dream turned into a reality at last, he braved the cold winter air and left Berlin’s German Imperial Patent Office on 29 January 1886 with the birth certificate for a “gas-powered vehicle” that changed the world forever."
                     }
                 },
@@ -99,7 +91,10 @@
                     "elementType": "image_group",
                     "elementData": {
                         "images": [
-                            { "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_02.jpg" }
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_02.jpg", 
+                                "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>" 
+                            }
                         ]
                     }
                 },
@@ -114,7 +109,8 @@
                     "elementType": "video",
                     "elementData": {
                         "videoId": "t4179RYt",
-                        "playerId": "h1yC9mkW"
+                        "playerId": "h1yC9mkW",
+                        "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>"
                     }
                 },
                 "mercedes__newdawn__technology": {
@@ -128,7 +124,8 @@
                     "elementType": "video",
                     "elementData": {
                         "videoId": "ylWuozww",
-                        "playerId": "h1yC9mkW"
+                        "playerId": "h1yC9mkW",
+                        "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>"
                     }
                 },
                 "mercedes__newdawn__technology2": {
@@ -141,7 +138,8 @@
                     "elementType": "video",
                     "elementData": {
                         "videoId": "9O5DCKjT",
-                        "playerId": "h1yC9mkW"
+                        "playerId": "h1yC9mkW",
+                        "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>"
                     }
                 },
                 "mercedes__newdawn__futuredrive": {
@@ -189,7 +187,8 @@
                     "elementType": "video",
                     "elementData": {
                         "videoId": "NjW38se4",
-                        "playerId": "bUaBxxgc"
+                        "playerId": "bUaBxxgc",
+                        "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>"
                     }
                 },
                 "mercedes__birdwatcher__text3": {
@@ -202,7 +201,8 @@
                     "elementType": "video",
                     "elementData": {
                         "videoId": "HdwBeGeb",
-                        "playerId": "h1yC9mkW"
+                        "playerId": "h1yC9mkW",
+                        "caption": "EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7 kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>"
                     }
                 },
                 "mercedes__birdwatcher__text4": {
@@ -210,6 +210,12 @@
                     "elementData": {
                         "highlight": "Product Info + Return to 1886",
                         "paragraph": "Ready to enjoy electric? Head to the EQC website <https://mercedes-benz-eqc.de> for more information about the Mercedes-Benz EQC Edition 1886, Mercedes-Benz EQC 400 4MATIC, and the EQ brand."
+                    }
+                },
+                "mercedes__birdwatcher__disclaimer": {
+                    "elementType": "text",
+                    "elementData": {
+                        "paragraph": "<sup>[1]</sup>Electric energy consumption and range have been determined on the basis of Regulation (EC) No. 692/2008. Electric energy consumption and range depend on the vehicle configuration."
                     }
                 }
             }

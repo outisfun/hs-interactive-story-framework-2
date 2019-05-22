@@ -1,9 +1,14 @@
+
 #isf-interactive-story {
   /* Gallery */
 
   button {
     outline: none!important;
   }
+/*
+  .glide__slide {
+    max-height: 500px;
+  }*/
 
   .isf-el_gallery {
 
@@ -22,8 +27,8 @@
       }
       .isf-el_gallery__inner {
         width: 100%;
-        max-width: 1600px;
         margin: 0 auto;
+        max-width: 1600px;
       }
 
       @media (min-width: 768px) {
@@ -35,6 +40,11 @@
       @media (min-width: 1200px) {
         .isf-el_gallery__item {
           width: 25%;
+          /*padding: 30px;
+
+          &:nth-child(3n), &:nth-child(2), &:nth-child(7) {
+            padding: 60px;
+          }*/
         }
       }
     }
@@ -117,6 +127,39 @@
         }
       }
 
+      &.is--fixed {
+        position: fixed;
+        top: 0;
+      }
+    }
+
+    .isf-el_image {
+      max-width: none!important;
+    }
+
+    &[data-layout = "prada"] {
+
+      height: 100vh;
+      background-color: black;
+
+      .isf-el_gallery__item {
+        min-width: 300px;
+        padding: 0px 3px;
+        .isf-el_image {
+          max-width: none!important;
+        }
+        .isf-el_image__caption {
+          display: none;
+        }
+      }
+      .isf-el_gallery__inner {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
       &.is--fixed {
         position: fixed;
         top: 0;

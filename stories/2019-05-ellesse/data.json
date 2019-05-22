@@ -41,10 +41,7 @@
                         "galleryPreview": true,
                         "galleryLoadingEffect": "random",
                         "galleryImages": [
-                            { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg", 
-                                "caption": "Ski Jacket (1970s): ellesse defied convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear."    
-                            },
+                            
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg", 
                                 "caption": "T-Shirt (SS19): Tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, & dual branding reference ellesse heritage pieces. Ski Trousers (1960s): The first product to feature the penguin logo, quilted knees, and jet stripe."
@@ -58,8 +55,8 @@
                                 "caption": "Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper. Tennis Jacket (1980s): A white jacket with the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name features on the back of the neck."
                             },
                             { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg", 
-                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes. Tracksuit Pants (SS19): Shell pants reminiscent of ellese’s iconic 80s tracksuits." 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg", 
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became an iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe. T-Shirt (1980s): Another tailoring inspired design with original embroidered badging and pinstripes ellesse colors." 
                             },
                             { 
                                 "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg", 
@@ -78,14 +75,20 @@
                                 "caption": "Downhill Racing Ski Suit (1980s): Featuring protective padded knee guards adorned with the semi palla logo and color panels that tailor to the wearer's form."
                             },
                             { 
-                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg", 
-                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became an iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe. T-Shirt (1980s): Another tailoring inspired design with original embroidered badging and pinstripes ellesse colors." 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg", 
+                                "caption": "Ski Jacket (1970s): ellesse defied convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear."    
+                            },
+                            
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg", 
+                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes. Tracksuit Pants (SS19): Shell pants reminiscent of ellese’s iconic 80s tracksuits." 
                             }
                         ]
                     }
                 }
             }
         },
+        
         "ellesse__video": {
 
             "layoutType": "simple",
@@ -94,11 +97,17 @@
                 "container": "container"
             },
             "layoutContent": {
-                "ellesse__liamhodges__text": {
+                "ellesse__video__text": {
                     "elementType": "text",
                     "elementData": {
                         "headline": "A meeting of styles",
                         "paragraph": "ellesse was a pioneer in bringing tailoring techniques to the design and manufacturing of sportswear. Yet, six decades on, these two styles of apparel still appear antithetical to some. In this video interview, stylist and writer Ayishat Akanbi breaks down the stylistic, technical, and cultural crossover between tailoring and sportswear."
+                    }
+                },
+                "ellesse__liamhodges__quote": {
+                    "elementType": "quote",
+                    "elementData": {
+                        "quote": "The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. No longer are you restricted to having to stick to tailoring or to stick to sportswear."
                     }
                 },
                 "ellesse__liamhodges__video": {
@@ -107,11 +116,68 @@
                         "videoId": "M7KADWuo",
                         "playerId": "bUaBxxgc"
                     }
-                },
-                "ellesse__liamhodges__quote": {
-                    "elementType": "quote",
+                }
+            }
+        },
+        "ellesse__lookbook": {
+            "layoutType": "simple",
+            "layoutData": {
+                "colorScheme": "dark"
+            },
+            "layoutContent": {
+                "ellesse__lookbook__text": {
+                    "elementType": "text",
                     "elementData": {
-                        "quote": "The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. No longer are you restricted to having to stick to tailoring or to stick to sportswear."
+                        "headline": "ellesse in 2019",
+                        "paragraph": "Today, ellesse is known for being a fashion brand as much as it is for being a sports brand. Its tailoring and sportswear heritage seamlessly converge with contemporary fashion trends in recent collections — ellesse’s recognizable color palette and semi-palla logo an ever-present symbol of the brand’s identity and history. Yet, now, sportswear is having a similar impact on tailoring as tailoring had on sportswear under ellesse and Servadio’s influence. Today’s tailored garments take as much from streetwear and sportswear as they do Italian traditions and people are subverting the association of suiting with drudgery. Honoring ellesse’s past, here’s how we shot and styled ellesse’s current offering."
+                    }
+                },
+                "ellesse__lookbook__gallery": {
+                    "elementType": "gallery",
+                    "elementData": {
+                        "galleryLayout": "prada",
+                        "galleryImages": [
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb1.jpg", 
+                                "caption": "Ski Jacket (1970s): ellesse defied convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear."    
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb2.jpg", 
+                                "caption": "T-Shirt (SS19): Tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, & dual branding reference ellesse heritage pieces. Ski Trousers (1960s): The first product to feature the penguin logo, quilted knees, and jet stripe."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb3.jpg", 
+                                "caption": "Tracktop (SS19): Reflective with dual branding. Ski Jacket: Quilted with an embroider-applied logo inspired by founder Leonardo Servadio’s tailoring background."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb4.jpg", 
+                                "caption": "Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper. Tennis Jacket (1980s): A white jacket with the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name features on the back of the neck."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb5.jpg", 
+                                "caption": "Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes. Tracksuit Pants (SS19): Shell pants reminiscent of ellese’s iconic 80s tracksuits." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb6.jpg", 
+                                "caption": "Green & Red Sneaker (1980s): An original running shoe with Italian flag colors. White Sneaker (SS19): Inspired by 80s running silhouettes with original rubberized logos." 
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb7.jpg", 
+                                "caption": "Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb8.jpg", 
+                                "caption": "Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb9.jpg", 
+                                "caption": "Downhill Racing Ski Suit (1980s): Featuring protective padded knee guards adorned with the semi palla logo and color panels that tailor to the wearer's form."
+                            },
+                            { 
+                                "src": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb10.jpg", 
+                                "caption": "Tracktop (1990s): A 90s original, the taping on the sleeves became an iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original 80s ellesse court shoe. T-Shirt (1980s): Another tailoring inspired design with original embroidered badging and pinstripes ellesse colors." 
+                            }
+                        ]
                     }
                 }
             }
@@ -121,7 +187,7 @@
             "layoutType": "chapter",
             "layoutData": {
                 "colorScheme": "dark",
-                "chapterStyle": "ellie",
+                "chapterStyle": "black",
                 "chapterBackground": "https://interactive-development.hsnb.io/2019-04-ellesse/assets/liamhodges.jpg",
                 "chapterTitle": "A Conversation With ellesse Collaborator Liam Hodges"
             },

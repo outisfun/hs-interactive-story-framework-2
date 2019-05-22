@@ -2,6 +2,7 @@
   "name": "hsisf",
   "version": "1.0.1",
   "dependencies": {
+    "@glidejs/glide": "^3.3.0",
     "animated-scroll-to": "^1.2.2",
     "blobs": "^1.0.3",
     "browser-sync": "^2.26.5",

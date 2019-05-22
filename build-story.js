@@ -45,7 +45,7 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
 
       if (!isCustom(layoutId)) {
         // build layout markup
-        var layoutHtml = self.buildModule(layout.customModuleId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
+        var layoutHtml = self.buildModule(layoutId, layoutObj).moduleHTML; // returns obj: { moduleHTML: "..." }
         var layoutContentObj = layoutObj.layoutContent;
         var layoutContentHtml = '';
 
@@ -54,7 +54,6 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
 
           var elemId = elem;
           var elemObj = layoutContentObj[elem];
-
           if (!isCustom(elemId)) {
             var element = self.buildModule( elemId, elemObj );
             layoutContentHtml += element.moduleHTML;
@@ -183,6 +182,8 @@ ISF_StoryBuilder.prototype.buildModule = function(moduleId, moduleObj){
     }
   }
 
+  moduleData.modId = moduleId;
+  console.log(moduleData);
   o.moduleHTML = this.buildModuleHTML(moduleSlug, moduleData);
 
   return o;

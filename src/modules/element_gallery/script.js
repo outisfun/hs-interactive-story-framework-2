@@ -11,16 +11,31 @@ var getRandomInt = require('src/js/helpers/getrandomint.js');
 
 var FRAMEWORKDATA = require('src/frameworkdata.js');
 
+var Hammer = require('hammerjs'); // a library to manage touch events
+
+var Glide = require('@glidejs/glide');
+console.log(Glide);
+
+var imagesLoaded = require('imagesloaded');
+
 var ww = window.innerWidth;
 var wh = window.innerHeight;
 
-function ISF_Element_Gallery(el, controller) {
+// var glide = new Glide('.glide', {
+//   type: 'carousel',
+//   focusAt: 'center',
+//   perView: 3
+// });
+// console.log(glide);
+// glide.mount({});
 
+function ISF_Element_Gallery(el, controller) {
+  console.log(el);
   this.controller = controller;
 
   this.DOM = {};
-  this.DOM.el = document.querySelector(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.EL);
-  this.DOM.inner = document.querySelector(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.INNER);
+  this.DOM.el = el;
+  this.DOM.inner = this.DOM.el.querySelector(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.INNER);
   this.DOM.items = Array.from( this.DOM.el.querySelectorAll(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.ITEM) );
 
   this.options = {};
@@ -37,7 +52,7 @@ ISF_Element_Gallery.prototype.init = function() {
 };
 
 ISF_Element_Gallery.prototype.buildLayout = function() {
-
+  console.log('build', this.options.layout);
   switch (this.options.layout) {
   case 'masonry':
     this.msnry = new Masonry( this.DOM.inner, {
@@ -60,9 +75,91 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
       .setPin(this.DOM.el)
       .addTo(this.controller);
     break;
+  case 'prada':
+
+
+    var imgHeight = 300;
+    if (ww <= 767) {
+      imgHeight = 420;
+    } else if (ww <= 991) {
+      imgHeight = 600;
+    } else if (ww <= 1399) {
+      imgHeight = 600;
+    } else {
+      imgHeight = 1000;
+    }
+
+    this.DOM.el.style.height = imgHeight + 'px';
+
+    this.DOM.items.forEach(function(item, ind) {
+      var image = item.querySelector('img');
+      item.style.height = imgHeight + 'px';
+      item.style.width = (image.naturalWidth*(imgHeight/image.naturalHeight)) + 'px';
+      console.log(item.style.height, item.style.width);
+    });
+
+    // setup vars necessary for touch interactions
+    this.touchManager = new Hammer.Manager( this.DOM.el );
+    this.horizontalBounds = { max: 0, min: - (this.DOM.inner.offsetWidth - ww) };
+    this.touchUtilities = {}; //object to store touch utilities
+    this.touchUtilities.swipe = new Hammer.Swipe(); //swipe ev listener
+    this.touchUtilities.pan = new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }); // pan ev listener
+    this.touchUtilities.swipe.recognizeWith(this.touchUtilities.pan); // to make them work together
+
+    this.touchManager.add( this.touchUtilities.swipe );
+    this.touchManager.add( this.touchUtilities.pan );
+
+    var self = this;
+    this.touchManager.on('panleft panright', function(e) {
+      self.navigateTouch( e.velocityX * 200 );
+    });
+
+    break;
   default:
     break;
   }
+};
+
+var getTranslateX = function(el) {
+    var style = window.getComputedStyle(el);
+    var matrix = new WebKitCSSMatrix(style.webkitTransform);
+    return matrix.m41;
+};
+
+var mapRange =function(num, in_min, in_max, out_min, out_max)  {
+    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+};
+
+var clamp = function(val, min, max) {
+    return Math.min(Math.max(min, val), max);
+};
+
+
+
+
+ISF_Element_Gallery.prototype.navigateTouch = function( distance ) {
+
+  // adjust distance and navigate
+  this.horizontalPosition = getTranslateX( this.DOM.inner );
+
+  var adjustedDistance = this.adjustDistanceToFitBounds( distance );
+  var self = this;
+  TweenMax.to( this.DOM.inner, 1, {
+      x: "+=" + adjustedDistance,
+      ease: Power3.easeOut,
+      onComplete: function(){
+          self.touchUtilities.isSwiping = false;
+      }
+  });
+
+};
+
+ISF_Element_Gallery.prototype.adjustDistanceToFitBounds = function( distance ) {
+  // adjust nav distance to avoid going too far
+  var rangeBounds = [-ww, ww]; // you'd want panning to be tamer
+  var mappedDistance = mapRange( distance, -window.innerWidth, window.innerWidth, rangeBounds[0], rangeBounds[1] );
+  var clampedDistance = clamp( mappedDistance, (this.horizontalBounds.min - this.horizontalPosition), (this.horizontalBounds.max - this.horizontalPosition) ); // clamp to fit bounds
+    return clampedDistance;
 };
 
 ISF_Element_Gallery.prototype.initPreview = function() {

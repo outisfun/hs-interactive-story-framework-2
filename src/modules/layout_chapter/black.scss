@@ -1,7 +1,7 @@
 
-/* STYLE ELLIE */
+/* STYLE BLACK */
 
-.style--ellie {
+.style--black {
     background-color: black;
     .isf-layout_chapter__header {
         align-items: center;
@@ -72,7 +72,7 @@
                 }
             }
             &:before{
-                opacity: 1;
+                opacity: 0.85;
             }
         }
     }
@@ -92,7 +92,7 @@
                 height: 100%;
             }
             &:before{
-                opacity: 1;
+                opacity: 0.85;
             }
         }
     }
