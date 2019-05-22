@@ -7,9 +7,10 @@ require('browsernizr/test/touchevents');
 var Modernizr = require('browsernizr'); // make sure to do this _after_ importing the tests
 var Masonry = require('masonry-layout');
 
-var getRandomInt = require('src/js/helpers/getrandomint.js');
+var YAML = require('yamljs');
+var _ = require('lodash');
 
-var FRAMEWORKDATA = require('src/frameworkdata.js');
+var FD = YAML.load('../../../src/fd.yml');
 
 var ww = window.innerWidth;
 var wh = window.innerHeight;
@@ -19,9 +20,9 @@ function ISF_Element_Gallery(el, controller) {
   this.controller = controller;
 
   this.DOM = {};
-  this.DOM.el = document.querySelector(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.EL);
-  this.DOM.inner = document.querySelector(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.INNER);
-  this.DOM.items = Array.from( this.DOM.el.querySelectorAll(FRAMEWORKDATA.MODULES.element_gallery.CLASSES.ITEM) );
+  this.DOM.el = document.querySelector('.' + FD.GALLERY.CLASSES.EL);
+  this.DOM.inner = document.querySelector('.' + FD.GALLERY.CLASSES.INNER);
+  this.DOM.items = Array.from( this.DOM.el.querySelectorAll('.' + FD.GALLERY.CLASSES.ITEM) );
 
   this.options = {};
   this.options.layout = this.DOM.el.dataset.layout;
@@ -29,7 +30,7 @@ function ISF_Element_Gallery(el, controller) {
 }
 
 ISF_Element_Gallery.prototype.init = function() {
-
+  console.log('init gallery');
   this.buildLayout();
   if (this.options.preview) {
     this.initPreview();

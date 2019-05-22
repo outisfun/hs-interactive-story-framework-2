@@ -2,10 +2,14 @@
 
     'use strict';
 
-    var FRAMEWORKDATA = require('frameworkdata.js');
     var imagesLoaded = require('imagesLoaded'); // make sure they're loaded before init
     var ScrollMagic = require('scrollmagic');
     var constructors = {};
+
+    var YAML = require('yamljs');
+    var FD = YAML.load('../../../src/fd.yml');
+
+    var _ = require('lodash');
 
     /* require modules */
 
@@ -34,24 +38,26 @@
         var self = this;
 
         // loop through modules and see if there are any to init
-        for (var mod in FRAMEWORKDATA.MODULES) {
+        for (var MOD in FD) {
+          console.log(FD[MOD], constructors);
+          if (FD[MOD].CLASSES !== undefined) {
+            var els = Array.from(document.querySelectorAll('.' + FD[MOD].CLASSES.EL));
 
-          var els = Array.from(document.querySelectorAll(FRAMEWORKDATA.MODULES[mod].CLASSES.EL));
-
-          if ((els.length !== 0) && (constructors[mod])) {
-            els.forEach(function(elem, ind) {
-              // init constructor
-              self.modules.push(new constructors[mod](elem, self.controller));
-              // check for effects
-              for (var attr in elem.dataset) {
-                if (isAttributeEffect(attr) && elem.dataset[attr]) {
-                  var applyEffect = self.effects[attr.replace('x_', '')];
-                  applyEffect( elem, elem.dataset[attr], self.controller );
+            if ((els.length !== 0) && (constructors[MOD])) {
+              els.forEach(function(elem, ind) {
+                // init constructor
+                console.log(constructors[MOD]);
+                self.modules.push(new constructors[MOD](elem, self.controller));
+                // check for effects
+                for (var attr in elem.dataset) {
+                  if (isAttributeEffect(attr) && elem.dataset[attr]) {
+                    var applyEffect = self.effects[attr.replace('x_', '')];
+                    applyEffect( elem, elem.dataset[attr], self.controller );
+                  }
                 }
-              }
-            });
+              });
+            }
           }
-
         }
 
         // init modules

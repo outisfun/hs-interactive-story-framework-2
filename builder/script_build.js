@@ -1,5 +1,5 @@
 var yaml = require('js-yaml');
-var AML = require('yamljs');
+var YAML = require('yamljs');
 var _ = require('lodash');
 
 // parse frameworkdata as js and require it.

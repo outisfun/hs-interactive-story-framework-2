@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     browserify: {
       options: {
         browserifyOptions: {
-          paths: [ './', './src', './stories' ]
+          paths: [ './', './src', './stories', './src/modules/layouts', './src/modules/elements' ]
         }
       },
       builder: {
@@ -66,14 +66,14 @@ module.exports = function(grunt) {
           node: true
         },
         files: {
-          'src/templates.js': ['./src/modules/**/*.hbs', './stories/**/**/template.hbs'],
+          'src/templates.js': ['./src/modules/layouts/**/*.hbs', './src/modules/elements/**/*.hbs', './stories/**/*.hbs'],
         }
       }
     },
 
     sass: {
       options: {
-        loadPath: ['./src/scss', './src/modules/', './stories/']
+        loadPath: ['./src/scss', './src/modules', './src/modules/elements', './src/modules/layouts', './stories/']
       },
       stories: {
         cwd: './',
@@ -165,8 +165,8 @@ module.exports = function(grunt) {
         tasks: ['handlebars', 'shell:buildStory:' + story]
       },
       yml: {
-        files: ['./src/*.yml', './src/*.yaml'],
-        tasks: ['yaml']
+        files: ['./src/*.yml', './stories/**/*.yml', './src/*.yaml'],
+        tasks: ['shell:buildStory:' + story]
       }
     },
 

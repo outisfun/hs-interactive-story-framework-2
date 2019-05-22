@@ -1,0 +1,11 @@
+.ellesse_two-piece {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+
+  &__half {
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+  }
+}
