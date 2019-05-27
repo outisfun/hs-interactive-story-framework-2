@@ -152,3 +152,47 @@ img {
     }
   }
 }
+
+.isf-icon {
+  height: 30px;
+  width: 30px;
+  background-position: center center;
+  display: block;
+  &.isf-icon--arrow-right {
+    background-image: url('https://interactive-development.hsnb.io/src/assets/icons/arrow-right-white.svg');
+  }
+  &.isf-icon--arrow-left {
+    background-image: url('https://interactive-development.hsnb.io/src/assets/icons/arrow-left-white.svg');
+  }
+}
+
+.isf-layout__header {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+

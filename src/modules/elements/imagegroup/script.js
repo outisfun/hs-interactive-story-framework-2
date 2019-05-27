@@ -1,7 +1,9 @@
 
 
 var ScrollMagic = require('scrollmagic');
-var FRAMEWORKDATA = require('src/frameworkdata.js');
+var YAML = require('yamljs');
+var _ = require('lodash');
+var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
 
 function ISF_El_Image_Group(el, controller) {
 
@@ -16,7 +18,7 @@ function ISF_El_Image_Group(el, controller) {
 }
 
 ISF_El_Image_Group.prototype.init = function(){
-  console.log('init image group');
+  // console.log('init image group');
 };
 
 module.exports = ISF_El_Image_Group;

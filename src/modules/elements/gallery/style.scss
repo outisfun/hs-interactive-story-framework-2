@@ -145,11 +145,21 @@
       .isf-el_gallery__item {
         min-width: 300px;
         padding: 0px 3px;
+        overflow: visible;
+        .isf-el_image__wrap {
+            position: relative;
+          }
         .isf-el_image {
           max-width: none!important;
+
         }
-        .isf-el_image__caption {
-          display: none;
+        p.isf-el_image__caption {
+          position: absolute;
+          top: 100%;
+          font-size: 14px;
+          opacity: 0.75;
+          left: 15px;
+          margin-top: 0px;
         }
       }
       .isf-el_gallery__inner {
@@ -176,6 +186,9 @@
           opacity: 0;
           display: none;
         }
+      }
+      .isf-el_gallery__inner {
+        transition: 0.2s all;
       }
       .isf-el_gallery__preview {
         position: fixed;
@@ -221,7 +234,7 @@
           opacity: 0;
           transition: 0.2s all;
           margin-top: 20px;
-          top: calc(100% + 20px);
+          top: calc(100% + 5px);
           span.is--bold {
             font-weight: 600;
           }
@@ -245,26 +258,34 @@
           height: 60px;
           width: 60px;
           z-index: 20;
-          background-color: transparent;
-          background-size: 30px 30px;
-          background-repeat: no-repeat;
-          background-position: center center;
           border: none;
           background-color: black;
           margin-top: -30px;
+          border: none;
+          background-color: rgba(0,0,0,0.35);
+          border-radius: 50%;
+          padding: 8px 8px;
+          &:hover{
+            background-color: rgba(0,0,0,0.75);
+          }
+          svg {
+            height: 15px;
+            width: 15px;
+            fill: white;
+          }
           &.js--preview__nav--prev {
             left: 0;
-            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/arrow-left-light.svg");
           }
           &.js--preview__nav--next {
             right: 0;
-            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/arrow-right-light.svg");
           }
           &.js--preview__nav--close {
-            top: 0;
-            right: 0;
-            background-image: url("https://interactive-development.hsnb.io/2019-04-ellesse/assets/close-light.svg");
+            top: 15px;
+            right: 15px;
+            background-image: url("https://interactive-development.hsnb.io/src/assets/icons/close-white.svg");
             margin-top: 0px;
+            width: 20px;
+            height: 20px;
           }
           &.is--disabled {
             pointer-events: none;
@@ -279,11 +300,12 @@
           left: 50%;
           transform: translateX(-50%);
           li {
-            height: 8px;
-            width: 8px;
-            margin: 0px 3px;
+            height: 13px;
+            margin: 0 .4705882353rem;
+            width: 13px;
             border-radius: 50%;
-            background-color: rgba(255,255,255,0.3);
+            border: 1px solid white;
+            background-color: transparent;
             &.is--current {
               background-color: rgba(255,255,255,1);
             }
@@ -322,5 +344,37 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+.isf-el_gallery__nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0px 15px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    background-color: rgba(0,0,0,0.35);
+    border-radius: 50%;
+    padding: 8px 8px;
+    &:hover{
+      background-color: rgba(0,0,0,0.75);
+    }
+    svg {
+      height: 15px;
+      width: 15px;
+      fill: white;
+    }
+  }
+}
+
+.is--faded {
+  opacity: 0;
 }
 

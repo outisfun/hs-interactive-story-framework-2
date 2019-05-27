@@ -189,13 +189,7 @@ ISF_StoryBuilder.prototype.buildModule = function(moduleId, moduleObj){
     }
   }
 
-<<<<<<< HEAD
-  moduleData.modId = moduleId;
-  console.log(moduleData);
-  o.moduleHTML = this.buildModuleHTML(moduleSlug, moduleData);
-=======
   o.moduleHTML = this.buildModuleHTML(moduleType, moduleData);
->>>>>>> dev-builder
 
   return o;
 };

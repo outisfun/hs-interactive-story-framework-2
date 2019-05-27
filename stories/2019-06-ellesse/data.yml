@@ -3,6 +3,10 @@
 
 index :
 
+  custom__header: 
+    customModuleId: ellesse_banner
+    img: https://interactive-development.hsnb.io/2019-04-ellesse/ellesse_header.jpg
+    title: Here’s How ellesse Used Tailoring to Change Sportswear Forever
   # LAYOUT INTRO
   ellesse__intro: 
     layoutType: SIMPLE
@@ -19,13 +23,13 @@ index :
                       was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
                       Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. 
                       With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
-                      sportswear and, with that, ellesse was born.
+                      sportswear and, with that, ellesse was born in 1959.
 
   # LAYOUT ARCHIVE
   ellesse__archive: 
     layoutType: CHAPTER
     layoutData:
-      chapterStyle: ellie
+      chapterStyle: black
       chapterBackground: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Scan.jpg
       chapterTitle: 'ellesse: Then & Now'
     layoutContent: 
@@ -36,11 +40,11 @@ index :
           highlight:  'In the beginning, ellesse made apparel for two quintessentially Italian sports: 
                       skiing and tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant 
                       which was included at a celebration of Italian design at the Pompidou Centre in 1979.'
-
-          paragraph:  'Fast forward 60 years, however, and while tennis and ski live on in ellesse’s designs 
+          paragraph:  Fast forward 60 years, however, and while tennis and ski live on in ellesse’s designs 
                       and logo, the label is as much a fashion brand as it is a sporting one. Here’s a look 
                       back at some of ellesse’s most memorable designs and how they continue to influence 
-                      today’s collections.'
+                      today’s collections.<br><br>
+                      <strong>Click the images below to explore ellesse through the ages.</strong>
       # Archive Gallery
       test__intro__gallery:
         elementType: GALLERY
@@ -49,41 +53,54 @@ index :
           galleryPreview: true
           galleryImages: 
             -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg
-              caption: 'Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. Shorts (SS19): A nod to the colors used on ellesse’s original skiwear.' 
-            -
               src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg
-              caption: 'Green & Red Sneaker (1980s): An original running shoe with colors referencing the Italian flag. White Sneaker (SS19): Inspired by running silhouettes of the 80s styled with an original rubberized logo on the upper and tongue branding.'
+              caption: 'SS19 Aladino Tennis T-Shirt: Tee worn by British tennis player Cameron Norrie. Chevron pattern, color blocking, & dual branding reference ellesse heritage. 
+                        Original Jet Stripe Pants (1960s): The first ski pants to be worn outside the boot.'
             -
               src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse10.jpg
-              caption: 'Tracktop (1990s): A 90s original, the taping on the sleeves became a classic and iconic ellesse feature. Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s. T-Shirt (1980s): Another classic, tailoring inspired design with original embroidered badging and pinstripes in corporate colors.' 
+              caption: 'SS19 Sortoni Reflective Jacket: Reflective with dual branding.
+                        Ski Jacket: Quilted with an embroider-applied logo inspired by founder Leonardo Servadio’s tailoring background.' 
             -
               src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse2.jpg
-              caption: 'Shirt (SS19): Tennis tee worn by British tennis player Cameron Norrie. The chevron pattern, color blocking, and dual branding reference ellesse heritage pieces. Ski Trousers (1960s): ellesse’s first product featuring the original penguin logo, quilted knees, and jet stripe.'          
-            -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg
-              caption: 'Trousers with Taping (SS19): Popper pants with classic ellesse taping. Padded Ski Trousers: Original jetpants with quilted knees and jet stripes down the leg. We see these colors used on the new SS19 range. Tracksuit Pants (SS19): Shellpants reminiscent of the brand’s iconic 80s tracksuits.'                  
-            -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg
-              caption: 'Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper.'          
-            -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg
-              caption: 'Tracktop (SS19): Reflective and with dual branding like the ski jacket it’s alongside. Ski Jacket: This archival piece features quilting and an embroider-applied logo, such ideas came from founder Leonardo Servadio’s tailoring background.'  
-            -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse9.jpg
-              caption: "Downhill Racing Ski Suit (1980s): This archival piece features protective padded knee guards adorned with the semi palla logo and color panels that tailored to fit the wearer's form."   
-            -
-              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg  
-              caption: 'Tanker Sneaker (1980s): An original court shoe from the 80s with oversized jacquard branding on the upper. Tennis Jacket (1980s): A white jacket with color pops on the sleeves and the iconic semi palla logo on the zip. Vilas Jacket (SS19): A replica of the dual-branded yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. Vilas’ name is printed on the back of the neck.'  
+              caption: 'Original Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper.
+                        Original Tennis Jacket (1980s): A white jacket with the original penguin logo on the zip.
+                        SS19 Vilas Jacket: A replica of the yellow jacket worn by legendary Argentinian tennis star Guillermo Vilas. 
+                        Vilas’ name features on the back of the neck.'   
             -
               src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse8.jpg
-              caption: 'Vinitziana 2.0 Sneaker (SS19): A replica of the original ellesse court shoe from the 1980s.'          
+              caption: 'Original Tracktop (1990s): A 90s piece with signature ellesse sleeve taping.
+                        SS19 Vinitziana 2.0 Sneaker (SS19): An 80s court shoe replica.
+                        Original Tennis Polo (1980s): Tailoring-inspired design with embroidered badging and pinstripes.' 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse7.jpg
+              caption: 'Original Marathon Shoe (1980s, green and red shoe): A running shoe featuring the Italian flag colors.
+                        Potenza (SS19, white shoe): Inspired by 80s running silhouettes with original rubberized logos.'    
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse3.jpg
+              caption: 'Original Tanker Sneaker (1980s): An original 80s court shoe with oversized branding on the upper.'     
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse9.jpg
+              caption: "Vinitziana 2.0 Original Court Shoe (1980s)​: A replica of the original 80s ellesse court shoe."   
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse4.jpg  
+              caption: "Downhill Racing Ski Suit (1980s): Featuring protective padded knee guards adorned with the 
+                        semi palla logo and color panels that tailor to the wearer's form."  
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse1.jpg
+              caption: 'Ski Jacket (1970s): ellesse ignored convention with a fashion-forward, oversized, and less streamlined fit. 
+                        SS19 Tennis Shorts Cafone: A nod to the color blocking used on ellesse’s original skiwear.' 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse5.jpg
+              caption: 'SS19 Appop Popper Pants (left)​: Popper pants with classic ellesse taping.
+                        The Jet Pants (middle)​: Original jetpants with quilted knees and jet stripes.
+                        SS19 Orvati Track Pant (right): Shell pants reminiscent of ellese’s iconic 80s tracksuits.'     
 
   # LAYOUT VIDEO
   ellesse__video: 
     layoutType: SIMPLE
     layoutData:
       colorScheme: dark
+      container: container
     layoutContent: 
       # Intro
       ellesse__video__text:
@@ -94,6 +111,7 @@ index :
                       Yet, six decades on, these two styles of apparel still appear antithetical to some. In this video interview, 
                       stylist and artist Ayishat Akanbi breaks down the stylistic, technical, and cultural crossover between 
                       tailoring and sportswear.'
+      
       # Video
       ellesse__video__video:
         elementType: video
@@ -104,10 +122,86 @@ index :
       ellesse__video__quote:
         elementType: quote
         elementData: 
-          quote:  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                  consequat.
+          quote:  The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. 
+                  No longer are you restricted to having to stick to tailoring or to stick to sportswear.
           source: Ayishat Akanbi
+      
+  # LAYOUT VIDEO
+  ellesse__lookbook__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent: 
+      # Intro
+      ellesse__lookbook__text:
+        elementType: text
+        elementData: 
+          headline:  ellesse in 2019
+          paragraph:  Today, ellesse is known for being a fashion brand as much as it is for being a sports brand. 
+                      In recent collections, its tailoring and sportswear heritage seamlessly converge with contemporary fashion trends and ellesse’s 
+                      recognizable color palette and semi-palla logo are ever-present symbols of the brand’s identity and history.
+                      <br><br>
+                      Yet, now, sportswear is having a similar impact on tailoring as tailoring had on sportswear under ellesse and Servadio’s influence. 
+                      Today’s tailored garments take as much from streetwear and sportswear as they do Italian traditions and people are subverting the 
+                      association of suiting with drudgery.
+                      <br><br>
+                      Honoring ellesse’s past, here’s how we shot and styled ellesse’s current offering.
+  # LAYOUT VIDEO
+  ellesse__lookbook: 
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+    layoutContent: 
+      # Lookbook
+      ellesse__lookbook__gallery:
+        elementType: GALLERY
+        elementData: 
+          galleryLayout: prada
+          galleryImages: 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb1.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/wClothing/p/alberta-t-shirt-light-blue" target="_blank">Alberta tee</a>
+                       and the <a href = "https://ellesse.com/uk/en/fWomens/p/giglio-sandal-navy" target="_blank">Giglio sandal</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb2.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/wClothing/p/consolata-jacket-light-blue" target="_blank">Consolata jacket</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb3.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/mClothing/p/vilas-track-top-yellow" target="_blank">Vilas Track jacket</a>
+                       and the <a href = "https://ellesse.com/uk/en/mClothing/p/cielo-short-yellow" target="_blank">Cielo shorts</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb4.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/fMens/p/piazza-trainer-off-white" target="_blank">Piazza trainer</a>
+                       and the <a href = "https://ellesse.com/uk/en/mClothing/p/cassina-t-shirt-black" target="_blank">Cassina tee</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb5.jpg
+              caption: Model is wearing the Angelica tracktop and Veronica trackpants.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb6.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/mClothing/p/rimini-track-top-light-pink" target="_blank">Rimini tracktop</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb7.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/wClothing/p/consolata-jacket-light-blue" target="_blank">Consolata jacket</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb8.jpg
+              caption: Model is wearing own jacket.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb9.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/wClothing/p/alberta-t-shirt-light-blue" target="_blank">Alberta tee</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb10.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/wClothing/p/infanta-dress-black" target="_blank">Infanta dress</a> and <a href = "https://ellesse.com/uk/en/wClothing/p/spitfire-track-top-pink" target="_blank">Spitfire jacket</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb11.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/fMens/p/potenza-trainer-blue-multi" target="_blank">Potenza trainers</a>
+                       and the <a href = "https://ellesse.com/uk/en/mClothing/p/toni-3pk-socks-white-grey-black" target="_blank">Selina socks</a>.
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb12.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/mAccessories/p/lorenzo-bucket-hat-white" target="_blank">Lorenzo bucket hat</a>. 
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lb13.jpg
+              caption: Model is wearing the <a href = "https://ellesse.com/uk/en/mAccessories/p/lorenzo-bucket-hat-white" target="_blank">Lorenzo bucket hat</a> and <a href = "https://ellesse.com/uk/en/fMens/p/piazza-trainer-off-white" target="_blank">Piazza trainer</a>.
 
   # LAYOUT LIAM HODGES
   ellesse__liamhodges: 
@@ -121,9 +215,9 @@ index :
       ellesse__liamhodges__intro:
         elementType: text
         elementData: 
-          paragraph:  ellesse has teamed up with rapidly rising British fashion designer Liam Hodges on an archive-inspired 
+          highlight:  ellesse has teamed up with rapidly rising British fashion designer Liam Hodges on an archive-inspired 
                       Fall/Winter 2019 collection. To find out more, we visited Hodges for a conversation at his East London studio to 
-                      iscuss ellesse’s rich history and how it’s inspired their partnership.
+                      discuss ellesse’s rich history and how it’s inspired their partnership.
       # LH Portrait
       ellesse__liamhodges__portrait:
         elementType: image
@@ -186,8 +280,8 @@ index :
                       oday, on his desk, I spot a copy of Yuval Noah Harari’s <i>21 Lessons for the 21st Century</i>. Case in point: Hodges is a 
                       sponge for knowledge. <br><br> “That’s kind of where inspiration comes from, isn’t it, it’s from books and museums and stuff. 
                       It’s not like I just go ‘ding’, and have it all right there. When I was doing the last collection I got really into a book 
-                      called Alone Together which is a study of how technology has changed people, changed how we communicate, and what we think 
-                      we are. Then there’s The Shallows which looks at how technology has changed the way our brains work, not needing to remember 
+                      called <i>Alone Together</i> which is a study of how technology has changed people, changed how we communicate, and what we think 
+                      we are. Then there’s <i>The Shallows</i> which looks at how technology has changed the way our brains work, not needing to remember 
                       things in the same way anymore, for example. But I guess that’s just what excites me, books, and comics books. And music. 
                       I’m going to see Tommy Cash on Friday and I’ve been listening to Ho99o9 a lot recently when cycling to work, it helps me 
                       get there faster.”"
@@ -228,14 +322,14 @@ index :
                       and even sold was very interesting,” he explains. The archive was stocked floor to ceiling with all manner of apparel spanning 
                       ecades, each a chapter in ellesse’s history book. But, surprisingly (or not considering his typically unconventional approach), 
                       Hodges was most attracted to old sales books and technical drawings that spoke, in particular, to ellesse’s history of bringing 
-                      together sportswear with traditional elements of tailoring. One classic campaign that caught Hodges’ attention was for a ski 
+                      together sportswear with traditional elements of tailoring.<br><br>One classic campaign that caught Hodges’ attention was for a ski 
                       collection — the sport that ellesse was built on. Hodges knew ellesse’s ski campaigns well, explaining that fashion students 
                       bring them up every time he teaches a sportswear course at the University of Westminster (his old stomping ground), but 
                       discovering and tracing their origins shone a new light on everything he’d seen before.
       # LH Custom 
       custom__liamhodges__archive:
         customModuleId: ellesse_twopiece
-        imgsrc: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh34.jpg
+        imgsrc: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh-moodboard.jpg
         videoId: l2OGRWmf
         playerId: h1yC9mkW
 
@@ -252,7 +346,7 @@ index :
                       piece’s purpose but in improving the overall design aesthetic, also discovered that sportswear could have fashion appeal. 
                       The Jet Pant was such a breakthrough that in 1979 it featured at an event at the Pompidou Centre in Paris celebrating 
                       Italian design. Given its history and the rising popularity of modern interpretations of tailoring today, it’s no wonder 
-                      that Hodges wanted ellesse’s old ski gear to form the framework of their collaboration. “We didn’t want to do a heritage 
+                      that Hodges wanted ellesse’s old ski gear to form the framework of their collaboration.<br><br>“We didn’t want to do a heritage 
                       collaboration. Because that’s crap, we’ve seen that a million times” Hodges explains. “For this one, it felt more about 
                       it being of the moment. Something that felt relevant to them and to us, representative of both brands, rather than too 
                       much one way or the other.” In his eyes, there’s no point in working with another label just to make the same clothes 
@@ -279,14 +373,7 @@ index :
                       going to pull and copy stuff directly, but simply playing with fits and cuts in his own way is a subtle nod to the archive 
                       considering what we know about ellesse’s past. He examined old samples and pictures thoroughly but he put the physical 
                       references aside when he started drawing, “it’s always a new thing then, right? Because it’s my memory of it rather than 
-                      this carbon copy. ”Hodges’ approach was to spin his favorite elements from the ellesse archive and leave his aesthetic or 
-                      conceptual mark on them. “The ski pants and the ski jacket were really important for us because that's where ellesse’s 
-                      heritage lies. For us to update them in our way, mixing the fabrics and adding the print that goes across most of the 
-                      collection, was really fun,” he explains. “We really went into the details, so on the tracksuits, we’ve got special zip 
-                      pulls and stuff, then we’ve added these wavy lines and played with the colors. Another thing I loved from the ellesse 
-                      archive was there use of double branding, so on some pieces, we’ve got the ellesse name on one side and the ‘semi palla’ 
-                      logo on the other.” The print Hodges mentions is the ice and salt crystal graphic that’s another abstract reference to 
-                      ellesse’s ski heritage.
+                      this carbon copy.”
 
       # LH Custom Three
       custom__liamhodges__three:
@@ -343,16 +430,22 @@ index :
                       never veered too far from its founder’s original mission to create stylish sportswear with the help of specialist tailoring 
                       techniques. These are the type of credible values that people crave from brands today and unsurprisingly the collection has 
                       been met with praise. As a result, the pair are already working on a Spring/Summer 2020 collection — Hodges wouldn’t show or 
-                      ell me anything about it other than that it’s informed by the other half of ellesse’s bedrock: tennis. Until then though, if 
+                      ell me anything about it other than that it’s informed by the other half of ellesse’s bedrock: tennis.<br><br>Until then though, if 
                       there’s one important lesson we can all learn from Liam Hodges and his team it’s that you can run a successful luxury fashion 
-                      label and still piss off to the pub in the middle of the day with your mates."
-                    
+                      label and still piss off to the pub in the middle of the day with your mates.<br><br>"
+        
       # LH ellesse video
       ellesse__liamhodges__fin:
         elementType: video
         elementData: 
           videoId:  Nxy2bpi2
           playerId: h1yC9mkW
+
+      # LH ellesse conclusion
+      ellesse__liamhodges__final:
+        elementType: text
+        elementData:
+          paragraph: <strong>The ellesse x Liam Hodges collaboration is due to launch later this year and will be available via <a href = 'https://ellesse.com/uk/en/' target='_blank'>ellesse.com.</a></strong>
                     
                     
 

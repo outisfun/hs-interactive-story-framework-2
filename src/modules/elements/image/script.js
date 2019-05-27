@@ -1,7 +1,8 @@
 
-
+var YAML = require('yamljs');
+var _ = require('lodash');
 var ScrollMagic = require('scrollmagic');
-var FRAMEWORKDATA = require('src/frameworkdata.js');
+var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
 
 function ISF_El_Image(el, controller) {
 

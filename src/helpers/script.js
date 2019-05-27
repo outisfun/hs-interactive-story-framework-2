@@ -7,9 +7,10 @@
     var constructors = {};
 
     var YAML = require('yamljs');
-    var FD = YAML.load('../../../src/fd.yml');
-
     var _ = require('lodash');
+    var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
+
+    var removeBadThings = require('js/helpers/removebadthings.js');
 
     /* require modules */
 
@@ -22,6 +23,7 @@
 
     var interactiveStory;
 
+    removeBadThings();
 
     function ISF_Story(el){
         this.DOM = {el: el};
@@ -39,14 +41,10 @@
 
         // loop through modules and see if there are any to init
         for (var MOD in FD) {
-          console.log(FD[MOD], constructors);
           if (FD[MOD].CLASSES !== undefined) {
             var els = Array.from(document.querySelectorAll('.' + FD[MOD].CLASSES.EL));
-
             if ((els.length !== 0) && (constructors[MOD])) {
               els.forEach(function(elem, ind) {
-                // init constructor
-                console.log(constructors[MOD]);
                 self.modules.push(new constructors[MOD](elem, self.controller));
                 // check for effects
                 for (var attr in elem.dataset) {

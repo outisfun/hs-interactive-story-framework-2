@@ -68520,10 +68520,10 @@ this["modules"]["gallery"] = Handlebars.template({"1":function(container,depth0,
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.caption : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "                </div>\n            </div>\n";
 },"3":function(container,depth0,helpers,partials,data) {
-    var helper;
+    var stack1, helper;
 
   return "                        <p class = \"isf-el_image__caption\">"
-    + container.escapeExpression(((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"caption","hash":{},"data":data}) : helper)))
+    + ((stack1 = ((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"caption","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "</p>\n";
 },"5":function(container,depth0,helpers,partials,data) {
     var helper;
@@ -68558,13 +68558,21 @@ this["modules"]["image"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main"
 },"useData":true});
 
 this["modules"]["imagegroup"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
-    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
   return "            <picture class = \"isf-el_image js--image isf-el_gallery__item js--gallery__item\">\n                <source srcset=\""
     + alias4(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"src","hash":{},"data":data}) : helper)))
     + "\" media=\"(min-width: 768px)\">\n                <img src=\""
     + alias4(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"src","hash":{},"data":data}) : helper)))
-    + "\" />\n            </picture>\n";
+    + "\" />\n                "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.caption : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n            </picture>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "<p class = \"caption\">"
+    + ((stack1 = ((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"caption","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p>";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -68582,9 +68590,9 @@ this["modules"]["imagegroup"] = Handlebars.template({"1":function(container,dept
 this["modules"]["quote"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div class = \"isf-el isf-el_quote js--quote\" id = \"modId\">\n    <div class = \"isf-el_quote__content\">\n        <h3 class = \"isf-el_quote__content__quote\">"
+  return "<div class = \"isf-el isf-el_quote js--quote\" id = \"modId\">\n    <div class = \"isf-el_quote__content\">\n        <h3 class = \"isf-el_quote__content__quote\">“"
     + alias4(((helper = (helper = helpers.quote || (depth0 != null ? depth0.quote : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"quote","hash":{},"data":data}) : helper)))
-    + "</h3>\n        <small class = \"isf-el_quote__content__source\">\n            "
+    + "”</h3>\n        <small class = \"isf-el_quote__content__source\">\n            - "
     + alias4(((helper = (helper = helpers.source || (depth0 != null ? depth0.source : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"source","hash":{},"data":data}) : helper)))
     + "\n        </small>\n    </div>\n</div>";
 },"useData":true});
@@ -68627,8 +68635,14 @@ this["modules"]["text"] = Handlebars.template({"1":function(container,depth0,hel
     + "</div>\n";
 },"useData":true});
 
-this["modules"]["video"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+this["modules"]["video"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "			<p class = \"caption\">"
+    + ((stack1 = ((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"caption","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
   return "<div class=\"isf-el isf-el_video\" id = \""
     + alias4(((helper = (helper = helpers.modId || (depth0 != null ? depth0.modId : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"modId","hash":{},"data":data}) : helper)))
@@ -68636,7 +68650,9 @@ this["modules"]["video"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main"
     + alias4(((helper = (helper = helpers.videoId || (depth0 != null ? depth0.videoId : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"videoId","hash":{},"data":data}) : helper)))
     + "-"
     + alias4(((helper = (helper = helpers.playerId || (depth0 != null ? depth0.playerId : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"playerId","hash":{},"data":data}) : helper)))
-    + ".html\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"auto\" allowfullscreen=\"\" style=\"position:absolute;\"></iframe>\n		</div>\n	</div>\n</div>";
+    + ".html\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"auto\" allowfullscreen=\"\" style=\"position:absolute;\"></iframe>\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.caption : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "		</div>\n	</div>\n</div>";
 },"useData":true});
 
 this["modules"]["header"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -68672,6 +68688,16 @@ this["modules"]["headerimage"] = Handlebars.template({"compiler":[7,">= 4.0.0"],
 
   return "<div class = \"isf-layout__header\" style = \"background-image: url('"
     + alias4(((helper = (helper = helpers.imgsrc || (depth0 != null ? depth0.imgsrc : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"imgsrc","hash":{},"data":data}) : helper)))
+    + "');\">\n	<h1>"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h1>\n</div>";
+},"useData":true});
+
+this["modules"]["ellesse_banner"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<div class=\"isf-layout__header\" style=\"background-image: url('"
+    + alias4(((helper = (helper = helpers.img || (depth0 != null ? depth0.img : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"img","hash":{},"data":data}) : helper)))
     + "');\">\n	<h1>"
     + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h1>\n</div>";

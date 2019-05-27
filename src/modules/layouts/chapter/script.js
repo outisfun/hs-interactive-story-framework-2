@@ -1,7 +1,9 @@
 
 // Plugins
 var ScrollMagic = require('scrollmagic');
-var FD = YAML.load('../../../src/fd.yml');
+var YAML = require('yamljs');
+var _ = require('lodash');
+var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
 
 var ww = window.innerWidth;
 var wh = window.innerHeight;

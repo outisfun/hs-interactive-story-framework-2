@@ -1,3 +1,49 @@
 .isf-el_quote {
   @include isf-padding-tb-md;
+  @include isf-margin-t-md;
+  @include isf-margin-b-md;
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    height: 2px;
+    width: 30px;
+    background-color: #2e2e2e;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  &:after {
+    bottom: 0;
+  }
+  &:before {
+    top: 0;
+  }
+  @media(min-width: 992px) {
+    &:before,
+    &:after {
+      width: 50px;
+    }
+  }
+
+  &__content__source {
+    font-style: italic;
+    font-size: .7647058824rem;
+    display: block;
+    color: #a8a8a8;
+    margin-top: .2941176471rem;
+  }
+}
+
+.isf-color-scheme--dark,
+.style--ellie {
+  .isf-el_quote {
+    position: relative;
+    &:before,
+    &:after {
+      background-color: rgba(255, 255, 255, 0.75);
+    }
+  }
 }
