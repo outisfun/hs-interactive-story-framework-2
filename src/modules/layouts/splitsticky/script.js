@@ -1,10 +1,9 @@
 
 // Plugins
-var imagesLoaded = require('imagesLoaded');
-var ScrollMagic = require("scrollmagic");
-require('scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap');
-var gsap = require("gsap");
-var FRAMEWORKDATA = require('src/frameworkdata.js');
+var ScrollMagic = require('scrollmagic');
+var YAML = require('yamljs');
+var _ = require('lodash');
+var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
 
 var ww = window.innerWidth;
 var wh = window.innerHeight;
@@ -13,7 +12,7 @@ function ISF_Layout_SplitSticky(el, controller) {
 
   this.DOM = {el: el};
   this.controller = controller;
-  this.DOM.sticky = document.querySelector( FRAMEWORKDATA.MODULES.layout_split_sticky.CLASSES.STICKY );
+  this.DOM.sticky = document.querySelector( '.' + FD.SPLITSTICKY.CLASSES.STICKY );
 }
 
 ISF_Layout_SplitSticky.prototype.init = function () {

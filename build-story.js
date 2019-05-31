@@ -38,6 +38,8 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
     // iterate through pages
     for (var page in storydata) {
 
+      console.log('is page', page);
+
       var pageHtml = '';
       var pageName = page;
       var pageSections = storydata[page];
@@ -62,20 +64,10 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
             var elemObj = layoutContentObj[elem];
 
             if (!isCustom(elemId)) {
-              console.log(elemId + ' is not custom');
               var element = self.buildModule( elemId, elemObj );
               layoutContentHtml += element.moduleHTML;
             } else {
-              if (elemId.includes('code_')) {
-                // again. move this somewhere else, as it's only relevant for the preview
-                var tId = layoutContentObj[elemId];
-                var tObj = layoutContentObj[tId];
-                layoutContentHtml += this.buildCodeModule(tObj); // returns markup
-              } else {
-                console.log(elemId + ' is custom');
-                layoutContentHtml += this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml;
-                console.log('modhtml' + this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml);
-              }
+              layoutContentHtml += this.buildCustomModule(elemObj.customModuleId, elemObj).moduleHtml;
             }
           }
 
@@ -83,19 +75,12 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
           pageHtml +=layoutHtml;
 
         } else {
-          // in case it's a code block. relevant only for the preview, so move somewhere else
-          if (layoutId.includes('code_')) {
-            var targetId = layoutObj;
-            var targetObj = pageSections[targetId];
-            pageHtml += TEMPLATES.custom_code({"codetext" : JSON.stringify(targetObj, null, 4) });
-          } else {
-            pageHtml += this.buildCustomModule(layoutObj.customModuleId, layoutObj).moduleHtml;
-          }
+          pageHtml += this.buildCustomModule(layoutObj.customModuleId, layoutObj).moduleHtml;
         }
       }
 
 
-      this.buildFile('index.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
+      this.buildFile(page + '.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
     }
 
     /* Build SCSS & JS files */
@@ -140,7 +125,7 @@ ISF_StoryBuilder.prototype.buildCodeModule = function(targetObj) {
 ISF_StoryBuilder.prototype.buildCustomModule = function(moduleId, moduleObj) {
 
   var oCustom = {};
-  console.log(typeof TEMPLATES[moduleId]);
+
   // build markup
   if (TEMPLATES[moduleId]) {
     // code els
@@ -205,7 +190,7 @@ ISF_StoryBuilder.prototype.buildModuleHTML = function(moduleType, moduleData){
 };
 
 ISF_StoryBuilder.prototype.importModuleStyle = function(moduleType) {
-  var importString = '@import "' + moduleType + '/style.scss";';
+  var importString = '@import "' + _.lowerCase(moduleType) + '/style.scss";';
   return importString;
 };
 
@@ -215,7 +200,7 @@ ISF_StoryBuilder.prototype.requireModuleConstructor = function(moduleType){
     if (FD[ _.upperCase(moduleType) ] !== undefined) {
       // check if it has a constructor - some modules don't.
       if (FD[ _.upperCase(moduleType) ].CONSTRUCTOR !== undefined) {
-        var requireModule = "var " + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + " = require('" + moduleType + "/script.js'); ";
+        var requireModule = "var " + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + " = require('" + _.lowerCase(moduleType) + "/script.js'); ";
         var addToObject = 'constructors["' + moduleType + '"] = ' + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + '; ';
         this.constructors[moduleType] = requireModule + addToObject;
         return this.constructors[moduleType];

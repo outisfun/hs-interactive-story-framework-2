@@ -144,10 +144,10 @@
 
       .isf-el_gallery__item {
         min-width: 300px;
-        padding: 0px 3px;
         overflow: visible;
         .isf-el_image__wrap {
             position: relative;
+            overflow: hidden;
           }
         .isf-el_image {
           max-width: none!important;
@@ -158,7 +158,7 @@
           top: 100%;
           font-size: 14px;
           opacity: 0.75;
-          left: 15px;
+          left: 0px;
           margin-top: 0px;
         }
       }
@@ -246,7 +246,7 @@
           }
           picture {
             img {
-              max-height: calc(100vh - 180px);
+              max-height: calc(100vh - 240px);
               max-width: 90vw;
             }
           }
@@ -363,6 +363,8 @@
     background-color: rgba(0,0,0,0.35);
     border-radius: 50%;
     padding: 8px 8px;
+    width: 38px;
+    height: 38px;
     &:hover{
       background-color: rgba(0,0,0,0.75);
     }

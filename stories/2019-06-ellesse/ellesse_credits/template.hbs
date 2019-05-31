@@ -1,0 +1,15 @@
+<div class = "isf-el_credits">
+{{#each credits}}
+	<div class = "isf-el_credits__section">
+	    <p class = "isf-title">{{ sectionId }}</p>
+	    <ul class = "isf-el_credits__list">
+		    {{#each sectionCredits}}
+			    <li>
+			    	<span class = "label">{{{ what }}}: </span>
+			    	<span class = "value">{{{ who }}}</span>
+			    </li>
+		    {{/each}}
+		</ul>
+	</div>
+{{/each}}
+</div>

@@ -6,14 +6,11 @@
             <div class = "isf-el_image js--image isf-el_gallery__item js--gallery__item isf-el_image--{{ type }}" data-x_animate_on_page_enter = "{{ galleryEffectOnPageEnter }}">
                 <div class = "isf-el_image__wrap">
                     <figure class = "isf-el_image__figure">
-                        <picture class = "isf-el_image__picture">
-                            <source srcset="{{ src }}" media="(min-width: 768px)">
-                            <img class = "isf-el_image__picture" src="{{ src }}" />
-                        </picture>
+                        <img class = "isf-el_image__picture" src="{{ src }}" />
+                        {{#if caption}}
+                            <p class = "isf-el_image__caption">{{{ caption }}}</p>
+                        {{/if}}
                     </figure>
-                    {{#if caption}}
-                        <p class = "isf-el_image__caption">{{{ caption }}}</p>
-                    {{/if}}
                 </div>
             </div>
             {{/if}}

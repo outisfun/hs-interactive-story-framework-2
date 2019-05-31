@@ -1,0 +1,188 @@
+---
+# HSNBISF 2.0: PREVIEW #######################################################
+
+# INDEX.HTML
+index:
+
+  custom_nav: 
+    customModuleId: custom_nav
+
+  custom_topsection:
+    customModuleId: custom_topsection
+    title: HSNB Interactive Story Framework 2.0
+    paragraph: A framework to speed up development of Tier 1 interactive stories.
+      It works by converting JSON files into pages.
+
+# BASIC_ELEMENTS.HTML
+basic_elements:
+
+  custom_nav:
+    customModuleId: custom_nav
+
+  custom_topsection:
+    customModuleId: custom_topsection
+    title: 'HSNBISF 2.0: Basic elements'
+
+  preview__intro:
+    layoutType: SIMPLE
+    layoutData: 
+      container: container
+    layoutContent:
+
+      custom_block:
+        customModuleId: module_title
+        title: 'text'
+
+      basic_elements__text:
+        elementType: TEXT
+        elementData:
+          highlight: On July 3 1973, David Bowie announced the retirement of his alter
+            ego, Ziggy Stardust, on stage at London’s Hammersmith Odeon Theatre. “Not
+            only is this the last show of the tour, but it’s the last show that we’ll
+            ever do,” Bowie told the crowd. His band didn’t get the memo.
+          paragraph: Sir Bowie? He turned down the offer of knighthood from the Queen
+            in 2003. “I would never have any intention of accepting anything like
+            that,” he said. “I seriously don’t know what it’s for. It’s not what I
+            spent my life working for.
+
+      custom_block_qt:
+        customModuleId: module_title
+        title: 'quote'
+
+      basic_elements__quote:
+        elementType: QUOTE
+        elementData:
+          quote: If it’s wearing a pink hat and a red nose, and it plays a guitar
+            upside down, I will go and look at it!
+          source: David Bowie
+
+      custom_block_img:
+        customModuleId: module_title
+        title: 'image'
+
+    #  custom_code_image: basic_elements__image
+      basic_elements__image:
+        elementType: IMAGE
+        elementData:
+          src_large: https://interactive-development.hsnb.io/hsnbisf/assets/bowie6.jpg
+          src_small: https://interactive-development.hsnb.io/hsnbisf/assets/bowie6.jpg
+
+      custom_block_vid:
+        customModuleId: module_title
+        title: 'video'
+
+      basic_elements__video:
+        elementType: video
+        elementData: 
+          videoId:  M7KADWuo
+          playerId: bUaBxxgc
+
+# GALLERY.HTML
+gallery:
+
+  custom_nav:
+    customModuleId: custom_nav
+
+  custom_topsection:
+    customModuleId: custom_topsection
+    title: 'HSNBISF 2.0: Gallery'
+
+  gallery__masonry:
+    layoutType: SIMPLE
+    layoutData: 
+      container: container
+    layoutContent:
+      custom_block:
+        customModuleId: module_title
+        title: 'gallery: masonry w/ preview'
+      ellesse__lookbook__gallery:
+        elementType: GALLERY
+        elementData: 
+          galleryLayout: masonry
+          galleryPreview: true
+          galleryImages: 
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg
+              caption: A small Jean Genie/Snuck off to the city/Strung out on lasers/And slash back blazers.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie3.jpg
+              caption: It's not the side-effects of the cocaine / I’m thinking that it must be love.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie4.jpg
+              caption: We live for just these twenty years / Do we have to die for the fifty more?
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie8.jpg
+              caption: Model is wearing the Angelica tracktop and Veronica trackpants.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie9.jpg
+              caption: I had to phone someone so I picked on you/ Hey, that's far out so you heard him too.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie7.jpg
+              caption: I, I can remember / Standing by the wall / And the guns shot above our heads / And we kissed / As though nothing could fall.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie10.jpg
+              caption: Time takes a cigarette/ Puts it in your mouth/ You pull on your finger/ Then another finger/ Then your cigarette.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie11.jpg
+              caption: I'm an alligator/I'm a mama-papa coming for you/ I'm the space invader/ I'll be a rock 'n' rollin' bitch for you
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg
+              caption: A small Jean Genie/Snuck off to the city/Strung out on lasers/And slash back blazers.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie3.jpg
+              caption: It's not the side-effects of the cocaine / I’m thinking that it must be love.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie4.jpg
+              caption: We live for just these twenty years / Do we have to die for the fifty more?
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie8.jpg
+              caption: Model is wearing the Angelica tracktop and Veronica trackpants.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie9.jpg
+              caption: I had to phone someone so I picked on you/ Hey, that's far out so you heard him too.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie7.jpg
+              caption: I, I can remember / Standing by the wall / And the guns shot above our heads / And we kissed / As though nothing could fall.
+
+  gallery__prada:
+    layoutType: SIMPLE
+    layoutData: 
+      container: none
+    layoutContent:
+
+      custom_block:
+        customModuleId: module_title
+        title: 'gallery: prada'
+
+      ellesse__lookbook__gallery:
+        elementType: GALLERY
+        elementData: 
+          galleryLayout: prada
+          galleryImages: 
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg
+              caption: A small Jean Genie/Snuck off to the city/Strung out on lasers/And slash back blazers.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie3.jpg
+              caption: It's not the side-effects of the cocaine / I’m thinking that it must be love.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie4.jpg
+              caption: We live for just these twenty years / Do we have to die for the fifty more?
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie8.jpg
+              caption: Model is wearing the Angelica tracktop and Veronica trackpants.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie9.jpg
+              caption: I had to phone someone so I picked on you/ Hey, that's far out so you heard him too.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie7.jpg
+              caption: I, I can remember / Standing by the wall / And the guns shot above our heads / And we kissed / As though nothing could fall.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie10.jpg
+              caption: Time takes a cigarette/ Puts it in your mouth/ You pull on your finger/ Then another finger/ Then your cigarette.
+            -
+              src: https://interactive-development.hsnb.io/hsnbisf/assets/bowie11.jpg
+              caption: I'm an alligator/I'm a mama-papa coming for you/ I'm the space invader/ I'll be a rock 'n' rollin' bitch for you
+
+
+

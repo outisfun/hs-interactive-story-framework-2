@@ -21,7 +21,7 @@ index :
           paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
                       Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
                       was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
-                      Servadio dreamt of fashion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      Servadio dreamt of fasdasddafadsdfdsdfsshion-forward sportswear that suited his stylish, tailored aesthetic. 
                       With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
                       sportswear and, with that, ellesse was born in 1959.
 
@@ -446,8 +446,84 @@ index :
         elementType: text
         elementData:
           paragraph: <strong>The ellesse x Liam Hodges collaboration is due to launch later this year and will be available via <a href = 'https://ellesse.com/uk/en/' target='_blank'>ellesse.com.</a></strong>
-                    
-                    
+  
+  # CREDITS
+  ellesse__credits: 
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent: 
+      # Custom credits
+      custom__credits: 
+        customModuleId: ellesse_credits
+        credits: 
+          - 
+            sectionId: ellesse Then & Now Gallery
+            sectionCredits: 
+              -
+                what: Photography
+                who: Julien Tell
+              - 
+                what: Production
+                who: Rochelle Bambury 
+              - 
+                what: Set Designer
+                who: Eva Jauss
+              - 
+                what: Gaffers
+                who: Lighthawk
+          - 
+            sectionId: Meeting of Styles Interview
+            sectionCredits: 
+              -
+                what: Director
+                who: Dumas Haddad
+              - 
+                what: DOP
+                who: Courtney Bennett 
+              - 
+                what: Producer HS
+                who: Rochelle Bambury
+              - 
+                what: Art Director
+                who: Stella Richter
+              -
+                who: Special thanks to <a href = "http://notjustanotherstore.com/">Not Just Another Store</a>.
+          - 
+            sectionId: Tailoring Lookbook
+            sectionCredits: 
+              -
+                what: Photographer
+                who: Highsnobiety
+              - 
+                what: Art Director
+                who: Stella Richter
+              - 
+                what: Producer
+                who: Rochelle Bambury
+              - 
+                what: Stylist
+                who: Greta Tettamanzi
+              - 
+                what: HMU
+                who: Susanna Jonas
+              - 
+                what: Gaffers
+                who: Lighthawk
+              -
+                what: Models
+                who: Sara <a href = "https://www.girlsclubmanagement.com" target="_blank">@Girls ClubManagement</a> and Tom <a href = "https://www.imgmodels.com/london/home" target="_blank">@IMG</a>
+
+          - 
+            sectionId: Liam Hodges Interview
+            sectionCredits: 
+              -
+                what: Photo & Video
+                who: Blue Laybourne
+              - 
+                what: Art Director
+                who: Aaron Howes
 
 
 

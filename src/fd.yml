@@ -126,13 +126,29 @@ CHAPTER :
         - ellie
         - mercedes
         - aleister
-      MANDATORY : true
 
     chapterBackground : 
       DATA_TYPEOF : imgsrc
-      MANDATORY : true
 
     chapterTitle : 
       DATA_TYPEOF : string
-      MANDATORY : true
+
+# ISF_Layout_SplitSticky
+SPLITSTICKY :
+  CLASSES :
+    EL : js--split-sticky
+    CONTENT : js--split-sticky__content
+    STICKY : js--split-sticky__sticky
+  CONSTRUCTOR : ISF_Layout_SplitSticky
+  DATA :
+    backgroundImage :
+      DATA_TYPEOF : imgsrc
+
+
+    
+
+
+
+
+
 

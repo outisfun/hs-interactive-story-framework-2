@@ -1,0 +1,273 @@
+---
+# HSNBISF: 2019 05 MERCEDED #######################################################
+
+index:
+
+  custom_headerimage:
+    customModuleId: headerimage
+    imgsrc: https://interactive-development.hsnb.io/2019-05-mercedes/assets/00_01.jpg
+    title: The Mercedes-Benz EQC is Driving Into a New Dawn
+
+  # INTRO
+  mercedes__intro:
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent:
+      mercedes__intro__text:
+        elementType: TEXT
+        elementData:
+          highlight: Among humanities greatest achievements, our shift from horse-drawn
+            carriages to engine-driven vehicles is one that has revolutionized the
+            way we live.
+          paragraph: 'It’s been over one hundred thirty-three years since Carl Benz
+            patented the first automobile in Berlin, Germany in 1886, and we’re still
+            feeling its effects. It struck the world like a lightning bolt, reimagining
+            how we travel and connect, and put what would become the Mercedes-Benz
+            company on the map.<br><br>There aren’t many ways to outflex the invention
+            of the automobile. Yet, somehow, Mercedes-Benz has made lightning strike
+            twice — this time almost literally. After a century of paving the way
+            with automobiles renowned for their quality and comfort, they’ve raced
+            into a new dawn in the driver’s seat of the fully electric Mercedes-Benz
+            EQC Edition 1886. Packing 133 years of history into the seamless, LED-outfitted
+            chassis, the limited edition model of the new Mercedes-Benz EQC 400 4MATIC
+            line is a window into the past and future of cars. It’s at once both a
+            time capsule to the birth of the automobile and a gleaming look at a future
+            driven by Mercedes-Benz’ new electric mobility brand, Electric Intelligence
+            (EQ).<br><br>The EQC line is designed to make us enjoy again and find
+            our passion — whether it be birdwatching, beach-bumming, or something
+            else entirely. With tech-packed interiors and engines as quiet as a monk’s
+            chambers, it certainly makes the case for being an antidote to the loud
+            shout of the modern world. But, before we can look to the future of driving,
+            it’s essential we go back to the beginning and tell the story of how Carl
+            Benz changed the world forever.'
+
+  # HISTORY
+  mercedes__history:
+    layoutType: CHAPTER
+    layoutData:
+      colorScheme: dark
+      container: container
+      chapterStyle: mercedes
+      chapterVideo: bNQ1cQ9V
+      chapterTitle: From 1886 to the First Spark
+    layoutContent:
+      mercedes__history__text:
+        elementType: TEXT
+        elementData:
+          highlight: Behind every great origin story is a dream and a path paved with
+            small achievements. For Carl Benz, that dream came to him in 1877 in the
+            form of a “vehicle without horses.”
+          paragraph: Sparked by the thought, he toiled away for a year on a gas-driven,
+            two-stroke engine capable of revolutionizing transportation. It would
+            take months of failure and tinkering but, on New Year’s Eve in 1878, he
+            got his engine running for the first time — providing the fuel needed
+            to keep fighting for his vision.<br><br>Five years after that fateful
+            day, Benz launched a two-stroke “System Benz” engine fit for the market
+            but too big and heavy to be installed into any vehicle at the time. In
+            a move born out of necessity, he built an entirely new automobile fit
+            with a four-stroke engine. With his dream turned into a reality at last,
+            he braved the cold winter air and left Berlin’s German Imperial Patent
+            Office on 29 January 1886 with the birth certificate for a “gas-powered
+            vehicle” that changed the world forever.
+      mercedes__history__gallery:
+        elementType: IMAGEGROUP
+        elementData:
+          images:
+          - src: https://interactive-development.hsnb.io/2019-05-mercedes/assets/01_02.jpg
+          - src: https://interactive-development.hsnb.io/2019-05-mercedes/assets/01_01.jpg
+      mercedes__announce__text:
+        elementType: TEXT
+        elementData:
+          paragraph: One hundred thirty-three years after Patent Number 37435 brought
+            individual mobility to the auto industry, the ethos of the OG Motorwagen
+            has been stitched into the spirit (and seats) of the Mercedes-Benz EQC
+            Edition 1886. It’s a new dawn for the company and the concept of electric
+            mobility and, this time, we’re along for the ride.
+
+  mercedes__break:
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent:
+      mercedes__break__quote:
+        elementType: quote
+        elementData:
+          quote: "The ethos of the Motorwagen has been stitched into the spirit (and
+            seats) of the Mercedes-Benz EQC Edition 1886."
+
+  # A NEW DAWN
+  mercedes__newdawn:
+    layoutType: CHAPTER
+    layoutData:
+      container: container
+      colorScheme: dark
+      chapterStyle: mercedes
+      chapterBackground: https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_01.jpg
+      chapterTitle: A New Dawn for Driving
+    layoutContent:
+      mercedes__newdawn__text:
+        elementType: TEXT
+        elementData:
+          highlight: 'The English theologian Thomas Fuller famously said: “It is always
+            darkest just before the Day dawneth.” Now, finally, the new day for electric
+            has dawned with a little help from the legendary German automaker.'
+          paragraph: 'It’s fitting that Mercedes-Benz’s pioneering spirit would eventually
+            turn to electric cars. Like the horse-drawn carriages of generations past,
+            the electric car could use some pioneering spirit and a few fuel cells
+            worth of fun. Make Electric Enjoyable Again, if you will. As much as we’d
+            like to say the experience of driving electric has been as exciting as
+            it looked in science fiction films, the reality has been more “stranded
+            on the Autobahn with no charge.” Not exactly a cute vibe for automobiles
+            that should be the future of driving. '
+      mercedes__newdawn__image:
+        elementType: IMAGEGROUP
+        elementData:
+          images:
+          - src: https://interactive-development.hsnb.io/2019-05-mercedes/assets/02_02.jpg
+            caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+              kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__newdawn__text2:
+        elementType: TEXT
+        elementData:
+          highlight: EQ and E-Mobility
+          paragraph: "The problem isn’t that electric is a snooze.  Great strides
+            have been made to put these cars on the cutting edge of technology as
+            charging stations multiply like rabbits around the world. But, somewhere
+            along the way, they’ve lost an essential ingredient: joy. It’s a problem
+            that’s been at the forefront of Mercedes-Benz’s foray into electric and
+            now, two words are helping bring joy back to the art of the joyride in
+            their fully electric fleet: Electric Intelligence.<br><br>No, not intelligence
+            in the sentient “talking cars in a sleepy town off Route 66” kind of way.
+            With the launch of the EQC as Mercedes-Benz’s first model under the EQ
+            brand, the automaker is ushering in a new era.<br><br>EQ is an ecosystem
+            of services designed to bring intelligence to electromobility that goes
+            far beyond driving. We live in a weird, wild world these days and if we’ve
+            learned anything, it's that technology should be as easy, quick, and
+            convenient as possible."
+      mercedes__birdwatcher__video__futuretech:
+        elementType: VIDEO
+        elementData:
+          videoId: t4179RYt
+          playerId: h1yC9mkW
+          caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+            kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__newdawn__technology:
+        elementType: TEXT
+        elementData:
+          highlight: Technology
+          paragraph: That’s why the EQC is packed with a range of quick charging options
+            for home and travel; a voice-controlled AI assistant for playing your
+            throwback 90s rap playlist; the MBUX Augmented Reality system for navigating
+            with gestures like a true Jedi; and even an app to check the charge over
+            a morning cup of coffee (or from bed for the late-risers).
+      mercedes__birdwatcher__video__silentdrive:
+        elementType: VIDEO
+        elementData:
+          videoId: ylWuozww
+          playerId: h1yC9mkW
+          caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+            kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__newdawn__technology2:
+        elementType: TEXT
+        elementData:
+          paragraph: 'That’s not even half of the EQ services packed into the Swiss
+            Army Knife of electric cars. Beyond all the gizmos, gadgets, and gesture-controlled
+            navigation systems, the standout feature is one tailor-made for our weary
+            souls: silence.<br><br>It’s a sensation that has become a precious commodity
+            in a world that gets noisier by the day and within the EQC’s spacious
+            cabin, there’s enough of it to fill a monastery. Like every inch of the
+            car, the meditative calm is carefully constructed. Insulation meant to
+            keep out diesel engine noise and foam layered into the tires fights back
+            against the sort of road noise that studies have shown overwhelmingly
+            contributes to fatigue. All that’s left is the sound of silence and the
+            open road.'
+      mercedes__birdwatcher__video__girlwoman:
+        elementType: video
+        elementData:
+          videoId: 9O5DCKjT
+          playerId: h1yC9mkW
+          caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+            kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__newdawn__futuredrive:
+        elementType: text
+        elementData:
+          highlight: Future Driving
+          paragraph: Of course, the goal of the EQC line wasn’t just to master the
+            art of silence; though it does certainly help with carve out time for
+            morning meditation on the commute. Mercedes-Benz’s vision of a new dawn
+            for driving isn’t just about creating a monk-like cabin and an ecosystem
+            of smart technology. It’s about turning the EQC into a vessel for finding
+            your passion — whether it be a walk in the woods or, perhaps, a winding
+            drive along the cliffs to go birdwatching.
+
+  # QUOTE BREAK
+  mercedes__break2:
+    layoutType: simple
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent:
+      mercedes__break__quote:
+        elementType: quote
+        elementData:
+          quote: Like every inch of the car, the meditative calm is carefully constructed.
+
+  # BIRDWATCHER
+  mercedes__birdwatcher:
+    layoutType: chapter
+    layoutData:
+      colorScheme: dark
+      chapterStyle: mercedes
+      chapterVideo: VlAilVYi
+      chapterTitle: The Birdwatcher's Journey
+      container: container
+    layoutContent:
+      mercedes__birdwatcher__text:
+        elementType: text
+        elementData:
+          highlight: Find Your Passion
+          paragraph: This isn’t a stealth birding propaganda film (though there are
+            some very cool birding clubs around). Fit with an ecosystem of EQ services
+            and the quietest cabin and ride around, it doesn’t matter if you’re a
+            lifelong birder or simply want to discover what drives you — pun intended.
+            Mercedes-Benz’s EQC fleet is bringing the joy back to joyriding so you
+            can find your passion in silence and style.
+      mercedes__birdwatcher__video1:
+        elementType: video
+        elementData:
+          videoId: NjW38se4
+          playerId: bUaBxxgc
+          caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+            kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__birdwatcher__text3:
+        elementType: text
+        elementData:
+          paragraph: We’ve come a long way since Carl Benz left that patent office
+            in 1886 and freed the world from the horse and carriage for good. But
+            throughout the 133 years of innovation, the pioneering passion has remained
+            woven into the brand’s DNA. Now it’s time for an all-electric era in mobility,
+            and with the Mercedes-Benz EQC line, we’ve finally found the sleek, silent
+            ride worthy of ushering us into the new dawn.
+      mercedes__birdwatcher__video2:
+        elementType: video
+        elementData:
+          videoId: HdwBeGeb
+          playerId: h1yC9mkW
+          caption: 'EQC 400 4MATIC: Combined electric energy consumption: 20.8–19.7
+            kWh/100 km; combined CO<sub>2</sub> emissions: 0 g/km.<sup>[1]</sup>'
+      mercedes__birdwatcher__text4:
+        elementType: text
+        elementData:
+          highlight: Product Info + Return to 1886
+          paragraph: Ready to enjoy electric? Head to the EQC website <https://mercedes-benz-eqc.de>
+            for more information about the Mercedes-Benz EQC Edition 1886, Mercedes-Benz
+            EQC 400 4MATIC, and the EQ brand.
+      mercedes__birdwatcher__disclaimer:
+        elementType: text
+        elementData:
+          paragraph: "<sup>[1]</sup>Electric energy consumption and range have been
+            determined on the basis of Regulation (EC) No. 692/2008. Electric energy
+            consumption and range depend on the vehicle configuration."
