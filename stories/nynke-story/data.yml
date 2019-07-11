@@ -35,17 +35,15 @@ index :
 
   # SECTION EVENT 1
   test_chapter:
-    layoutType: CHAPTER 
+    layoutType: SPLITSTICKY 
     layoutData: 
-      chapterStyle: ellie
-      chapterBackground: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_chapter.jpg
-      chapterTitle: SectionHeader
+      stickyImage: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_chapter.jpg
 
     layoutContent:
 
       # Text
       test_chapter__text:
-        elementType: text
+        elementType: TEXT
         elementData: 
           highlight:  "In the beginning, ellesse made apparel for two quintessentially Italian sports: skiing and 
                       tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant which was 

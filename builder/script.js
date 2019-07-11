@@ -68496,7 +68496,7 @@ this["modules"]["splitsticky"] = Handlebars.template({"compiler":[7,">= 4.0.0"],
     var helper;
 
   return "<div class = \"isf-layout_split-sticky js--split-sticky\">\n\n    <div class = \"isf-layout_split-sticky__sticky js--split-sticky__sticky style--something\">\n        <div class = \"isf-layout_split-sticky__sticky__item stack-item stack-item--1\" style = \"background-image: url('"
-    + container.escapeExpression(((helper = (helper = helpers.backgroundImage || (depth0 != null ? depth0.backgroundImage : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"backgroundImage","hash":{},"data":data}) : helper)))
+    + container.escapeExpression(((helper = (helper = helpers.stickyImage || (depth0 != null ? depth0.stickyImage : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"stickyImage","hash":{},"data":data}) : helper)))
     + "'); \">\n        </div>\n    </div>\n\n    <div class = \"isf-layout_split-sticky__content js--split-sticky__content js--content\">\n        <div class = \"isf-layout_split-sticky__content--inner\">\n           <!-- content -->\n        </div>\n    </div> <!-- Content end -->\n</div>";
 },"useData":true});
 
@@ -68820,6 +68820,5 @@ this["modules"]["module_title"] = Handlebars.template({"compiler":[7,">= 4.0.0"]
 },"useData":true});
 
 if (typeof exports === 'object' && exports) {module.exports = this["modules"];}
-
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"handlebars":167}]},{},[1]);
