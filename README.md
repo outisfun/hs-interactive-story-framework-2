@@ -172,15 +172,6 @@ All fields are optional. If you don't enter a headline, nothing's going to be di
       playerId: bUaBxxgc
 ```
 
-#### Element: Video 
-```
-  example_imagegroup:
-    elementType: VIDEO
-    elementData: 
-      videoId:  M7KADWuo
-      playerId: bUaBxxgc
-```
-
 #### Element: Gallery (for more than 3 images)
 ```
   example_gallery:
@@ -211,8 +202,8 @@ All fields are optional. If you don't enter a headline, nothing's going to be di
           src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/Ellesse6.jpg
           caption: optional caption     
 ```
-!!! Important: All the layouts depend very much on the images and may not necessarily look good with the available assets.
-Gallery as a module hasn't been thoroughly debug, so something might not work as expected, but I'll try to fix everything before I leave.
+!!! Important: All the gallery layouts depend very much on the images and may not necessarily look good with the available assets.
+Gallery as a module hasn't been thoroughly debugged, so something might not work as expected, but I'll try to fix everything before I leave.
 !!! To do (for me): A preview of all gallery styles. And maybe renaming prada.
 
 
