@@ -270,10 +270,34 @@ $ grunt handlebars
 ```
 ...and the module should be ready to use!
 
-### Adding Layouts
+## Important grunt commands
 
-### Adding Elements
+Default watch task:
+```
+$ grunt --story=YOUR-STORY-NAME
+```
 
+Compiles templates (useful if you added a new or changed an existing one):
+```
+$ grunt handlebars
+```
+
+Init story:
+```
+$ grunt init-story --story=YOUR-STORY-NAME
+```
+
+Init custom module (and after you added the hbs template, run the compile task):
+```
+$ grunt init-custom-module --customModule=YOUR-MODULE-NAME
+```
+
+Lint everything!:
+```
+$ grunt lintall
+```
+
+## Rarely asked questions (because so far there was no one to ask me anything anyway)
 
 
 
