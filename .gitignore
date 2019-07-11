@@ -13,3 +13,6 @@ stories/**/dist
 src/templates.js
 
 build-files__old.js
+
+builder
+builder/*
