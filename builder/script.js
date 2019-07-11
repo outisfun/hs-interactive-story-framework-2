@@ -68452,7 +68452,7 @@ this["modules"]["chapter"] = Handlebars.template({"1":function(container,depth0,
     + alias4(((helper = (helper = helpers.chapterStyle || (depth0 != null ? depth0.chapterStyle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"chapterStyle","hash":{},"data":data}) : helper)))
     + "\" id = \""
     + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n\n    <!-- Chapter: Style Ralph -->\n    <div class = \"isf-layout_chapter__header js--chapter__header\">\n        <div class = \"isf-layout_chapter__img\">\n            <div class = \"isf-layout_chapter__mask\">\n                <div class = \"isf-layout_chapter__background-img__wrapper\">\n"
+    + "\">\n    <!-- Chapter: Style Ralph -->\n    <div class = \"isf-layout_chapter__header js--chapter__header\">\n        <div class = \"isf-layout_chapter__img\">\n            <div class = \"isf-layout_chapter__mask\">\n                <div class = \"isf-layout_chapter__background-img__wrapper\">\n"
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.chapterBackground : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.chapterVideo : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "                </div>\n            </div>\n        </div>\n        <div class = \"isf-layout_chapter__title isf-f-white\">\n            <div class = \"isf-container\">\n                <h1>"
@@ -68468,6 +68468,16 @@ this["modules"]["horizontal"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"
   return "\n<!-- horizontal layout to navigate content -->\n<!-- how to structure content? -->\n<div class = \"isf-layout_horizontal js--horizontal\">\n\n    <div class = \"isf-layout_horizontal__background js--horizontal__background style--something\">\n        <div class = \"isf-layout_split-sticky__sticky__item stack-item stack-item--1\" style = \"background-image: url('"
     + container.escapeExpression(((helper = (helper = helpers.backgroundImage || (depth0 != null ? depth0.backgroundImage : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"backgroundImage","hash":{},"data":data}) : helper)))
     + "'); \">\n        </div>\n    </div>\n\n    <div class = \"isf-layout_horizontal__content\">\n        <div class = \"isf-layout_split-sticky__content--inner\">\n           <!-- content -->\n        </div>\n    </div> <!-- Content end -->\n</div>";
+},"useData":true});
+
+this["modules"]["interactivescroller"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function";
+
+  return "\n<div class = \"isf-layout_interactive-scroller js--interactive-scroller\">\n    <!-- Steps: maybe generate in script? -->\n    <div class = \"isf-layout_interactive-scroller__viewer js--interactive-scroller__viewer\">\n        <div class = \"isf-layout_interactive-scroller__background js--interactive-scroller__background\" style = \"background-image: url('"
+    + ((stack1 = ((helper = (helper = helpers.headerImage || (depth0 != null ? depth0.headerImage : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headerImage","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "');\">\n        	<h3>"
+    + ((stack1 = ((helper = (helper = helpers.headerTitle || (depth0 != null ? depth0.headerTitle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"headerTitle","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</h3>\n        </div>\n        <!-- Viewer: Content -->\n        <div class = \"isf-layout_interactive-scroller__content isf-f-white\">\n            <!-- content -->\n        </div>\n    </div>\n</div>";
 },"useData":true});
 
 this["modules"]["simple"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -68602,16 +68612,16 @@ this["modules"]["text"] = Handlebars.template({"1":function(container,depth0,hel
     + container.escapeExpression(((helper = (helper = helpers.x_animate_on_page_enter || (depth0 != null ? depth0.x_animate_on_page_enter : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"x_animate_on_page_enter","hash":{},"data":data}) : helper)))
     + "\"";
 },"3":function(container,depth0,helpers,partials,data) {
-    var helper;
+    var stack1, helper;
 
   return "        <h3 class = \"isf-el_text__headline\" >\n            "
-    + container.escapeExpression(((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"headline","hash":{},"data":data}) : helper)))
+    + ((stack1 = ((helper = (helper = helpers.headline || (depth0 != null ? depth0.headline : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"headline","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "\n        </h3>\n";
 },"5":function(container,depth0,helpers,partials,data) {
-    var helper;
+    var stack1, helper;
 
   return "        <h4 class = \"isf-el_text__highlight\">\n            "
-    + container.escapeExpression(((helper = (helper = helpers.highlight || (depth0 != null ? depth0.highlight : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"highlight","hash":{},"data":data}) : helper)))
+    + ((stack1 = ((helper = (helper = helpers.highlight || (depth0 != null ? depth0.highlight : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"highlight","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "\n        </h4>\n";
 },"7":function(container,depth0,helpers,partials,data) {
     var stack1, helper;
@@ -68653,6 +68663,14 @@ this["modules"]["video"] = Handlebars.template({"1":function(container,depth0,he
     + "		</div>\n	</div>\n</div>";
 },"useData":true});
 
+this["modules"]["proba"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<h1>\n	what awht "
+    + container.escapeExpression(((helper = (helper = helpers.test || (depth0 != null ? depth0.test : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"test","hash":{},"data":data}) : helper)))
+    + "\n</h1>";
+},"useData":true});
+
 this["modules"]["header"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<div class = \"isf-layout__header\" style = \"background-image: url('https://interactive-development.hsnb.io/2019-05-bottega/header.jpg');\">\n	<h1>Lorem Ipsum Dolor Sit Amet Bottega Veneta</h1>\n</div>";
 },"useData":true});
@@ -68689,6 +68707,32 @@ this["modules"]["headerimage"] = Handlebars.template({"compiler":[7,">= 4.0.0"],
     + "');\">\n	<h1>"
     + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h1>\n</div>";
+},"useData":true});
+
+this["modules"]["lookbook-scene"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "            <picture class = \"\">\n                <source srcset=\""
+    + alias4(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"src","hash":{},"data":data}) : helper)))
+    + "\" media=\"(min-width: 768px)\">\n                <img src=\""
+    + alias4(((helper = (helper = helpers.src || (depth0 != null ? depth0.src : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"src","hash":{},"data":data}) : helper)))
+    + "\" />\n                "
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.caption : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n            </picture>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "<p class = \"caption\">"
+    + ((stack1 = ((helper = (helper = helpers.caption || (depth0 != null ? depth0.caption : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"caption","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p>";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group effect--"
+    + ((stack1 = ((helper = (helper = helpers.groupEffect || (depth0 != null ? depth0.groupEffect : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"groupEffect","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "\">\n	<div class = \"js--interactive-scroller__content__group__inner isf-layout_interactive-scroller__content__group__inner \">\n"
+    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.groupImages : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "	</div>\n</div>";
 },"useData":true});
 
 this["modules"]["ellesse_banner"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -68731,6 +68775,20 @@ this["modules"]["ellesse_twopiece"] = Handlebars.template({"compiler":[7,">= 4.0
     + ".html\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"auto\" allowfullscreen=\"\" style=\"position:absolute;\"></iframe>\n		</div>\n	</div>\n</div>";
 },"useData":true});
 
+this["modules"]["swatch_products"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class = \"isf-layout_interactive-scroller__content__group group--0 is--active-always\" data-city = \"global\">\n    <img class = \"hsto-swatch__campaign__logo\" src = \"https://static-ads.highsnobiety.com/2019-05-swatch/assets/swatch_x_bape.svg\" />\n</div>\n\n<!-- content group -->\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--1 isf-f-white\" data-city = \"global\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n\n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>Global</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/global.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/global-wide.jpg\" />\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/global-close.jpg\" />\n        </div>\n    </div>\n</div>\n\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--2\" data-city = \"tokyo\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n        \n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>Tokyo</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/tokyo.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/tokyo-close.jpg\" />\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/tokyo-wide.jpg\" />\n            \n        </div>\n    </div>\n</div>\n\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--3\" data-city = \"nyc\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n        \n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>New York</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/newyork.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/nyc-wide.jpg\" />\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/nyc-close.jpg\" />\n        </div>\n    </div>\n</div>\n\n<!-- content group -->\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--4 isf-f-white\" data-city = \"paris\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n        \n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>Paris</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/paris.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/paris-close.jpg\" />\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/paris-wide.jpg\" />\n            \n        </div>\n    </div>\n</div>\n\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--5\" data-city = \"london\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>London</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/london.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/london-wide.jpg\" />\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/london-close.jpg\" />\n        </div>\n    </div>\n</div>\n\n<div class = \"isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group group--6\" data-city = \"switzerland\">\n    <div class = \"js--interactive-scroller__content__group__inner watch__content\">\n        \n        <div class = \"watch__content__face\">\n            <div class = \"watch__content__title\">\n                <h3>Switzerland</h3>\n            </div>\n            <img class=\"hsto-swatch__watch__image\" src=\"https://static-ads.highsnobiety.com/2019-05-swatch/assets/bern.png\">\n            <a class=\"button stream__more-button\" data-behavior=\"load-more\" href=\"https://shop.swatch.com/en_us/prehome/?collections=big-bold&source=highsnobiety&content=advertorial&medium=display-a&campaign=special-bape\" target=\"_blank\">Discover more</a>\n        </div>\n        <div class = \"watch__content__lookbook\">\n            <img class = \"watch__content__image watch__content__image--1\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/bern-wide.jpg\" />\n            <img class = \"watch__content__image watch__content__image--2\" src = \"https://interactive-development.hsnb.io/2019-06-swatch/assets/bern-close.jpg\" />\n        </div>\n    </div>\n</div>\n";
+},"useData":true});
+
+this["modules"]["module_test"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function";
+
+  return "<h3 id = \""
+    + container.escapeExpression(((helper = (helper = helpers.modId || (depth0 != null ? depth0.modId : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"modId","hash":{},"data":data}) : helper)))
+    + "\" >\n    "
+    + ((stack1 = ((helper = (helper = helpers.custom_heading || (depth0 != null ? depth0.custom_heading : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"custom_heading","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "\n</h3>";
+},"useData":true});
+
 this["modules"]["custom_code"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper;
 
@@ -68762,5 +68820,6 @@ this["modules"]["module_title"] = Handlebars.template({"compiler":[7,">= 4.0.0"]
 },"useData":true});
 
 if (typeof exports === 'object' && exports) {module.exports = this["modules"];}
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"handlebars":167}]},{},[1]);

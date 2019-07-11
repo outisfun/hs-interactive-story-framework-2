@@ -79,10 +79,8 @@ basic_elements:
 
 # GALLERY.HTML
 gallery:
-
   custom_nav:
     customModuleId: custom_nav
-
   custom_topsection:
     customModuleId: custom_topsection
     title: 'HSNBISF 2.0: Gallery'
@@ -185,4 +183,87 @@ gallery:
               caption: I'm an alligator/I'm a mama-papa coming for you/ I'm the space invader/ I'll be a rock 'n' rollin' bitch for you
 
 
+# CHAPTER.HTML
+chapter:
+  custom_nav:
+    customModuleId: custom_nav
+  custom_topsection:
+    customModuleId: custom_topsection
+    title: 'HSNBISF 2.0: Chapter'
+
+  chapter__ralph:
+    layoutType: CHAPTER
+    layoutData: 
+      chapterStyle: ralph-lauren
+      chapterBackground: https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg
+      chapterTitle: 'Chapter: Ralph Lauren'
+    layoutContent:
+      custom_block:
+        customModuleId: module_title
+        title: 'Chapter: rea'
+      ellesse__lookbook__gallery:
+        elementType: text
+        elementData: 
+          highlight:  'In the beginning, ellesse made apparel for two quintessentially Italian sports: 
+                      skiing and tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant 
+                      which was included at a celebration of Italian design at the Pompidou Centre in 1979.'
+          paragraph:  Fast forward 60 years, however, and while tennis and ski live on in ellesse’s designs 
+                      and logo, the label is as much a fashion brand as it is a sporting one. Here’s a look 
+                      back at some of ellesse’s most memorable designs and how they continue to influence 
+                      today’s collections.<br><br>
+                      <strong>Click the images below to explore ellesse through the ages.</strong>
+
+  ellesse__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
+                      Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
+                      was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                      Servadio dreamt of fasdasddafadsdfdsdfsshion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                      sportswear and, with that, ellesse was born in 1959.
+
+  chapter__ellie:
+    layoutType: CHAPTER
+    layoutData: 
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/hsnbisf/assets/bowie2.jpg
+      chapterTitle: 'Chapter: Ellie'
+    layoutContent:
+      custom_block:
+        customModuleId: module_title
+        title: 'Chapter: rea'
+      ellesse__lookbook__gallery:
+        elementType: text
+        elementData: 
+          highlight:  'In the beginning, ellesse made apparel for two quintessentially Italian sports: 
+                      skiing and tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant 
+                      which was included at a celebration of Italian design at the Pompidou Centre in 1979.'
+          paragraph:  Fast forward 60 years, however, and while tennis and ski live on in ellesse’s designs 
+                      and logo, the label is as much a fashion brand as it is a sporting one. Here’s a look 
+                      back at some of ellesse’s most memorable designs and how they continue to influence 
+                      today’s collections.<br><br>
+                      <strong>Click the images below to explore ellesse through the ages.</strong>
+
+  ellesse__intrdso: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
+                      Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
+                      was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                      Servadio dreamt of fasdasddafadsdfdsdfsshion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                      sportswear and, with that, ellesse was born in 1959.
 

@@ -1,0 +1,27 @@
+---
+# HSNBISF: NYNKE TEST #######################################################
+
+index :
+
+  # SECTION INTRO
+  test__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  Swatch and BAPE are both masters of collaboration. First collaborating with artist Kiki Picasso in 1985, 
+                      Swatch has worked over the years with legends such as Keith Haring, Vivienne Westwood, Damien Hirst, and Jeremy Scott. 
+                      BAPE, it goes without saying, has been even more prolific, touching almost every aspect of modern culture and 
+                      collaborating with everyone from Marvel to Google since the mid-‘90s.
+          paragraph:  Unsurprisingly then we were pleased to learn earlier this month that Swatch and BAPE are at last coming 
+                      together for a marriage of two OG collaborators and undeniably iconic brands. While today’s “collabs” are often 
+                      just another part of the news cycle — hyped today and gone tomorrow — Swatch x BAPE has been somewhat of a long 
+                      time coming and a collaboration we always hoped we’d see from two names with a history of killer partnerships.<br><br>
+                      To make the news more exciting, it’ll be Swatch’s all-new BIG BOLD model that gets the BAPE treatment as the pair 
+                      have come together to reimagine BIG BOLD in five city-inspired colorways and one global colorway.<br><br>
+                      To prepare for today’s global drop, keep reading to find out why this collaboration is noteworthy and check out 
+                      all six colorways.

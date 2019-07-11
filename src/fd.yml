@@ -144,6 +144,19 @@ SPLITSTICKY :
     backgroundImage :
       DATA_TYPEOF : imgsrc
 
+# ISF_Layout_InteractiveScroller
+INTERACTIVESCROLLER :
+  CLASSES :
+    EL : js--interactive-scroller
+    STEP : js--interactive-scroller__step
+    VIEWER : js--interactive-scroller__viewer
+    CONTENT: js--interactive-scroller__content
+    CONTENT_GROUP: js--interactive-scroller__content__group
+  CONSTRUCTOR : ISF_Layout_InteractiveScroller
+  DATA :
+    backgroundImage :
+      DATA_TYPEOF : imgsrc
+
 
     
 

@@ -38,8 +38,6 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
     // iterate through pages
     for (var page in storydata) {
 
-      console.log('is page', page);
-
       var pageHtml = '';
       var pageName = page;
       var pageSections = storydata[page];
@@ -56,14 +54,13 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
           var layoutContentObj = layoutObj.layoutContent;
           var layoutContentHtml = '';
 
-
           // build layout content
           for (var elem in layoutContentObj) {
 
             var elemId = elem;
             var elemObj = layoutContentObj[elem];
 
-            if (!isCustom(elemId)) {
+            if (!isCustom(elemObj)) {
               var element = self.buildModule( elemId, elemObj );
               layoutContentHtml += element.moduleHTML;
             } else {
@@ -100,12 +97,10 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
     // build custom files (only if they don't exist, to avoid rewriting)
     if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.js')) {
       this.buildFile('custom.js', 'build', '');
-      console.log('added custom.js');
     }
 
     if (!fs.existsSync('./stories/' + storyFolder +'/build/custom.scss')) {
       this.buildFile('custom.scss', 'build', '');
-      console.log('added custom.scss');
     }
   }
 
@@ -212,8 +207,8 @@ ISF_StoryBuilder.prototype.requireModuleConstructor = function(moduleType){
   }
 };
 
-function isCustom(el) {
-  return (el.includes('custom_'));
+function isCustom(obj) {
+  return (obj.customModuleId !== undefined);
 }
 
 var story = new ISF_StoryBuilder();

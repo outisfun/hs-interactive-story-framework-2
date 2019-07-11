@@ -1,0 +1,99 @@
+---
+# HSNBISF: 2019 06 SWATCH #######################################################
+
+index :
+
+  # LAYOUT INTRO
+  swatch__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  Swatch and BAPE are both masters of collaboration. First collaborating with artist Kiki Picasso in 1985, 
+                      Swatch has worked over the years with legends such as Keith Haring, Vivienne Westwood, Damien Hirst, and Jeremy Scott. 
+                      BAPE, it goes without saying, has been even more prolific, touching almost every aspect of modern culture and 
+                      collaborating with everyone from Marvel to Google since the mid-‘90s.
+          paragraph:  Unsurprisingly then we were pleased to learn earlier this month that Swatch and BAPE are at last coming 
+                      together for a marriage of two OG collaborators and undeniably iconic brands. While today’s “collabs” are often 
+                      just another part of the news cycle — hyped today and gone tomorrow — Swatch x BAPE has been somewhat of a long 
+                      time coming and a collaboration we always hoped we’d see from two names with a history of killer partnerships.<br><br>
+                      To make the news more exciting, it’ll be Swatch’s all-new BIG BOLD model that gets the BAPE treatment as the pair 
+                      have come together to reimagine BIG BOLD in five city-inspired colorways and one global colorway.<br><br>
+                      To prepare for today’s global drop, keep reading to find out why this collaboration is noteworthy and check out 
+                      all six colorways.
+
+  # LAYOUT VIDEO
+  swatch__video: 
+    layoutType: SIMPLE
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent: 
+      swatch__video__title:
+        elementType: text
+        elementData: 
+          highlight: Watch below to see more
+      # Video
+      swatch__video__video:
+        elementType: video
+        elementData: 
+          videoId:  b5ohqPLs
+          playerId: bUaBxxgc
+
+
+  # LAYOUT INTRO
+  swatch__alongtime: 
+    layoutType: CHAPTER
+    layoutData:
+      chapterStyle: ralph-lauren
+      chapterBackground: https://interactive-development.hsnb.io/2019-06-swatch/assets/globe.jpg
+      chapterTitle: "It's been a long time coming..."
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  Swatch and BAPE were among the first to master the art of collaboration — long before it became the driver of hype 
+                      that it is today — and collaborations have been vital to both brands’ success. Looking back, each collaboration 
+                      Swatch and BAPE have initiated represents a different chapter in their histories and captures something about 
+                      their brand identities at the time. 
+          paragraph:  'Many of BAPE’s collaborations in the last two years, for example, speak to the idea that streetwear has been more 
+                      widely accepted into popular culture. While Swatch’s collaborations tell a story of growing support for contemporary 
+                      art movements and artists.<br><br>
+                      That said, the Swatch x BAPE collaboration has been a long time coming, significant in that it honors and validates 
+                      Swatch’s oft-forgotten affiliation with street culture, dating back to its days collaborating with graffiti artists 
+                      such a Keith Haring. For BAPE, the partnership is further evidence of the world’s growing obsession with streetwear 
+                      and the latest partnership highlighting the brand’s extensive cultural footprint.'
+
+      swatch__images:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-swatch/assets/swatch__london.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-06-swatch/assets/swatch__nyc.jpg
+
+      test__more__text:
+        elementType: text
+        elementData: 
+          paragraph:  "In a nod to their origins and identities, the Swatch x BAPE BIG BOLD collection features five watches inspired 
+                      by locations significant to both brands: Tokyo, New York, Paris, London, and Switzerland. In addition, there’s a 
+                      global colorway and BAPE lends its signature camouflage pattern to the watchstrap and face of all six models in a 
+                      unique combination of colors. At closer inspection, finer details reference the six locations and make each model 
+                      distinctly unique."
+
+  # LAYOUT PRODUCT
+  swatch__watches: 
+    layoutType: INTERACTIVESCROLLER
+    layoutData:
+      colorScheme: dark
+      container: container
+    layoutContent: 
+      # Text
+      custom__interactive_groups:
+        customModuleId: swatch_products

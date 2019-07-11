@@ -7,6 +7,10 @@ require('browsernizr/test/touchevents');
 var Modernizr = require('browsernizr'); // make sure to do this _after_ importing the tests
 var Masonry = require('masonry-layout');
 
+var bodyScrollLock = require('body-scroll-lock');
+var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+var enableBodyScroll = bodyScrollLock.enableBodyScroll;
+
 var YAML = require('yamljs');
 var _ = require('lodash');
 var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
@@ -48,134 +52,134 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
 
   switch (this.options.layout) {
 
-    // Masonry Layout
-    case 'masonry':
-      this.msnry = new Masonry( this.DOM.inner, {
-        itemSelector: '.js--gallery__item'
-      });
-      break;
+  // Masonry Layout
+  case 'masonry':
+    this.msnry = new Masonry( this.DOM.inner, {
+      itemSelector: '.js--gallery__item'
+    });
+    break;
 
     // Grid: to be refined
-    case 'grid':
-      break;
+  case 'grid':
+    break;
 
     // Horizontal: to be refined
-    case 'horizontal':
-      var contentRect = this.DOM.inner.getBoundingClientRect();
-      var move = contentRect.width - ww;
-      var wipeOut = new TimelineMax()
-        .to(this.DOM.inner, 4, {x: -move});
+  case 'horizontal':
+    var contentRect = this.DOM.inner.getBoundingClientRect();
+    var move = contentRect.width - ww;
+    var wipeOut = new TimelineMax()
+      .to(this.DOM.inner, 4, {x: -move});
 
-      this.scene = new ScrollMagic.Scene({
-        triggerElement: this.DOM.el,
-        triggerHook: 0,
-        duration: contentRect.width - 2*contentRect.left
-      })
-        .setPin(this.DOM.el)
-        .addTo(this.controller);
-      break;
+    this.scene = new ScrollMagic.Scene({
+      triggerElement: this.DOM.el,
+      triggerHook: 0,
+      duration: contentRect.width - 2*contentRect.left
+    })
+      .setPin(this.DOM.el)
+      .addTo(this.controller);
+    break;
 
     // Prada style
-    case 'prada':
+  case 'prada':
 
-      var imgHeight = 300;
-      if (ww <= 767) {
-        imgHeight = 420;
-      } else if (ww <= 991) {
-        imgHeight = 600;
-      } else if (ww <= 1600) {
-        imgHeight = 600;
-      } else {
-        imgHeight = 1000;
-      }
+    var imgHeight = 300;
+    if (ww <= 767) {
+      imgHeight = 420;
+    } else if (ww <= 991) {
+      imgHeight = 600;
+    } else if (ww <= 1600) {
+      imgHeight = 600;
+    } else {
+      imgHeight = 1000;
+    }
 
-      this.DOM.el.style.height = imgHeight + 'px';
+    this.DOM.el.style.height = imgHeight + 'px';
 
-      this.DOM.items.forEach(function(item, ind) {
-        var image = item.querySelector('img');
-        item.style.height = imgHeight + 'px';
-        item.style.width = (image.naturalWidth*(imgHeight/image.naturalHeight)) + 'px';
+    this.DOM.items.forEach(function(item, ind) {
+      var image = item.querySelector('img');
+      item.style.height = imgHeight + 'px';
+      item.style.width = (image.naturalWidth*(imgHeight/image.naturalHeight)) + 'px';
+    });
+
+    var self = this;
+
+    setTimeout(function(){
+      self.horizontalBounds = { max: 0, min: - (self.DOM.inner.offsetWidth - ww) };
+    }, 1000);
+
+    if (this.useTouch) {
+      this.touchManager = new Hammer.Manager( this.DOM.el );
+      this.touchUtilities = {}; //object to store touch utilities
+      this.touchUtilities.pan = new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 }); // pan ev listener
+      this.touchManager.add( self.touchUtilities.pan );
+      this.touchManager.on('panleft panright', function(e) {
+        self.navigateTouch( e.velocityX * 200 );
       });
+    } else {
 
-      var self = this;
+      // build navigation units
+      this.nav = [];
+      var nav = document.createElement('nav');
+      nav.classList.add('js--gallery__nav', 'isf-el_gallery__nav');
+      var navArrowNext = document.createElement('button');
+      navArrowNext.classList.add('js--gallery__nav__item');
+      var navArrowPrev = navArrowNext.cloneNode(true);
+      navArrowNext.classList.add('js--gallery__nav__item--next');
+      navArrowPrev.classList.add('js--gallery__nav__item--prev');
+      navArrowNext.innerHTML = '<svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M77,4.1 72.9,0 23,50 72.9,100 77,95.9 31.1,50 z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg>';
+      navArrowPrev.innerHTML = '<svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M77,4.1 72.9,0 23,50 72.9,100 77,95.9 31.1,50 z" class="arrow"></path></svg>';
+      navArrowPrev.dataset.direction = 'prev';
+      navArrowNext.dataset.direction = 'next';
+      nav.appendChild(navArrowPrev);
+      nav.appendChild(navArrowNext);
+      this.nav.push(navArrowNext, navArrowPrev);
 
-      setTimeout(function(){
-        self.horizontalBounds = { max: 0, min: - (self.DOM.inner.offsetWidth - ww) };
-      }, 1000);
+      this.DOM.el.appendChild(nav);
 
-      if (this.useTouch) {
-        this.touchManager = new Hammer.Manager( this.DOM.el );
-        this.touchUtilities = {}; //object to store touch utilities
-        this.touchUtilities.pan = new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 }); // pan ev listener
-        this.touchManager.add( self.touchUtilities.pan );
-        this.touchManager.on('panleft panright', function(e) {
-          self.navigateTouch( e.velocityX * 200 );
-        });
-      } else {
+      this.navCurrent = 0;
 
-        // build navigation units
-        this.nav = [];
-        var nav = document.createElement('nav');
-        nav.classList.add('js--gallery__nav', 'isf-el_gallery__nav');
-        var navArrowNext = document.createElement('button');
-        navArrowNext.classList.add('js--gallery__nav__item');
-        var navArrowPrev = navArrowNext.cloneNode(true);
-        navArrowNext.classList.add('js--gallery__nav__item--next');
-        navArrowPrev.classList.add('js--gallery__nav__item--prev');
-        navArrowNext.innerHTML = '<svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M77,4.1 72.9,0 23,50 72.9,100 77,95.9 31.1,50 z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg>';
-        navArrowPrev.innerHTML = '<svg class="flickity-button-icon" viewBox="0 0 100 100"><path d="M77,4.1 72.9,0 23,50 72.9,100 77,95.9 31.1,50 z" class="arrow"></path></svg>';
-        navArrowPrev.dataset.direction = 'prev';
-        navArrowNext.dataset.direction = 'next';
-        nav.appendChild(navArrowPrev);
-        nav.appendChild(navArrowNext);
-        this.nav.push(navArrowNext, navArrowPrev);
+      // add event listeners
+      _.forEach(this.nav, function(navitem, ind) {
 
-        this.DOM.el.appendChild(nav);
+        navitem.addEventListener('click', function() {
+          var direction = (navitem.dataset.direction === 'prev') ? 1 : -1;
+          var distance = ww/2;
 
-        this.navCurrent = 0;
-
-        // add event listeners
-        _.forEach(this.nav, function(navitem, ind) {
-
-          navitem.addEventListener('click', function() {
-            var direction = (navitem.dataset.direction === 'prev') ? 1 : -1;
-            var distance = ww/2;
-
-            // calculate distance according to current image?
-            self.navCurrent += direction;
-            self.horizontalPosition = getTranslateX( self.DOM.inner );
-            var adjustedDistance = self.adjustDistanceToFitBounds( distance*direction );
-            TweenMax.to(self.DOM.inner, 0.5, {
-              x: '+=' + adjustedDistance,
-              ease: Power3.easeOut
-            });
-
+          // calculate distance according to current image?
+          self.navCurrent += direction;
+          self.horizontalPosition = getTranslateX( self.DOM.inner );
+          var adjustedDistance = self.adjustDistanceToFitBounds( distance*direction );
+          TweenMax.to(self.DOM.inner, 0.5, {
+            x: '+=' + adjustedDistance,
+            ease: Power3.easeOut
           });
 
         });
 
+      });
 
-      }
 
-      break;
+    }
 
-    default:
+    break;
+
+  default:
     break;
   }
 };
 
 var getTranslateX = function(el) {
-    var style = window.getComputedStyle(el);
-    var matrix = new WebKitCSSMatrix(style.webkitTransform);
-    return matrix.m41;
+  var style = window.getComputedStyle(el);
+  var matrix = new WebKitCSSMatrix(style.webkitTransform);
+  return matrix.m41;
 };
 
 var mapRange =function(num, in_min, in_max, out_min, out_max)  {
-    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 };
 
 var clamp = function(val, min, max) {
-    return Math.min(Math.max(min, val), max);
+  return Math.min(Math.max(min, val), max);
 };
 
 
@@ -261,7 +265,7 @@ ISF_Element_Gallery.prototype.buildPreview = function() {
 
   // build preview nav
   this.preview.nav = {};
-// build navigation units
+  // build navigation units
 
   var prev = document.createElement('button');
   prev.classList.add('js--preview__nav', 'js--preview__nav--prev');
@@ -305,7 +309,7 @@ ISF_Element_Gallery.prototype.openPreview = function(trigger) {
 
   var self = this;
 
-  toggleScroll('disable');
+  disableBodyScroll(this.preview);
 
   this.DOM.inner.classList.add('is--faded');
 
@@ -357,7 +361,7 @@ ISF_Element_Gallery.prototype.updatePreviewContent = function(trigger) {
 ISF_Element_Gallery.prototype.closePreview = function() {
   this.preview.el.classList.remove("is--open");
   this.DOM.inner.classList.remove('is--faded');
-  toggleScroll('enable');
+  enableBodyScroll(this.preview);
 };
 
 var toggleScroll = function(action) {

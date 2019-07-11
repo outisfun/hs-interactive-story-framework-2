@@ -1,0 +1,11 @@
+<div class = "isf-layout_interactive-scroller__content__group js--interactive-scroller__content__group effect--{{{ groupEffect }}}">
+	<div class = "js--interactive-scroller__content__group__inner isf-layout_interactive-scroller__content__group__inner ">
+		{{#each groupImages}}
+            <picture class = "">
+                <source srcset="{{ src }}" media="(min-width: 768px)">
+                <img src="{{ src }}" />
+                {{#if caption}}<p class = "caption">{{{ caption }}}</p>{{/if}}
+            </picture>
+        {{/each}}
+	</div>
+</div>

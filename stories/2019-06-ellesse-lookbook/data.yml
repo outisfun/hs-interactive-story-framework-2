@@ -1,0 +1,305 @@
+---
+# HSNBISF: 2019 06 ELLESSE LOOKBOOK #######################################################
+
+index :
+
+  custom__header: 
+    customModuleId: ellesse_banner
+    img: https://interactive-development.hsnb.io/2019-04-ellesse/ellesse_header.jpg
+    title: Here’s How ellesse Used Tailoring to Change Sportswear Forever
+
+  # LAYOUT INTRO
+  ellesse__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "Highsnobiety is always looking for an opportunity to champion emerging talent, whether it’s the next breakout musician, 
+                      groundbreaking filmmaker, or fashion extraordinaire. So together with Italian fashion and sportswear brand 
+                      <a href = 'https://www.ellesse.com/?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>ellesse</a>, 
+                      we’re offering a challenge to up-and-coming young talent."
+          paragraph:  "We’ve already taken a deep dive into <a href = 'https://www.highsnobiety.com/p/ellesse-sportswear-tailoring-history/' target='_blank'>ellesse’s rich back story</a>,
+                      looking at how small-town tailor Leonardo Servadio 
+                      turned a tennis and ski-wear brand into a global sportswear and fashion label. But how can such a story inspire a new 
+                      generation of designers, stylists, and those next in line to change the fashion industry as we know it?
+                      <br><br>
+                      In a series of lookbooks, three students located in New York, Berlin, and London look to ellesse’s history, 
+                      back catalog, and current collections to inspire a vision for the future of fashion. The lookbooks offer a glimpse 
+                      into the work and minds of would-be pioneers and hints at what the future of fashion looks like through their eyes.
+                      <br><br>
+                      First up, New York-based designer, founder, and creative director of sustainable fashion brand 
+                      <a href = 'https://www.instagram.com/offcenter_official/' target='_blank'>OFFCENTER</a>: Jong Kim. 
+                      Kim and his label specialize in reworking and reinterpreting second-hand clothing — reusing unwanted garments to reduce 
+                      waste and give them a new, contemporary lease on life."
+
+  # LAYOUT LOOKBOOK
+  ellesse__lookbook: 
+    layoutType: INTERACTIVESCROLLER
+    layoutData:
+      container: container
+      headerImage: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_2.jpg
+      headerTitle: Jong Kim's lookbook
+    layoutContent: 
+      # Text
+      custom__group--1:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_3.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_7.jpg
+        groupEffect: fade-in
+
+      # Text
+      custom__group--2:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_2.jpg
+        groupEffect: come-up
+      # Text
+      custom__group--3:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_5.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_6.jpg
+        groupEffect: up-and-down
+      custom__group--4:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_8.jpg
+        groupEffect: fade-in
+      custom__group--5:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_1.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/lb_1_4.jpg
+        groupEffect: up-and-down
+
+  # LAYOUT INTERVIEW
+  ellesse__lookbook__interview: 
+    layoutType: CHAPTER
+    layoutData:
+      container: container
+      colorScheme: dark
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/ny1.jpg
+      chapterTitle: Get to know Jong Kim
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "In the past, how people dressed was heavily dictated by rules. Blue and green should never be seen; 
+                      don’t wear socks with sandals; a suit is to be worn at work and sportswear on the track and field. All of that changed 
+                      in recent decades. Generation after generation tore pages from the rulebook turning fashion faux pauxs into fashion 
+                      statements and trends; casual Friday’s were introduced to workplaces; and, in March this year, investment banking 
+                      company Morgan Stanley announced its bankers no longer had to wear suits and ties in the office."
+          paragraph:  "ellesse too was founded with a rule-breaking mentality, bringing together the seemingly antithetical worlds of 
+                      sportswear and tailoring. It was this aspect of the brand that Jong Kim looked towards to inspire his lookbook, 
+                      shot after dark in New York’s Chinatown. Much like ellesse, he believes fashion should be an expression of individuality 
+                      and character, reflecting one’s personality whether that means breaking the rules or following them.<br><br>
+                      After the shoot, we sat with Jong Kim to learn more about his artistry, brand, and concept behind the ellesse lookbook 
+                      — including how he customized some of ellesse’s current collection for the shoot. Read the conversation below and peep 
+                      the images to see how he turned early-stage sketches into reworked garments.
+                      "
+      ellesse__liamhodges__clip:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/kimjong.jpg
+      ellesse__lookbook_q1:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>For this project you were inspired by the idea of breaking rules and stereotypes, why is that and where 
+                      did the inspiration come from?</strong><br><br>
+                      The idea came from the word “trend.” Through magazines and social media, people consume and follow trends. 
+                      I am not trying to be negative about it, but it has adverse effects on the field of fashion. For me, the beauty 
+                      of fashion is individuality. People have different characteristics and come from different cultures. Through those 
+                      different backgrounds, people dress differently. Nowadays, people are so caught up with trends and trying to be 
+                      somebody. I always wanted people to be individual and themselves."
+
+      ellesse__lookbook__images1:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/sketch1.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/sketch2.jpg
+
+      ellesse__lookbook_q2:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      How did this concept play out in the lookbook styling and aesthetics?
+                      </strong><br><br>
+                      I went for all gender looks. I did not want to suggest what women and men should wear and let them style themselves. 
+                      It shows that women can be masculine and men can be feminine. I tried my best to break stereotypes around gender roles.
+                      <br><br>
+                      <strong>
+                      Why did you choose to feature these ellesse pieces and how did you think about customizing some of them?
+                      </strong><br><br>
+                      I like the classic look of the 
+                      <a href = 'https://ellesse.com/uk/en/mClothing/p/jose-track-pant-black?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Jose Track Pants</a> 
+                      and love the color combination. Since it has a traditional style, 
+                      the Jose Tracks Pants were like a blank canvas for me. 
+                      The <a href = 'https://ellesse.com/uk/en/mClothing/p/lapaccio-track-top-black?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Lapaccio Track Top</a>
+                      has a great silhouette which made 
+                      it easy to pull off. With this, I wanted to challenge myself to design differently, but keep the primary aesthetic.
+                      "
+
+      ellesse__lookbook__images2:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/patchwork2.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/patchwork3.jpg
+
+      ellesse__lookbook_q3_pt2:
+        elementType: text
+        elementData: 
+          paragraph:  "Personally, the 
+                      <a href = 'https://ellesse.com/uk/en/mClothing/p/prado-t-shirt-white-marl?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Prado T-shirt</a>
+                      was the most iconic ellesse piece. I wanted to keep its identity, 
+                      but play it differently, showing the possibilities of changes in style, look, and silhouette. Similarly, 
+                      the <a href = 'https://ellesse.com/uk/en/mClothing/p/marono-polo-white?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Marono Polo Shirt</a>
+                      is a dandy and classic item of clothing so I wanted to break the stereotype and 
+                      show how a polo shirt can be styled as street wear. I also loved the colors and logo play on it.
+                      "
+
+      ellesse__lookbook__images3:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/patchwork4.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/patchwork5.jpg
+
+      ellesse__lookbook_q3_pt3:
+        elementType: text
+        elementData: 
+          paragraph:  "When it came to the <a href = 'https://ellesse.com/uk/en/fMens/p/piacentino-trainer-black-metallic?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Piacentino Black</a> 
+                      and <a href = 'https://ellesse.com/uk/en/fMens/p/piacentino-trainer-grey?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>Piacentino Grey</a> sneakers, it was the shape that first interested me. 
+                      It’s neither too simple nor too much.
+                      <strong>
+                      Are there any style rules people should stick to or are all rules made to be broken?
+                      </strong><br><br>
+                      I do not want people to follow the rules and trends. I want people to develop their heart to make their own 
+                      rules of fashion and make it natural for them.<br>
+                      When I go through daily fashion blogs, I see so many similar styles and the same brands over and over. 
+                      Let’s forget about the trends. Let’s focus on what we genuinely love and feel passionate about.
+                      <br><br>
+                      <strong>
+                      From what you know about ellesse, how could they be considered a rule-breaking brand?
+                      </strong><br><br>
+                      Through collaborating with different designers, ellesse pushes their boundaries and aesthetics. 
+                      When opposites meet, they create synergy, rule-breaking, and innovative design. That’s what makes ellesse 
+                      a rule-breaking brand.
+                      <br><br>
+                      <strong>
+                      Why are you interested in fashion? What makes style more than simply the clothes people choose 
+                      to put on every day?
+                      </strong><br><br>
+                      My main interest in fashion is to look cool. Starting the year of my high school, I loved shoes and later 
+                      overall fashion. I was amazed that style could change people’s looks and attitudes. Whenever I dressed nice 
+                      and cool, it gave me the confidence to talk to people, or people came to speak to me first. Since then, 
+                      I wanted to give confidence and joy to other people. Fashion is not about clothes. It is about the ego.
+                      "
+
+      ellesse__lookbook__images4:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/process1.jpg
+
+      ellesse__lookbook_q7:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      Give us a little insight into your education and professional history, how did you get to where you are today?
+                      </strong><br><br>
+                      I graduated from The New School's Parsons School of Design last year May. After graduation, I started my brand 
+                      OFFCENTER. I barely had any intern experiences, but I was passionate and trusted my abilities. 
+                      I always had a dream of being a fashion designer since high school. I did not give up my goal, met fantastic 
+                      teammates, and kept moving forward. In the middle of the journey, I’ve had this opportunity to work with 
+                      Highsnobiety and ellesse.
+                      "
+
+      ellesse__lookbook__images5:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-06-ellesse-lookbook/assets/process2.jpg
+
+      ellesse__lookbook_q8:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      Tell us about your brand OFFCENTER.
+                      </strong><br><br>
+                      Before OFFCENTER, I had a brand called LET_ which sold t-shirt, hoodies, and caps. It did not work out very well. 
+                      I had to close the brand and there were so many leftovers. So I started to redesign them for fun. 
+                      That caught my team’s attention and we decided to launch the brand using the leftovers.
+                      <br><br>
+                      OFFCENTER’s primary sources of material are from thrift stores and donations.
+                      We try to reduce waste and make it as sustainable as possible. Sustainable brands are stereotyped as being 
+                      classic and mostly targeted at the older generation. OFFECENTER wants to break the stereotypes and make 
+                      stylish, sustainable clothes for a young generation.
+                      <br><br>
+                      <strong>
+                      How has New York influenced the way you think about fashion, style, and design?
+                      </strong><br><br>
+                      New York City gave me so much cultural experience. I’ve met so many different people from around the world exploring 
+                      various areas in New York. Now I have a more comprehensive view and have become more open-minded, I understand why 
+                      and how people dress, talk, and eat; my designs have become stronger and more vibrant. Chinatown is hugely 
+                      inspirational — the busy, crowded, smelly streets gave me the energy to work.
+                      <br><br>
+                      The most lovely thing about NYC is that people try to respect and understand each other. 
+                      NYC has strong individual identities. I still keep falling in love with NYC.
+                      <br><br>
+                      <strong>
+                      What routines, habits, or practices do you have that keep you focused and boost your creativity?
+                      </strong><br><br>
+                      Taking breaks where I don’t think about work at all is essential to boosting my creativity. I’ll ride a bike 
+                      around the neighborhood and watch movies with my favorite ice cream in my bed. I completely turn off my 
+                      creative side and try not to think about it. I make sure to set the schedule and have my plan as organized 
+                      as possible.
+                      <br><br>
+                      <strong>
+                      What are you working towards right now and where can people find you and your work online?
+                      </strong><br><br>
+                      I’m working towards the future of OFFCENTER. I want OFFCENTER to be more than a brand. I genuinely hope the 
+                      brand will give joy and confidence to people, not just clothes. Also, it will reduce the waste the fashion 
+                      industry is making. I want OFFCENTER to be the trendiest sustainable brand in the world. You can check it 
+                      out at <a href = 'https://www.offcenterofficial.com/' target='_blank'>offcenterofficial.com</a> and on Instagram 
+                      at <a href = 'https://www.instagram.com/offcenter_official/' target='_blank'>@offcenter_official</a>.
+                      "
+
+      ellesse__lookbook_conclusion:
+        elementType: text
+        elementData: 
+          paragraph:  "<i>
+                      Shop <a href = 'https://www.ellesse.com/?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>ellesse’s</a> SS19 collection in-store 
+                      now and <a href = 'https://www.ellesse.com/?utm_source=Highsnobiety&utm_medium=(Other)&utm_campaign=Partnership' target='_blank'>online</a> via the link below. 
+                      Follow all the latest from ellesse on <a href = 'https://www.instagram.com/ellesseuk/' target='_blank'>Instagram.</a>
+                      </i>
+                      "
+
+

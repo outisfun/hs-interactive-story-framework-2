@@ -1,0 +1,104 @@
+---
+# HSNBISF: NYNKE TEST STORY #######################################################
+
+index :
+    
+  # LAYOUT INTRO
+  test_intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+
+      # Text
+      test_intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "In the beginning, ellesse made apparel for two quintessentially Italian sports: skiing and 
+                      tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant which was 
+                      included at a celebration of Italian design at the Pompidoud Centre in 1979."
+          paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
+                      Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
+                      was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                      Servadio dreamt of fasdasddafadsdfdsdfsshion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                      sportswear and, with that, ellesse was born in 1959.
+
+      # LAYOUT VIDEO
+      test_intro__video:
+        elementType: video
+        elementData: 
+          videoId:  M7KADWuo
+          playerId: bUaBxxgc
+
+
+  # SECTION EVENT 1
+  test_chapter:
+    layoutType: CHAPTER 
+    layoutData: 
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh_chapter.jpg
+      chapterTitle: SectionHeader
+
+    layoutContent:
+
+      # Text
+      test_chapter__text:
+        elementType: text
+        elementData: 
+          highlight:  "In the beginning, ellesse made apparel for two quintessentially Italian sports: skiing and 
+                      tennis. Servadio’s tailored approach led to iconic designs like the Jet Pant which was 
+                      included at a celebration of Italian design at the Pompidou Centre in 1979."
+          paragraph:  ellesse founder Leonardo Servadio started out as a tailor in his hometown Perugia, Italy. 
+                      Like many great ideas, ellesse — which gets its name from Servadio’s initials L.S. — 
+                      was a way for its founder to scratch his own itch. Born into a family of textile merchants, 
+                      Servadio dreamt of fasdasddafadsdfdsdfsshion-forward sportswear that suited his stylish, tailored aesthetic. 
+                      With nothing satisfying available, Servadio decided to apply his knowledge to redefining 
+                      sportswear and, with that, ellesse was born in 1959.
+
+      # LAYOUT VIDEO
+      test_chapter__video:
+        elementType: video
+        elementData: 
+          videoId:  M7KADWuo
+          playerId: bUaBxxgc
+
+      # LAYOUT images
+      test_chapter__imggroup:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh49.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-04-ellesse/assets/lh51.jpg
+
+      # LAYOUT VIDEO
+      test_chapter__img:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-hub/assets/gh.jpg
+
+
+  # LAYOUT INTRO
+  test_conclusion: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+
+      # Text
+      test_intro__text:
+        elementType: quote
+        elementData: 
+          quote:  I’d never seen a brand’s archive before, the way the clothes were designed, drawn, presented, 
+                  and even sold was very interesting.
+          source: Liam Hodges
+
+      proba_el:
+        customModuleId: proba
+        customVar: Nynke story heading

@@ -1,0 +1,261 @@
+---
+# HSNBISF: 2019 07 ELLESSE LOOKBOOK #######################################################
+
+index :
+
+  custom__header: 
+    customModuleId: ellesse_banner
+    img: https://interactive-development.hsnb.io/2019-04-ellesse/ellesse_header.jpg
+    title: Here’s How ellesse Used Tailoring to Change Sportswear Forever
+
+  # LAYOUT INTRO
+  ellesse__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  Style is a language we all speak. Whether we’re conscious of it or not, the clothes we put on every day say something 
+                      about each of us and are far more powerful than the individual fibers from which they’re sewn.
+          paragraph:  Through years of study, Central St. Martins student Daniel Fabara knows this all too well and uses fashion for purposes 
+                      beyond stylistics. To this cause, he’s visited the idea in his new lookbook for Italian sportswear pioneer ellesse featuring 
+                      pieces from the brand’s SS19 collection. For inspiration, Fabara looked keenly towards ellesse’s practical nature and to 
+                      highlight ellesse’s functional features made adjustments to pieces from the collection such as exaggerating three-dimensional 
+                      pockets.<br><br>
+                      Fabara’s lookbook is the latest in a series of shoots challenging up-and-coming fashion talent to channel ellesse’s DNA both 
+                      past and present. In a previous installment, OFFCENTER founder Jong Kim honed in on ellesse’s history as a rule-breaking 
+                      brand that married sportswear with tailoring for the first time in the late ‘60s.<br><br>
+                      Check out Fabara’s lookbook below where you can also shop the original collection items. Then read our conversation with 
+                      Fabara at the bottom of the page to find out why he thinks fashion is a good medium to explore complex topics and how 
+                      London has influenced the way he thinks about fashion, style, and design.
+
+  # LAYOUT LOOKBOOK
+  ellesse__lookbook: 
+    layoutType: INTERACTIVESCROLLER
+    layoutData:
+      container: container
+      headerImage: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/h1.jpg
+      headerTitle: "Check out Daniel Fabara’s ellesse-inspired lookbook:"
+    layoutContent: 
+      # Text
+      custom__group--1:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l8.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l2.jpg
+        groupEffect: fade-in
+      custom__group--2:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l12.jpg
+        groupEffect: come-up
+      custom__group--3:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l4.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l5.jpg
+        groupEffect: up-and-down
+      custom__group--4:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l7.jpg
+        groupEffect: fade-in
+      custom__group--5:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l10.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l3.jpg
+        groupEffect: up-and-down
+      custom__group--7:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l6.jpg
+        groupEffect: fade-in
+      custom__group--6:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l1.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/l9.jpg
+        groupEffect: fade-in
+
+  # LAYOUT INTERVIEW
+  ellesse__lookbook__interview: 
+    layoutType: CHAPTER
+    layoutData:
+      container: container
+      colorScheme: dark
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/h3.jpg
+      chapterTitle: Get to know Daniel Fabara
+    layoutContent: 
+      i1:
+        elementType: text
+        elementData: 
+          paragraph:  While overflowing inboxes and too many flavours of toothpaste to choose from might seem like trivial 
+                      complaints when the amount of carbon in our atmosphere is rising at a devastating rate, the effect of these 
+                      little stressers when compounded is undeniably real and a constant part of our existence. As a student 
+                      who’s grown up in a hyperconnected, productivity obsessed world, Daniel Fabara is readily aware of the 
+                      day-to-day challenges his generation faces.
+                      <br><br>
+                      One solution is to build products, environments, and systems better suited to today’s world and its problems. 
+                      To this note, Fabara saw in ellesse elements of the functionality needed to equip future generations for a changing 
+                      world and customised the ellesse SS19 collection to exaggerate these features. To find out more, read our 
+                      conversation with Fabara below and check out the images documenting his customisation process.
+
+      imgs1:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/daniel.jpg
+      # Text
+      q1:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      For this project, you were inspired by the day-to-day struggles and pressures faced by your generation. 
+                      What are the biggest struggles and pressures you face?
+                      </strong>
+                      <br><br>
+                      I think learning to have a healthy relationship with technology, mainly our phones, is something everyone 
+                      is still trying to figure out. Learning to disconnect, to be more present, to not let superficialities influence you. 
+                      I feel there’s an added pressure to keep up with the Joneses that keeps you on a hamster wheel if you’re not 
+                      careful and it’s this idea of not switching off, of constantly being on the go that was the starting point for 
+                      this project.
+                      <br><br>
+                      <strong>
+                      Why is this something you wanted to channel for this project?
+                      </strong>
+                      <br><br>
+                      It’s just what had been on my mind when this project came about and this idea of constantly being on the go 
+                      led to me looking at functionality as it coincided with my university deadlines so I was constantly carrying 
+                      around so much stuff.
+                      <br><br>
+                      <strong>
+                      To some, fashion is simply clothes and aesthetics; in your mind, why is fashion a good medium through which 
+                      to explore topics like this?
+                      </strong>
+                      <br><br>
+                      Fashion as a means of communication can be a very powerful tool. When a brand has a strong set of values 
+                      and/or a meaningful story to tell it can really influence people to think about things differently or 
+                      at least plant the seed in their heads. 
+                      <br><br>
+                      <strong>
+                      How did this concept play out in the lookbook’s styling and overall look and feel?
+                      </strong>
+                      <br><br>
+                      We wanted it to have a pretty casual feel to it so we chose the setting of a home as it’s a place where you 
+                      should ideally be able to unwind after a long hectic day. I say ideally because, in reality, you still have to 
+                      cook, clean, do your laundry, etc. so do you ever <i>really</i> get a break?
+                      "
+                      
+      imgs2:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p1.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p3.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p4.jpg
+
+      q3:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      Why did you pick these pieces from ellesse to use in this shoot?
+                      </strong>
+                      <br><br>
+                      The <a href = '#' target='_blank'>Fighter 1/2 zip track top</a> and <a href = '#' target='_blank'>Typhoon track pants</a> 
+                      fit perfectly with the idea of functionality as they use such a great technical fabric. 
+                      Regarding the <a href = '#' target='_blank'>neon yellow Cuba t-shirt</a>, I was more looking at the color and how 
+                      I could play around with the logo.
+                      <br><br>
+                      <strong>
+                      I know you were intrigued by the practical and functional features on ellesse’s garments. From what you know about 
+                      ellesse, why would you consider the brand an antidote to the struggles and pressures we face today and in 
+                      the future?
+                      </strong>
+                      <br><br>
+                      It’s even just small things like receiving the clothes from ellesse in packaging made of recycled materials that 
+                      make a big difference and it’s great to see them addressing such important issues. I feel like they are in tune 
+                      with what’s happening and are a good example for other brands.
+                      "
+
+      imgs3:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p5.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p6.jpg
+
+      q4:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      Give us a little insight into your education and professional history, how did you get to where you are today?
+                      </strong>
+                      <br><br>
+                      I just finished my first year of university, I study Menswear at Central St. Martins. I’ve been lucky to meet 
+                      some very inspiring, hard-working people and I wouldn’t be where I am today if it wasn’t for the friends I’ve 
+                      made along the way. 
+                      <br><br>
+                      <strong>
+                      How has London influenced the way you think about fashion, style, and design?
+                      </strong>
+                      <br><br>
+                      London is just a melting pot for everything. It’s such a multicultural place, you have the blessing to see and 
+                      be amongst so many different communities. There’s also a lot of museums and galleries that I love going to 
+                      whenever I get the chance, especially since a lot of them are free. In short, it’s a very open-minded city and 
+                      I’ve tried to adopt the same mentality.
+                      "
+
+      imgs4:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p7.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/p8.jpg
+
+      q5:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      What routines, habits, or practices do you have that keep you focused and boost your creativity?
+                      </strong>
+                      <br><br>
+                      I like to go to the park near my house a few mornings a week to exercise on the bars or meditate. 
+                      It’s usually empty at that time so it gets me into a good headspace. I enjoy reading too, especially 
+                      Haruki Murakami books. Generally, I just like to find an escape so that I can come back to my work with a 
+                      fresh mind.
+                      <br><br>
+                      <strong>
+                      What are you working towards right now and where can people find you and your work online?
+                      </strong>
+                      <br><br>
+                      Right now I’m planning out some projects over the summer with some friends just for fun and to keep us busy. 
+                      You can find me and my work on Instagram <a href = '#' target = '_blank'>@daniel.fabara</a>.
+                      "
+
+
+

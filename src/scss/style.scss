@@ -4,18 +4,18 @@
 @import 'grid';
 @import 'typography';
 
-body {
-   /* overflow-x: hidden;
+body.isf {
+    overflow-x: hidden;
     min-height: 100vh;
     margin: 0px;
-    font-family: Arial, sans-serif;*/
 }
 
 img {
     width: 100%;
     max-width: 100%;
 }
-#isf-interactive-story {
+#isf-interactive-story,
+.isf-interactive-story {
   .isf-el_preview__top {
     max-width: 1200px;
     margin: 0 auto;

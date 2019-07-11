@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     browserify: {
       options: {
         browserifyOptions: {
-          paths: [ './', './src', './stories', './src/modules/layouts', './src/modules/elements' ]
+          paths: [ './', './src', './src/js', './stories', './src/modules/layouts', './src/modules/elements' ]
         }
       },
       builder: {
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       stories: {
         files: [{
           cwd: './',
-          src: './stories/' + story + '/build/*.js',
+          src: './stories/' + story + '/build/scripts.js',
           expand: true,
           rename: function(dest, src) {
               var newPath = src.replace('build', 'dist');
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
           node: true
         },
         files: {
-          'src/templates.js': ['./src/modules/layouts/**/*.hbs', './src/modules/elements/**/*.hbs', './stories/**/*.hbs'],
+          'src/templates.js': ['./src/modules/layouts/**/*.hbs', './src/modules/elements/**/*.hbs',  './src/modules/custom/**/*.hbs','./stories/**/*.hbs'],
         }
       }
     },
@@ -191,7 +191,7 @@ module.exports = function(grunt) {
   grunt.registerTask('lintall', ['eslint']);
 
   grunt.registerTask('init-custom-module', ['shell:initCustomModule:' + story]);
-  grunt.registerTask('init-story', ['shell:initStory:' + story]);
+  grunt.registerTask('init-story', ['shell:initStory:' + story, 'shell:buildStory:' + story, 'browserify:stories', 'sass:stories', 'autoprefixer:stories', 'watch']);
   grunt.registerTask('build-story', ['handlebars', 'shell:buildStory:' + story, 'browserify:stories', 'sass:stories', 'autoprefixer:stories', 'watch']);
 
   grunt.registerTask('default', ['watch']); //test
