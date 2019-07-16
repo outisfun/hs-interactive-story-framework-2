@@ -2,6 +2,9 @@
 
 A framework to speed up development of Tier 3 Interactive Stories.
 
+## TO DO:
+// remove classes and double check that media uploads work correctly!!!!!
+
 ## Getting Started
 
 Clone & install dependencies & grunt:
@@ -67,6 +70,11 @@ Each element, in turn, has its own specific element data.
 Saving the new data.yml file compiles the markup, scripts and styles again. Now you can view the page in dist!
 
 !!! Important: the custom IDs can be anything, but should not be repeated.
+
+### Managing assets
+
+You can upload all your assets (during testing and previews) to Google Cloud, z.B.:
+interactive-development.hsnb.io/YYYY-MM-projectName/assets.
 
 ### Available Modules
 
@@ -260,6 +268,52 @@ Each element has three data components: DATA (custom data elements that you pass
 $ grunt handlebars
 ```
 ...and the module should be ready to use!
+
+## Publishing a story to Staging
+
+### Upload scripts and styles to Google Cloud (for testing and previews)
+
+Create a folder YYYY-MM-projectName, and upload all dist files there.
+Copy also index.html for the sake of keeping track, and also because it allows you to send a quick preview:
+https://interactive-development.hsnb.io/YYYY-MM-projectName/index.html
+
+Storing scripts and styles there allows you to quickly edit them and skip the Amazon caching.
+Add the following two lines in the end of the story, after the custom markup:
+```
+<script type = 'text/javascript' src = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/scripts.js'></script>
+<link rel = 'stylesheet' href = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/styles.css' />
+```
+
+## Publishing a story to Live
+
+### Upload scripts and styles to S3 
+
+Once clients and everyone is happy with the story, and you expect no more CSS/JS changes, you can upload the scripts/styles to S3 (just merge with the master branch in the repo below).
+
+In your local copy of this repo: https://github.com/titel-media/hs-interactive-stories, create a new folder in src/ that follows the same structure: YYYY-MM-projectName, and upload dist/scripts.js and styles.css directly there. Create a pull request and merge it.
+You can also push a copy of index.html for archiving purposes.
+
+This repo contains the finished scripts and styles of all stories so far and is accessible by WordPress.
+
+Once the files are uploaded, delete those two lines:
+```
+<script type = 'text/javascript' src = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/scripts.js'></script>
+<link rel = 'stylesheet' href = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/styles.css' />
+```
+
+... and add the folder ID (just the name of the project folder in src/ ) in the Custom Template ID field. This way, the scripts and styles are loaded through S3.
+
+Once again: S3 caches like crazy, so avoid making changes there.
+
+### Setting up and sending previews (to clients, HS+ and Harry/Shaun)
+
+... and add the folder ID (just the name of the project folder in src/ ) in the Custom Template ID field. This way, the scripts and styles are loaded through S3.
+
+Once again: S3 caches like crazy, so avoid making changes there.
+
+### Replace standalone images with uploads in the Media Library
+
+// to do
 
 ## Important grunt commands
 
