@@ -5,24 +5,14 @@
 @import 'typography';
 
 body.isf {
-    overflow-x: hidden;
-    min-height: 100vh;
-    margin: 0px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0px;
 }
 
 img {
-    width: 100%;
-    max-width: 100%;
-}
-#isf-interactive-story,
-.isf-interactive-story {
-  .isf-el_preview__top {
-    max-width: 1200px;
-    margin: 0 auto;
-    h3 {
-      margin-bottom: 45px;
-    }
-  }
+  width: 100%;
+  max-width: 100%;
 }
 
 .isf-color-scheme--dark {
@@ -30,165 +20,43 @@ img {
   color: white;
 }
 
-.isf-el_quote{
+/* format the img element after replacing with media library */
 
-  display: flex;
-  max-width: 1024px;
-  margin: 0 auto;
-  text-align: center;
-  @include isf-padding-tb-md;
-  .l-effect{
-    justify-content: center;
-  }
+.isf-interactive-story figure.img-element {
+margin: 0px auto!important;
+}
+.isf-interactive-story .aspect-ratio-placeholder {
+max-width: none!important;
 }
 
-.isf-el_image {
-    max-width: 60rem;
-    margin: 0 auto;
+.isf-interactive-story .aspect-ratio-placeholder__fill {
+display: none;
 }
 
-
-.isf-el_text{
-    max-width: 40rem;
-    margin: 0 auto;
+.isf-interactive-story .aspect-ratio-placeholder img.image {
+padding: 5px;
+width: 100%;
+height: auto;
+position: relative!important;
 }
 
-.isf-el_code {
-  background-color: #f9f9f9;
-  padding: 15px;
-  font-size: 16px;
-  margin-top: 60px;
-  margin-bottom: 15px;
-  max-width: 1200px;
-  margin: 60px auto 30px;
-  pre {
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4-6 */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  }
+.isf-interactive-story .aspect-ratio-placeholder img{
+position: relative!important;
 }
 
-#isf-preview__nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0px;
-  border-bottom: 3px solid black;
-  h3{
-    padding: 0px 15px;
-    font-size: 18px;
-    line-height: 1em;
-    margin-bottom: 0px;
-    @media (min-width: 768px) {
-      font-size: 24px;
-    }
-  }
-  ul {
-    display: flex;
-    padding: 0px 10px;
-    li {
-      padding: 0px 8px;
-      a.isf-preview__nav__link {
-        color: black;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        ion-icon {
-          margin-right: 3px;
-        }
-      }
-    }
-    @media (min-width: 768px) {
-      padding: 0px 15px;
-      li {
-        padding: 0px 15px;
-        a {
-          ion-icon {
-            margin-right: 5px;
-          }
-        }
-      }
-    }
-  }
-  .isf-dropdown__list {
-    position: absolute;
-    height: 0px;
-    opacity: 0;
-    pointer-events: none;
-    background-color: black;
-    width: 100%;
-    right: 0;
-    top: 65px;
-    color: white;
-    padding: 15px;
-    transition: 0.2s all;
-    &__sub {
-      h6 {
-        margin-bottom: 15px;
-        font-size: 16px;
-      }
-      a {
-        color: white;
-        text-decoration: none;
-        margin-bottom: 5px;
-        display: block;
-      }
-    }
-    @media (min-width: 768px) {
-      right: 0;
-      width: 450px;
-      top: 55px;
-    }
-
-  }
-  &.is--open {
-    .isf-dropdown__list {
-      height: 200px;
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
+.isf-interactive-story .aspect-ratio-placeholder .image {
+padding: 5px;
+width: 100%!important;
+height: auto!important;
+position: relative!important;
 }
 
-.isf-icon {
-  height: 30px;
-  width: 30px;
-  background-position: center center;
-  display: block;
-  &.isf-icon--arrow-right {
-    background-image: url('https://interactive-development.hsnb.io/src/assets/icons/arrow-right-white.svg');
-  }
-  &.isf-icon--arrow-left {
-    background-image: url('https://interactive-development.hsnb.io/src/assets/icons/arrow-left-white.svg');
-  }
+.isf-interactive-story img {
+position: relative!important;
 }
 
-.isf-layout__header {
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.4;
-    z-index: 1;
-    top: 0;
-    left: 0;
-  }
+.isf-interactive-story .img-element__credit {
+  padding-left: 5px;
 }
 
 

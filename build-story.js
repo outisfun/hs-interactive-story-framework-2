@@ -76,7 +76,6 @@ ISF_StoryBuilder.prototype.buildFiles = function(){
         }
       }
 
-
       this.buildFile(page + '.html', 'dist', String(htmlFile).replace("<!-- story -->", pageHtml));
     }
 
@@ -196,7 +195,7 @@ ISF_StoryBuilder.prototype.requireModuleConstructor = function(moduleType){
       // check if it has a constructor - some modules don't.
       if (FD[ _.upperCase(moduleType) ].CONSTRUCTOR !== undefined) {
         var requireModule = "var " + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + " = require('" + _.lowerCase(moduleType) + "/script.js'); ";
-        var addToObject = 'constructors["' + moduleType + '"] = ' + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + '; ';
+        var addToObject = 'constructors["' + _.lowerCase(moduleType) + '"] = ' + FD[ _.upperCase(moduleType) ].CONSTRUCTOR + '; ';
         this.constructors[moduleType] = requireModule + addToObject;
         return this.constructors[moduleType];
       }

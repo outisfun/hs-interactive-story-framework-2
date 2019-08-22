@@ -3,6 +3,10 @@
   @include isf-margin-t-md;
   @include isf-margin-b-md;
   position: relative;
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
   &:before,
   &:after {
     content: " ";
@@ -38,6 +42,10 @@
 
   p {
     margin-bottom: 0px;
+  }
+
+  .l-effect{
+    justify-content: center;
   }
 }
 

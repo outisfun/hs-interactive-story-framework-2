@@ -1,9 +1,11 @@
 .isf-layout_split-sticky{
     position: relative;
     &__content{
-        &--inner{
-            padding: 15px;
-        }
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      &--inner{
+        padding: 15px;
+      }
     }
     &__sticky{
       background-color: pink;
@@ -24,47 +26,61 @@
         }
     }
     @media(min-width: 992px){
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        &__content{
-            width: 50%;
-            float: right;
-            @include isf-padding-sm;
+      display: flex;
+      width: 100%;
+      &__content{
+        width: 50%;
+        float: right;
+
+        &--inner {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
         }
-        &__sticky{
-            width: 50%;
-            min-height: 100vh;
-            &:before{
-                content: '';
-                position: absolute;
-                width: 1px;
-                height: 80vh;
-                top: 10vh;
-                max-height: 0px;
-                right: 0;
-                background-color: white;
-                transition: 0.2s all;
-            }
-            .isf-el_split-sticky__sticky__item{
-                height: 100vh;
-            }
+      }
+      &__sticky{
+        width: 50%;
+        min-height: 100vh;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 80vh;
+            top: 10vh;
+            max-height: 0px;
+            right: 0;
+            background-color: white;
+            transition: 0.2s all;
         }
-        &.is--sticky{
-            .isf-el_split-sticky__sticky{
-                background-color: pink;
-                position: fixed;
-                top: 0;
-                &:before{
-                    max-height: 80vh;
-                }
-            }
+        .isf-el_split-sticky__sticky__item{
+            height: 100vh;
         }
-        &.is--bottom{
-            .isf-el_split-sticky__sticky{
-                bottom: 0;
-                top: auto;
-            }
+      }
+      &.is--sticky{
+          .isf-el_split-sticky__sticky{
+              background-color: pink;
+              position: fixed;
+              top: 0;
+              &:before{
+                  max-height: 80vh;
+              }
+          }
+      }
+      &.is--bottom{
+          .isf-el_split-sticky__sticky{
+              bottom: 0;
+              top: auto;
+          }
+      }
+
+      &.split-sticky--right {
+        .isf-layout_split-sticky__content {
+          order: 1;
         }
+        .isf-layout_split-sticky__sticky,
+        .scrollmagic-pin-spacer {
+          order: 2;
+        }
+      }
     }
 }

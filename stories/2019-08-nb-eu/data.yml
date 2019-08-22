@@ -1,0 +1,73 @@
+---
+# HSNBISF: 2019 08 NEW BALANCE 997 EU #######################################################
+
+index :
+
+  # LAYOUT INTRO
+  dc__intros: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      dc__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "Call it a comeback if you will, but DC’s popularity in recent years — due in large part to a refocused strategy and a spate of high-profile 
+                      collaborations — has prompted the California skate brand to revamp its range of heritage sneakers and create a new forum for expression 
+                      through its exclusive DC Reserve program."
+          paragraph:  "Launched just over a year ago, DC Reserve celebrates and expands upon some of DC’s most iconic 
+                      styles by offering limited-edition OG reissues, collabs with some of the most sought after designers and brands, and exclusive new colorways 
+                      — all in a bid to merge its rich history with a refined vision for the future of skateboarding. 
+                      <br><br>
+                      In the early ‘90s, DC pioneered a unique vision of blending skate with fringe cultures that were just coming up, namely graffiti and streetwear, 
+                      and took them mainstream. Now, as DC plans to expand and grow the program with a slate of new releases for 2019 and beyond, we spoke with some 
+                      of the people and brands behind the scenes who were pivotal to DC’s growth to see what they’ve been cooking up.<br><br>"
+
+  nbeu__splitsticky:
+    layoutType: SPLITSTICKY
+    layoutData:
+      backgroundImage: https://interactive-development.hsnb.io/2019-08-dc/dc19.jpg
+      stickyPosition: left
+    layoutContent:
+      # Quote
+      ellesse__video__quote:
+        elementType: quote
+        elementData: 
+          quote:  The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. 
+                  No longer are you restricted to having to stick to tailoring or to stick to sportswear.
+          source: Ayishat Akanbi
+
+  nbeuds__splitsticky2:
+    layoutType: SPLITSTICKY
+    layoutData:
+      backgroundImage: https://interactive-development.hsnb.io/2019-08-dc/dc19.jpg
+      stickyPosition: right
+    layoutContent:
+      # Quote
+      ellesse__video__quote:
+        elementType: quote
+        elementData: 
+          quote:  The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. 
+                  No longer are you restricted to having to stick to tailoring or to stick to sportswear.
+          source: Ayishat Akanbi
+
+  whatadarkanddrearylife: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      dc__intrdsso__text:
+        elementType: text
+        elementData: 
+          highlight:  "Call it a comeback if you will, but DC’s popularity in recent years — due in large part to a refocused strategy and a spate of high-profile 
+                      collaborations — has prompted the California skate brand to revamp its range of heritage sneakers and create a new forum for expression 
+                      through its exclusive DC Reserve program."
+          paragraph:  "Launched just over a year ago, DC Reserve celebrates and expands upon some of DC’s most iconic 
+                      styles by offering limited-edition OG reissues, collabs with some of the most sought after designers and brands, and exclusive new colorways 
+                      — all in a bid to merge its rich history with a refined vision for the future of skateboarding. 
+                      <br><br>
+                      In the early ‘90s, DC pioneered a unique vision of blending skate with fringe cultures that were just coming up, namely graffiti and streetwear, 
+                      and took them mainstream. Now, as DC plans to expand and grow the program with a slate of new releases for 2019 and beyond, we spoke with some 
+                      of the people and brands behind the scenes who were pivotal to DC’s growth to see what they’ve been cooking up.<br><br>"

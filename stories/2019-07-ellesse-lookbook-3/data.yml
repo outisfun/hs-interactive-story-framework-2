@@ -1,0 +1,212 @@
+---
+# HSNBISF: 2019 07 ELLESSE LOOKBOOK 3: KASIA KUCHARSKA #######################################################
+
+index :
+
+  # LAYOUT INTRO
+  ellesse__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+      colorScheme: dark
+    layoutContent: 
+      # Text
+      test__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  Over the last few months, we’ve taken a close look at ellesse’s sportswear and tailoring history, including its origins and its 
+                      reemerging relevance within today’s style zeitgeist. In a three-part series, we’ve also challenged fashion students in New York, 
+                      London, and now Berlin to customize and style ellesse’s SS19 collection — reimagining it through the lens of tomorrow’s top 
+                      fashion talent.
+          paragraph:  The latest lookbook is perhaps the most fitting homage to ellesse’s founder Leonardo Servadio. When Servadio launched ellesse 
+                      in 1959, the small-town tailor decided to break the style and sportswear rules of the time by introducing his tailoring expertise 
+                      to sportswear design. The result was sports clothing that was as wearable on the track and field as it was for day-to-day living — 
+                      in a sense, giving birth to comfortable lifestyle-wear or what we might now call athleisure.<br><br>
+                      Like Servadio, Berlin-based fashion student Kasia Kucharska brings a unique background to her field. Kucharska studied interior 
+                      architecture in Stuttgart and Japan prior to embarking on a fashion design masters program at Berlin’s Universität der Künste. 
+                      As a result, she enjoys experimenting with manufacturing techniques such as gluing, laser cutting, welding, deep drawing, and plugging.
+                      <br><br>
+                      Kucharska employs these techniques and more in her lookbook heavily inspired by ellesse’s tailoring-meets-sportswear heritage. 
+                      Check out the outcome below and keep reading for insight into how it came together including an interview with Kucharska herself.
+
+  # LAYOUT LOOKBOOK
+  ellesse__lookbook: 
+    layoutType: INTERACTIVESCROLLER
+    layoutData:
+      container: container
+      headerImage: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/h1.jpg
+      headerTitle: "Check out Kasia Kucharska’s ellesse-inspired lookbook:"
+    layoutContent: 
+      # Text
+      custom__group--1:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb2.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb3.jpg
+        groupEffect: fade-in
+      custom__group--2:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb1.jpg
+        groupEffect: come-up
+      custom__group--3:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb4.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb5.jpg
+        groupEffect: up-and-down
+      custom__group--4:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb6.jpg
+        groupEffect: fade-in
+      custom__group--5:
+        customModuleId: lookbook-scene
+        groupImages: 
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb7.jpg
+          -
+            src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/lb8.jpg
+        groupEffect: up-and-down
+
+  # LAYOUT INTERVIEW
+  ellesse__lookbook__interview: 
+    layoutType: CHAPTER
+    layoutData:
+      container: container
+      colorScheme: dark
+      chapterStyle: ellie
+      chapterBackground: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-2/assets/h3.jpg
+      chapterTitle: Get to know Kasia Kucharska
+    layoutContent: 
+      i1:
+        elementType: text
+        elementData: 
+          paragraph:  “The future is now” — this is Kasia Kucharska’s motto and something she applies to all of her work. 
+                      It’s a forward-thinking philosophy that in many ways also inspired the founding of ellesse.<br><br>
+                      For Kucharska, it’s meant not just working with innovative new methods but striving to discover and 
+                      develop manufacturing technologies and techniques that allow her to push the boundaries of design and 
+                      manifest the future as she imagines it.<br><br>
+                      We spoke to Kucharska to find out more about all of this and her work on the ellesse project. 
+                      Read on below.
+
+      imgs1:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/kasia.jpg
+
+      # Text
+      q1:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      For this project, you were inspired by ellesse’s rich tailoring and sportswear history. 
+                      What attracted you to this history and why is it something you wanted to focus on?
+                      </strong>
+                      <br><br>
+                      The history of tailored clothing has been intense with me now for many months as it’s been a 
+                      prominent topic for my master's collection. History is a trustful and reliable source of inspiration, 
+                      that's what I like about it most. I find inspiration in old manufacturing techniques or in 
+                      evolutionary processes of clothing and I like to recall and rethink these techniques and processes 
+                      and apply them in a relevant way to today's wardrobe."
+
+      imgs2:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process2.jpg
+
+      q2:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      How did this concept play out in the lookbook’s styling and overall look and feel? 
+                      Tell us about how you deconstructed and disassembled some pieces too.
+                      </strong>
+                      <br><br>
+                      Personally, I am a very convenient person. I like products and garments that are multifunctional. 
+                      I wanted to create pieces that are convertible and multipurpose and which you can wear in different 
+                      ways by simply adding them to your existing wardrobe — like functional accessories or tools."
+
+      imgs3:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process6.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process5.jpg
+
+      q3:
+        elementType: text
+        elementData: 
+          paragraph:  "That's what we wanted to bring out in the lookbook styling too. You can basically strap on 
+                      or throw over, layer and combine the pieces however you need them. The garments adapt to 
+                      your needs and not the other way around."
+
+      imgs6s:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process3.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process1.jpg
+
+      q4:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      Describe for us why you picked each of the pieces you used from ellesse.
+                      </strong>
+                      <br><br>
+                      I wanted to work with male garments and adjust them to the female body. It is sort of something 
+                      that also happened throughout history with tailored clothing. The suit was initially made for men 
+                      and later adjusted to the female body. I like to take that as a starting point for my own projects 
+                      too. For example, I took the tracksuit apart and constructed a garment which can be worn as a 
+                      dress or a skirt, both in different ways. You can adjust it in length and size. Its basically 
+                      one size fits all but you can still customize it according to your needs.<br><br>
+                      I liked the loose fit, colors, and technical fabrics of the <a href = '#' target = '_blank'>
+                      Fighter Jacket</a> and <a href = '#' target = '_blank'>Typhoon Trousers</a> — 
+                      they were perfect for translating my idea of garment adaptation."
+
+      imgs4:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process4.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-07-ellesse-lookbook-3/process7.jpg
+
+      q5:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>
+                      What routines, habits, or practices do you have that keep you focused and boost your creativity?
+                      </strong>
+                      <br><br>
+                      As I grow older, I really believe it’s the breaks and recreation you allow yourself that 
+                      keep you focused. In your head, the creative process never stops; you continuously develop 
+                      ideas and it’s hard to escape that process. The breaks where you’re actually not in the 
+                      studio surrounded by all the work make you rethink and evaluate your ideas. I really 
+                      like to take my time with that in order to create something that makes sense.
+                      <br><br>
+                      <strong>
+                      What are you working towards right now and where can people find you and your work online?
+                      </strong>
+                      I would love to continue my own practice, my laboratory in fashion, as I did in university. 
+                      I am very much into new technologies and love to explore manufacturing techniques which are 
+                      not fashion related in order to create garments. There is so much potential for innovation. 
+                      You can find me and my work on Instagram at <a href = 'https://www.instagram.com/kasiaku/' target = '_blank'>@kasiaku</a>.
+                      "
+

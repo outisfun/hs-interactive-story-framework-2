@@ -4,6 +4,7 @@ A framework to speed up development of Tier 3 Interactive Stories.
 
 ## TO DO:
 // remove classes and double check that media uploads work correctly!!!!!
+// general style suggestions: separate chapters with quotes and other common scenarios
 
 ## Getting Started
 
@@ -269,6 +270,13 @@ $ grunt handlebars
 ```
 ...and the module should be ready to use!
 
+## Setting up and sending previews (to clients, HS+ and Harry/Shaun)
+
+Internally (for Harry / Shaun and mostly HS+) you can use the Google Cloud folder: https://interactive-development.hsnb.io/YYYY-MM-projectName/index.html, but in this case, you would also need to upload the index.html file from dist/.
+
+For clients, we send a preview either on Staging/QA (as a published post) or on the live site as a draft.
+In the latter case, don't forget to check the Enable Client Preview box!
+
 ## Publishing a story to Staging
 
 ### Upload scripts and styles to Google Cloud (for testing and previews)
@@ -300,20 +308,12 @@ Once the files are uploaded, delete those two lines:
 <script type = 'text/javascript' src = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/scripts.js'></script>
 <link rel = 'stylesheet' href = 'https://interactive-development.hsnb.io/YYYY-MM-projectName/styles.css' />
 ```
-
 ... and add the folder ID (just the name of the project folder in src/ ) in the Custom Template ID field. This way, the scripts and styles are loaded through S3.
-
-Once again: S3 caches like crazy, so avoid making changes there.
-
-### Setting up and sending previews (to clients, HS+ and Harry/Shaun)
-
-... and add the folder ID (just the name of the project folder in src/ ) in the Custom Template ID field. This way, the scripts and styles are loaded through S3.
-
-Once again: S3 caches like crazy, so avoid making changes there.
+Once again: S3 caches like crazy, so avoid making changes there. If you *have to* though, you can get away with a little inline CSS last-minute.
 
 ### Replace standalone images with uploads in the Media Library
 
-// to do
+Unfortunately, there's no quick workaround here - I've been doing them manually on the live server, but if you think of something smarter, go ahead!
 
 ## Important grunt commands
 
@@ -342,7 +342,15 @@ Lint everything!:
 $ grunt lintall
 ```
 
-## Rarely asked questions (because so far there was no one to ask me anything anyway)
+## Rarely asked questions (because so far there was no one to ask me anything anyway) and some general remarks
+
+Whenever you add a new file or a module (this would be rare, but still), you need to restart the watch task, so it can start watching the new file:
+```
+$ grunt --story=YOUR-STORY-NAME
+```
+
+Some common errors may include:
+
 
 
 

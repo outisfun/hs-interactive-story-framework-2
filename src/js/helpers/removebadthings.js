@@ -2,7 +2,6 @@
 module.exports = function() {
     var content = document.querySelector('.post__content');
     // by Gregor & Avery, I think
-    console.log("removed bad things");
     if (content) {
         var allParagraphs = content.querySelectorAll('p');
         allParagraphs.forEach(function (paragraph) {

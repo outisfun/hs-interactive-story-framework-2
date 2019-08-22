@@ -36,6 +36,32 @@ GALLERY :
         img : string
         src : string
 
+# ISF_Element_GalleryTwo
+GALLERYTWO : 
+  CLASSES :
+    EL : js--gallery-two
+    VIEWER : js--gallery-two__viewer
+    VIEWER_ITEM : js--gallery-two__viewer__item
+    STEPS : js--gallery-two__steps
+    STEP : js--gallery-two__step
+  CONSTRUCTOR : ISF_Element_GalleryTwo
+  DATA : 
+    # for each data, we provide 2 specs: data type and data values
+    galleryLayout : 
+      DATA_TYPEOF : string 
+      DATA_VALUES : # if data values is not specified, like for example in element text, then that's fine
+        - masonry
+        - grid
+        - preview
+      DATA_USAGE: # add data usage specs
+    galleryPreview : 
+      DATA_TYPEOF : boolean
+    galleryImages : 
+      DATA_TYPEOF : objectsArray
+      DATA_VALUES :
+        img : string
+        src : string
+
 # ISF_Element_Text
 TEXT : 
   DATA: 

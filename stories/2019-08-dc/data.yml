@@ -1,0 +1,154 @@
+---
+# HSNBISF: 2019 08 DC SHOES #######################################################
+
+index :
+
+  # LAYOUT INTRO
+  dc__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      dc__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "Call it a comeback if you will, but DC’s popularity in recent years — due in large part to a refocused strategy and a spate of high-profile 
+                      collaborations — has prompted the California skate brand to revamp its range of heritage sneakers and create a new forum for expression 
+                      through its exclusive DC Reserve program."
+          paragraph:  "Launched just over a year ago, DC Reserve celebrates and expands upon some of DC’s most iconic 
+                      styles by offering limited-edition OG reissues, collabs with some of the most sought after designers and brands, and exclusive new colorways 
+                      — all in a bid to merge its rich history with a refined vision for the future of skateboarding. 
+                      <br><br>
+                      In the early ‘90s, DC pioneered a unique vision of blending skate with fringe cultures that were just coming up, namely graffiti and streetwear, 
+                      and took them mainstream. Now, as DC plans to expand and grow the program with a slate of new releases for 2019 and beyond, we spoke with some 
+                      of the people and brands behind the scenes who were pivotal to DC’s growth to see what they’ve been cooking up.<br><br>"
+
+      dc__intro__image:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-dc/dc19.jpg
+
+      dc__intro__text2: 
+        elementType: text
+        elementData:
+          paragraph:  "DC cares deeply about self-expression and paved the way for collaboration culture in sneakers during the early aughts with a first-of-its-kind 
+                      artist series program, and DC Reserve, in a way, is the culmination and progression of that work. “[DC] Reserve is a space for them to experiment, 
+                      kind of go outside of a comfort zone,” explained 
+                      former DC footwear designer Sung Choi, who designed the Lynx — arguably DC’s most iconic sneaker. 
+                      “These projects are the culmination of two different energies: DC and the partnership.” 
+                      By partnering with local brands and designers intimately tied to the skate community, like Los Angeles-based FTP and Australian label Sports 
+                      Class, DC continues to spur dialogue and create conversations around modern skate culture in ways that are authentic to both themselves 
+                      and the sport.<br><br>
+                      DC recently brought Choi back on board to lead the DC Reserve program and remarks on some of his favorite upcoming projects to date, 
+                      including a super luxe version of the Lynx that designer Jon Buscemi has reworked. Watch the video above to see what else is in 
+                      store for the DC Reserve program in 2019 and the year to come, and stay tuned for the next exclusive drop."
+
+      dc__intro__video:
+        elementType: video
+        elementData: 
+          videoId:  zv1e0b5f
+          playerId: bUaBxxgc
+
+  dc__gallery: 
+    layoutType: SIMPLE
+    layoutData:
+      container: none
+    layoutContent: 
+
+      dc__gallery__gallery:
+        elementType: gallerytwo
+        elementData: 
+          viewerScenes:
+            -
+              heading: Custom title of the gallery
+              src: https://interactive-development.hsnb.io/2019-08-dc/dc6.jpg
+              dataItem: 0
+              posH: center
+            -
+              heading: A custom heading explaining the sequence of images in a line or two.
+              dataItem: 1
+              posH: center
+            -
+              src: https://interactive-development.hsnb.io/2019-08-dc/dc13.jpg
+              dataItem: 2
+              posH: left
+            -
+              heading: A custom heading explaining the sequence of images in a line or two.
+              dataItem: 3
+              posH: center
+          steps: 
+            -
+              alignH: center
+              dataViewer: 0
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc1.jpg
+            -
+              alignH: center
+              dataViewer: 0
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc14.jpg
+                  caption: Lorem ipsum dolor sit caption caption caption
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc17.jpg
+                  effect: parallax
+            - 
+              alignH: right
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc12.jpg
+                  caption: Lorem ipsum dolor sit amet caption
+            - 
+              alignH: left
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc18.jpg
+            -
+              alignH: center
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc15.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc16.jpg
+                  effect: parallax
+            -
+              alignH: around
+              dataViewer: 3
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc3.jpg
+                  effect: parallax
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc4.jpg
+            -
+              alignH: center
+              dataViewer: 3
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc7.jpg
+            -
+              alignH: around
+              dataViewer: 3
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc11.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-dc/dc20.jpg
+
+
+
+
+
+
+
+
+
+
+
