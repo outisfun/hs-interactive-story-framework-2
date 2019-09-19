@@ -13,7 +13,7 @@ var enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 var YAML = require('yamljs');
 var _ = require('lodash');
-var FD = YAML.load('https://interactive-development.hsnb.io/src/fd.yml');
+var FD = YAML.load('./src/fd.yml');
 
 var Hammer = require('hammerjs'); // a library to manage touch events
 
@@ -24,7 +24,7 @@ var ww = window.innerWidth;
 var wh = window.innerHeight;
 
 function ISF_Element_Gallery(el, controller) {
-
+  console.log("gallery!");
   this.controller = controller;
 
   this.DOM = {};
@@ -90,7 +90,7 @@ ISF_Element_Gallery.prototype.buildLayout = function() {
     } else if (ww <= 1600) {
       imgHeight = 600;
     } else {
-      imgHeight = 1000;
+      imgHeight = 800;
     }
 
     this.DOM.el.style.height = imgHeight + 'px';

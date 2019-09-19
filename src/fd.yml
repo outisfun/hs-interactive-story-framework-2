@@ -36,6 +36,12 @@ GALLERY :
         img : string
         src : string
 
+# ISF_Gallery
+GLLRY :
+  CLASSES :
+    EL : js--gllry
+  CONSTRUCTOR : ISF_Element_Gllry
+
 # ISF_Element_GalleryTwo
 GALLERYTWO : 
   CLASSES :
@@ -70,6 +76,16 @@ TEXT :
     highlight: 
       DATA_TYPEOF : string
     paragraph: 
+      DATA_TYPEOF : string
+
+# ISF_Element_Text
+CTA : 
+  DATA: 
+    url: 
+      DATA_TYPEOF : string
+    text: 
+      DATA_TYPEOF : string]
+    colorScheme:
       DATA_TYPEOF : string
 
 # ISF_Element_Quote
@@ -182,6 +198,16 @@ INTERACTIVESCROLLER :
   DATA :
     backgroundImage :
       DATA_TYPEOF : imgsrc
+
+# ISF_Layout_Floater
+FLOATER :
+  CLASSES :
+    EL : js--floater
+    TEXT : js--floater__text
+    SCENES : js--floater__scenes
+    SCENE : js--floater__scene
+  CONSTRUCTOR : ISF_Layout_Floater
+
 
 
     

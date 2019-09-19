@@ -1,0 +1,349 @@
+---
+# HSNBISF: 2019 08 GAP ###############
+
+index :
+
+  # LAYOUT INTRO
+  gap__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+    layoutContent: 
+      # Text
+      gap__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "Before the advent of computers and modern technology, shopping for clothes was likely a burdensome task — 
+                      people who couldn’t find the perfect pair of jeans might have simply moved on to the next mall hoping to land the right size."
+          paragraph:  "For American philanthropist Don Fisher and his wife, Doris, who founded Gap Inc. five decades ago in their hometown of San Francisco, 
+                      they saw an opportunity to solve this problem and do something different that would ultimately grow to become the quintessential 
+                      American clothing company it is today.<br><br>
+                      In order to attract a younger demographic and stand apart from other retailers, Fisher’s genius idea was to only sell two things 
+                      at the first Gap store: jeans and records. He was so into the idea that he nearly named the store ‘Pants and Discs’ before his 
+                      wife suggested something far simpler and catchier: The Gap. 
+                      It was uncomplicated and also served as a coy reference to the generation 
+                      gap that started growing between young people and baby boomers during that time. 
+                      he first Gap store famously stocked over three tons of denim in 
+                      nearly every size and color imaginable, and, a few years and a couple dozen stores later, they stopped selling music entirely 
+                      to focus only on clothing."
+
+      gap__intro__images: 
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-6.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-5.jpg
+
+      gap__intro__text2:
+        elementType: text
+        elementData: 
+          paragraph: "During much of the ‘70s Gap went all-in to court young shoppers, and introduced its now-iconic “Fall into the Gap” jingle that ushered 
+                      in a new era of cheeky advertising that came to define the American clothing brand. To better understand Gap’s contributions to 
+                      fashion, we’re looking at Gap through the decades from its early archival collections to some of the up-and-coming designers 
+                      today whose work is partially informed by the casual American aesthetic cultivated by Gap."
+
+      gap__intro__video:
+        elementType: video
+        elementData: 
+          videoId:  zv1e0b5f
+          playerId: bUaBxxgc
+
+  # LAYOUT VIDEO
+  gap__archive: 
+    layoutType: CHAPTER
+    layoutData:
+      colorScheme: dark
+      container: none
+      chapterStyle: ralph-lauren
+      chapterBackground: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-36-xl.jpg
+      chapterTitle: A Rare Look Inside Gap’s Archives 
+    layoutContent: 
+
+      gap__archive__text:
+        elementType: text
+        elementData: 
+          paragraph:  Established in 1969, Gap has been defining what American clothing and accessories have looked like for 50 years, 
+                      and, by extension, shaping culture. From its iconic television commercials in the late ’90s that popularized 
+                      wardrobe staples, like khakis and corduroys, to its dope history of working with artists, including 
+                      Missy Elliot, Madonna, and LL Cool J, Gap has played a big part in defining cool through the decades.<br><br>
+                      Located in New York City is Gap’s Heritage and Design Archives, where a team is dedicated to collecting Gap 
+                      products dating back to the brand’s inception. Not only do the collections provide information about Gap’s 
+                      design history, they help serve as inspiration for its designers today. And that’s not hard for us to believe.<br><br>
+                      Rarely open to anyone outside of the Gap team, Highsnobiety was invited to dig into its archives. We also got a closer 
+                      look at the vintage pieces that inspired Gap’s latest denim drop – all-new, limited-edition pieces that pay tribute 
+                      to denim from the ’70s, ’80s, and ’90s.<br><br>
+                      Take a look at the images below to see Gap through the decades.
+
+      gap__archive__gallery:
+        elementType: gllry
+        elementData:
+          galleryLayout: horizontal
+          galleryImages:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-2.jpg
+              caption: One of the first denim styles produced by Gap, this 
+                      pair is from its 
+                      Pioneer Denim range introduced in the ‘70s and prominently featured 
+                      boot cuts & flared styles.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-5.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-6.jpg
+              caption: The ‘80s saw the rollout of Gap’s workforce collection with pieces 
+                        like high-rise wide leg carpenter jeans & heavy-duty chore jackets.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-9.jpg
+
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-10.jpg
+              caption: This is just one of the massive aisles inside Gap’s cavernous 
+                        archives at its NYC headquarters.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-11.jpg
+              caption: Tongue-in-cheek graphic tees from the early ‘70s were a big 
+                      part of Gap’s formative years before they honed in on denim.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-13.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-16.jpg
+              caption: An assortment of Gap accessories over the years with 
+                        everything ranging from caps, watches, belts, and other 
+                        obscure items.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-19.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-24.jpg
+              caption: One of Gap’s earliest forays into sportswear, this pullover 
+                        Arctic Light Fleece was first introduced in the ‘90s.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-25.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-27.jpg
+              caption: Gap partnered with Mattel in 1996 at the height of Barbie’s 
+                        popularity on several co-branded dolls featuring full Gap 
+                        ensembles.
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-28.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-36.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/archive-37.jpg
+              caption: Inspired by its 1980s workwear styles, this pleated jacket is 
+                        part of Gap’s Denim Through the Decades collection and is 
+                        available now.
+
+  gap__videogallery1:
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+
+    layoutContent:
+
+      gap__videogallewewery1__text:
+        elementType: text
+        elementData:
+          headline:   "Closing the Gap: Bristol Studio" 
+          paragraph:  "To celebrate 50 years in the game, Gap recognizes the tenacity and hard work it takes to build a brand as iconic as theirs. 
+                      Together, we’ve highlighted two up-and-coming labels who share the same ethos of thinking outside the box when it 
+                      came to building their brand, just as Gap’s founders did when its first store opened in 1969. Bristol Studio is a 
+                      lifestyle label based in Los Angeles whose entire aesthetic blurs the line between sport and streetwear. 
+                      For co-founder and creative director Luke Tadashi, who grew up playing basketball competitively, it was the only logical 
+                      direction to take Bristol Studio. “Consistency is being able to deliver a product that speaks honestly to who you are 
+                      as a brand and designer,” Tadashi explains. “Basketball was always a way into culture.”<br><br>
+                      By tapping into sports culture and weaving it into Bristol Studio’s core DNA, they’ve managed to carve a lane for itself 
+                      not dissimilar to what Fisher did with Gap’s first store when he decided they’d only sell two things: music and jeans. 
+                      Now that Tadashi’s got his own brand to run, he can only dream of being as prolific as the mighty Gap and hopes to 
+                      be remembered just as fondly 50 years from now. “I remember being an eight or nine-year-old kid and seeing the Gap 
+                      hoodies on everyone,” Tadashi recalls “I didn’t own one, but I wanted one because all of my friends had it.”"
+
+      gap__videogalleseery1__video:
+        elementType: video
+        elementData: 
+          videoId:  RhDc6cXJ
+          playerId: bUaBxxgc
+
+      ellesse__videosse__quote:
+        elementType: quote
+        elementData: 
+          quote:  Consistency is being able to deliver a product that speaks honestly to who you are as a brand and designer.
+          source: Luke Tadashi
+
+  gap__videogallery2:
+    layoutType: SIMPLE
+    layoutData:
+      container: container
+ 
+    layoutContent:
+
+      gap__intro__images: 
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/gap1.jpg
+            -
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/gap2.jpg
+
+      gap__videogallery1__text:
+        elementType: text
+        elementData:
+          headline:   "Closing the Gap: No Vacancy Inn" 
+          paragraph:  The next label we’re highlighting is founded by multi-hyphenates Tremaine Emory, 
+                      Brock Korsan, and Acyde Odunlami. Together they form the music, radio, fashion, 
+                      and nightlife hybrid known as No Vacancy Inn with a shared mission to make cultural 
+                      knowledge accessible to the masses. With their vast network and connections to 
+                      tastemakers in every realm, it’s no surprise that NVI had previously worked with 
+                      Gap, in collaboration with GQ, on their own rendition of its iconic pull-over 
+                      hoodie.<br><br>
+                      “The greatest reaction was seeing people react to it,” Korsan recalls. “People 
+                      going to the Gap and sending you a photo of your sweatshirt, that was different.” 
+                      Gap’s willingness to cede creative control to a scrappy creative collective and 
+                      rework one of their most iconic garments is a testament to why they’ve been 
+                      around for as long as they have. “The ultimate key to success, long-term, is 
+                      to be able to pivot while maintaining your core,” Korsan explains. 
+      gap__videogallery1__video:
+        elementType: video
+        elementData: 
+          videoId:  qckdGCQI
+          playerId: bUaBxxgc
+
+      ellesse__video__quote:
+        elementType: quote
+        elementData: 
+          quote:  The greatest testament to any brand is being around for 50 years.
+          source: Brock Korsan
+
+
+  gap__lookbook: 
+    layoutType: SIMPLE
+    layoutData:
+      container: none
+      colorScheme: dark
+    layoutContent: 
+
+      gap__lookbook__text:
+        elementType: text
+        elementData:
+          headline:   "The 1969 Premium Collection" 
+          paragraph:  Now that we’ve got an intimate snapshot of Gap’s history along with a profile 
+                      of some of today’s influential designers that are following in its footsteps, 
+                      it’s time to see what’s in store for the next 50 years of the iconic American 
+                      brand’s history. If their 1969 Premium Collection is any indication, Gap’s 
+                      going back to its roots with iconic pieces that are inspired directly from 
+                      its archives — all with an emphasis on modern detailing and premium 
+                      craftsmanship.<br><br>
+                      As masters of modern basics, the 1969 Premium Collection is a continuation 
+                      of its Denim through the Decades range, featuring designs pulled from 
+                      different decades throughout Gap’s history. “At Gap, denim is in our 
+                      DNA. As we mark our 50th year, we see it as both our heritage and our future,” 
+                      said John Caruso in a press release, Gap’s head of adult design. 
+                      “For fall, we revisited iconic styles with the Denim through the 
+                      Decades and highlighted the brand’s evolution with the 1969 
+                      Premium Collection. During this half century, we’ve been 
+                      dedicated to designing iconic pieces that are a staple for 
+                      every wardrobe, and will continue to create clothing that empowers 
+                      people to express their individual style.”
+ 
+      gap__lookbook__gallery:
+        elementType: gallerytwo
+        elementData: 
+          viewerImage: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--20.jpg
+          viewerScenes:
+            -
+              heading: "GAP: Heading Title"
+              src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--11.jpg
+              dataItem: 0
+              posH: center
+          steps: 
+            -
+              alignH: center
+              dataViewer: 0
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--19.jpg
+            -
+              alignH: center
+              dataViewer: 0
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--3.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--4.jpg
+                  effect: parallax
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--5.jpg
+            - 
+              alignH: right
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--6.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--2.jpg
+                  effect: parallax
+            - 
+              alignH: center
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--1.jpg
+            -
+              alignH: around
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--7.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--8.jpg
+            -
+              alignH: center
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--11.jpg
+            -
+              alignH: around
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--12.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--14.jpg
+            - 
+              alignH: center
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--9.jpg
+            -
+              alignH: center
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--16.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--17.jpg
+                  effect: parallax
+            - 
+              alignH: center
+              dataViewer: 1
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--10.jpg
+            -
+              alignH: around
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--18.jpg
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--19.jpg
+                  effect: parallax
+            -
+              alignH: center
+              dataViewer: 2
+              stepImages:
+                -
+                  src: https://interactive-development.hsnb.io/2019-08-gap/assets/baraka-gap50--20.jpg

@@ -2,6 +2,13 @@
 
     <div class = "isf-el_gallery-two__viewer js--gallery-two__viewer">
 
+        <div class = "isf-el_gallery-two__viewer__header js--gallery-two__viewer__header">
+            <div class = "isf-viewer__header__mask js--viewer__header__mask">
+                <div class = "isf-viewer__header__background js--viewer__header__background" style = "background-image: url('{{ viewerImage }}')">
+                </div>
+            </div>
+            <h1 class = "isf-viewer__header__heading">{{ viewerHeading }}</h1>
+        </div>
         {{#each viewerScenes}}
     	<div class = "isf-el_gallery-two__viewer__item js--gallery-two__viewer__item h--{{ posH }}" data-item = "{{ dataItem }}">
     		<div class = "viewer-group__inner">
@@ -17,12 +24,9 @@
     </div>
 
     <div class = "isf-el_gallery-two__steps js--gallery-two__steps">
-
-
         {{#each steps}}
         <div class = "isf-el_gallery-two__step js--gallery-two__step step--0" data-viewer = "{{ dataViewer }}">
             <div class = "step__inner h--{{ alignH }}">
-
                 {{#each stepImages}}
                 <div class = "isf-el_gallery-two__item js--gallery-two__item step__inner__img" data-effect = "{{ effect }}">
                     <div class = "isf-el_image__wrap">
@@ -31,85 +35,11 @@
                             <p class = "isf-el_image__caption">{{{ caption }}}</p>
                         {{/if}}
                     </div>
-                    
                 </div>
                 {{/each}}
-
             </div>
         </div>
         {{/each}}
-
-    	<!-- <div class = "isf-el_gallery-two__step js--gallery-two__step step--0" data-step = "0">
-
-    		<div class = "step__inner h--left">
-    			<div class = "step__inner__img">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc2.jpg" />
-	    		</div>
-	    	</div>
-
-	    	<div class = "step__inner h--center">
-	    		<div class = "step__inner__img">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc14.jpg" />
-	    		</div>
-	    		<div class = "step__inner__img">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc17.jpg" />
-	    		</div>
-    		</div>
-    	</div>
-
-    	<div class = "isf-el_gallery-two__step js--gallery-two__step step--1" data-step = "1">
-
-    		<div class = "step__inner h--right">
-    			<div class = "step__inner__img p-top--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc12.jpg" />
-	    		</div>
-    		</div>
-    		<div class = "step__inner h--left">
-    			<div class = "step__inner__img p-top--md p-bottom--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc18.jpg" />
-	    		</div>
-    		</div>
-    	</div>
-
-    	<div class = "isf-el_gallery-two__step js--gallery-two__step step--1" data-step = "2">
-    		<div class = "step__inner">
-    			<div class = "step__inner__img p-top--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc15.jpg" />
-	    		</div>
-	    		<div class = "step__inner__img p-bottom--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc16.jpg" />
-	    		</div>
-    		</div>
-    	</div>
-
-    	<div class = "isf-el_gallery-two__step js--gallery-two__step step--1" data-step = "3">
-
-    		<div class = "step__inner h--around">
-    			<div class = "step__inner__img p-top--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc3.jpg" />
-	    		</div>
-	    		<div class = "step__inner__img p-bottom--md">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc4.jpg" />
-	    		</div>
-    		</div>
-    	</div>
-
-    	<div class = "isf-el_gallery-two__step js--gallery-two__step step--1" data-step = "3">
-
-    		<div class = "step__inner h--center">
-    			<div class = "step__inner__img">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc7.jpg" />
-	    		</div>
-    		</div>
-    	</div>
-
-    	<div class = "isf-el_gallery-two__step js--gallery-two__step step--1" data-step = "3">
-    		<div class = "step__inner h--left">
-    			<div class = "step__inner__img">
-	    			<img src = "https://interactive-development.hsnb.io/2019-08-dc/dc11.jpg" />
-	    		</div>
-    		</div>
-    	</div> -->
     </div>
 
 </div>

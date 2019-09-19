@@ -11,8 +11,9 @@ module.exports = function() {
         });
         var allBreakTags = content.querySelectorAll('br');
         allBreakTags.forEach(function(breakTag) {
+          console.log(breakTag.classList, breakTag.classList.value, breakTag);
             if (breakTag.classList.value === '') {
-                breakTag.parentNode.removeChild(breakTag);
+                //breakTag.parentNode.removeChild(breakTag);
             }
         });
     }

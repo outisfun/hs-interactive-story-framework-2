@@ -15,8 +15,6 @@ var imagesLoaded = require('imagesloaded');
 var ww = window.innerWidth;
 var wh = window.innerHeight;
 
-console.log("script");
-
 function ISF_Element_GalleryTwo(el, controller) {
 
   this.controller = controller;
@@ -35,12 +33,23 @@ function ISF_Element_GalleryTwo(el, controller) {
 
 ISF_Element_GalleryTwo.prototype.init = function() {
   // init main scroll magic scene
+  var self = this;
   this.scrollScene = new ScrollMagic.Scene({
     triggerElement: this.DOM.el,
-    triggerHook: 0
+    triggerHook: 0,
+    duration: this.DOM.el.offsetHeight - window.innerHeight
   })
-    .setPin(this.DOM.viewer)
-    .setClassToggle(this.DOM.el, "is--fixed")
+    .setPin(this.DOM.viewer, { pushFollowers: false })
+    .on('enter', function(e) {
+      if (e.scrollDirection === 'FORWARD') {
+        self.DOM.el.classList.add("is--fixed");
+      }
+    })
+    .on('leave', function(e) {
+      if (e.scrollDirection === 'REVERSE') {
+        self.DOM.el.classList.remove("is--fixed");
+      }
+    })
     .addTo(this.controller);
 
   var self = this;
@@ -69,34 +78,37 @@ ISF_Element_GalleryTwo.prototype.setInitialValues = function() {
 
 ISF_Element_GalleryTwo.prototype.setImageScrollScenes = function() {
   var self = this;
-  _.forEach(this.DOM.stepImages, function(image, index) {
 
-    if (image.dataset.effect === 'parallax') {
-      TweenLite.set(image, {y: window.innerHeight/5});
-      var _t = new TimelineLite()
-        .to(image, 1, {y: -window.innerHeight/5});
+  _.forEach(this.DOM.steps, function(step, index) {
+    var _images = Array.from(step.querySelectorAll(".js--gallery-two__item"));
+    _.forEach(_images, function(image, index) {
 
-      var _p = new ScrollMagic.Scene({
-        triggerElement: image,
-        duration: window.innerHeight,
-        triggerHook: 'onEnter'
-      })
-        .on('enter', function() {
-          TweenLite.to(image, 0.5, {opacity: 1, ease: Power2.easeOut });
+      if (image.dataset.effect === 'parallax') {
+        TweenLite.set(image, {y: window.innerHeight/5});
+        var _t = new TimelineLite()
+          .to(image, 1, {y: -window.innerHeight/5});
+
+        var _p = new ScrollMagic.Scene({
+          triggerElement: step,
+          duration: 1.5*window.innerHeight,
+          triggerHook: 'onEnter'
         })
-        .setTween(_t)
-        .addTo(self.controller);
-    } else {
-      var _s = new ScrollMagic.Scene({
-        triggerElement: image,
-        triggerHook: 0.8
-      })
-        .on('enter', function() {
-          TweenLite.to(image, 0.5, {opacity: 1, y: 0, ease: Power2.easeOut });
+          .on('enter', function() {
+            TweenLite.to(image, 0.5, {opacity: 1, ease: Power2.easeOut });
+          })
+          .setTween(_t)
+          .addTo(self.controller);
+      } else {
+        var _s = new ScrollMagic.Scene({
+          triggerElement: step,
+          triggerHook: 0.5
         })
-        .addTo(self.controller);
-    }
-
+          .on('enter', function() {
+            TweenLite.to(image, 0.8, {opacity: 1, y: 0, ease: Power2.easeInOut });
+          })
+          .addTo(self.controller);
+      }
+    });
   });
 };
 

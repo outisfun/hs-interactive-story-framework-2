@@ -1,0 +1,65 @@
+.isf-layout_floater{
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+
+  &__scenes {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: 0.2s all;
+
+    .isf-layout_floater__scene {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+     /* transform-style: preserve-3d;
+      perspective: 1000px;*/
+      opacity: 0.5;
+      &__item {
+        position: absolute;
+        max-width: 50vw;
+        max-height: 70vh;
+        display: flex;
+        width: 100%;
+        padding: 15px;
+        .isf-layout_floater__scene__image {
+          object-fit: contain;
+        }
+        &.h--right {
+          left: 75%;
+        }
+        &.h--left {
+          left: 25%;
+        }
+
+        @media (max-width: 767px) {
+          max-width: 100vw;
+          max-height: 90vh;
+        }
+      }
+    }
+  }
+
+  &__text {
+    padding: 90px 0px;
+    z-index: 20;
+    position: relative;
+    pointer-events: none;
+    &__el {
+      max-width: 640px;
+      margin: 0 auto;
+      display: block
+    }
+  }
+
+/*  .floater-trigger {
+    color: blue;
+    text-decoration: underline;
+  }*/
+}

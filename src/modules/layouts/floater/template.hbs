@@ -1,0 +1,25 @@
+<div class = "isf-layout_floater js--floater">
+
+    
+
+    <div class = "isf-layout_floater__scenes js--floater__scenes">
+
+    	{{#each floaterScenes}}
+    	<div class = "isf-layout_floater__scene js--floater__scene" data-scene = "{{ floaterSceneData }}">
+    		<div class = "isf-layout_floater__scene--inner">
+    			{{#each floaterSceneItems}}
+    			<div class = "isf-layout_floater__scene__item js--floater__scene__item h--right" data-parallax = "light" data-horizontal_pos = "{{ horizontal_pos }}">
+    				<img class = "isf-layout_floater__scene__image" src = "{{ src }}" />
+    			</div>
+    			{{/each}}
+    		</div>
+    	</div>
+    	{{/each}}
+    </div>
+
+    <div class = "isf-layout_floater__text js--floater__text">
+    	<div class = "isf-container">
+    		<!-- content -->
+    	</div>
+    </div>
+</div>

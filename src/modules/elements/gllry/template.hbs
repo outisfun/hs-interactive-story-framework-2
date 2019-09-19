@@ -1,0 +1,24 @@
+
+
+<div class = "isf-el_gllry js--gllry" id = "{{ modId }}" data-layout = "{{ galleryLayout }}">
+    <div class = "isf-el_gllry--inner js--gllry--inner">
+        <div class = "isf-el_gllry__items js--gllry__items">
+        {{#each galleryImages}}
+            {{#if src}}
+            <div class = "isf-el_image js--image isf-el_gllry__item js--gllry__item">
+                <div class = "isf-el_image--inner js--item--inner">
+                    <picture class = "isf-el_picture js--picture">
+                        <source srcset="{{ src }}"
+                            media="(min-width: 768px)">
+                        <img src="{{ src }}" />
+                    </picture>
+                    <small class = "isf-el_caption">
+                       {{ caption }}
+                    </small>
+                </div>
+            </div>
+            {{/if}}
+        {{/each}}
+        </div>
+    </div>
+</div>

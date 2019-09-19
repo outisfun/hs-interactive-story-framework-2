@@ -5,7 +5,7 @@
     "@glidejs/glide": "^3.3.0",
     "animated-scroll-to": "^1.2.2",
     "blobs": "^1.0.3",
-    "body-scroll-lock": "^2.6.1",
+    "body-scroll-lock": "^2.6.4",
     "brfs": "^2.0.2",
     "browser-sync": "^2.26.5",
     "browserfs": "^1.4.3",
@@ -39,6 +39,8 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "autoprefixer": "^9.4.9",
     "browserify-fs": "^1.0.0",
     "eslint": "^5.16.0",
@@ -54,10 +56,12 @@
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0",
+    "grunt-responsive-images": "^1.10.1",
     "grunt-shell": "^3.0.1",
     "grunt-yaml": "^0.4.2",
     "load-grunt-tasks": "^4.0.0"

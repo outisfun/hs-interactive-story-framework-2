@@ -1,0 +1,35 @@
+.isf-el_gllry {
+  position: relative;
+
+  &[data-layout = "horizontal"] {
+    .isf-el_gllry--inner {
+      background: black;
+      color: white;
+      height: calc(100vh);
+      width: 100%;
+      .isf-el_gllry__items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 90px; /* accounting for highsnob header */
+
+        .isf-el_gllry__item {
+          margin: 0px 15px;
+          padding: 0px;
+
+          @media (min-width: 1200px) {
+            margin: 0 45px;
+          }
+        }
+        .isf-el_caption {
+          margin-top: 10px;
+          max-width: 600px;
+          line-height: 1.1em!important;
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+}

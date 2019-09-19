@@ -1,0 +1,117 @@
+---
+# HSNBISF: GALLERY EL #####
+
+index :
+
+  # LAYOUT INTRO
+  nf__intro: 
+    layoutType: SIMPLE
+    layoutData:
+      container: none
+    layoutContent: 
+      # Text
+      nf__intro__text:
+        elementType: text
+        elementData: 
+          highlight:  "It sounds like the set up to an outlandish story that could only happen in 2019: 
+                      An artist famous on the ‘gram for painting boys’ nails and a Black, queer transgender spoken word poet walk 
+                      into a nondescript apartment block in London. But this is far from fiction."
+          paragraph:  Underneath all of the headline-making 
+                      drama about Brexit, a new creative renaissance has gripped Britain’s capital city; one that brings together 
+                      Jess Young, a painter dealing in tiny brushstrokes applied to our built-up keratin, and Kai-Isaiah Jamal, 
+                      an artist weaving words into emotional exposés of identity. As different as they may seem on the surface, 
+                      both artists have come of age in an era where creative communities 
+                      of color and artist collectives have risen up to make major waves in art scenes long dominated by white, cisgender man. 
+                      Whether that collective is the feminist nail art girls at cult salon WAH Nails that watched Jess grow for the last 
+                      five years or the Bold Brazen Zamis (BBZ) Collective of queer womxn, trans folk and non-binary people of colour 
+                      that Kai has come to embrace as family. 
+
+      nf__intro__gallery:
+        elementType: gllry
+        elementData:
+          galleryLayout: horizontal
+          galleryImages:
+            -
+              src: archive-2
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-5
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-6
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-9
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-10
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-11
+              caption: The speckles give the bubble a sense of depth and density, almost giving it the appearance of a translucent rock or gemstone.
+            -
+              src: archive-13
+            -
+              src: archive-16
+            -
+              src: archive-19
+            -
+              src: archive-24
+            -
+              src: archive-25
+            -
+              src: archive-27
+            -
+              src: archive-28
+            -
+              src: archive-36
+            -
+              src: archive-37
+
+      nf__intro__text2:
+        elementType: text
+        elementData: 
+          highlight:  "It sounds like the set up to an outlandish story that could only happen in 2019: 
+                      An artist famous on the ‘gram for painting boys’ nails and a Black, queer transgender spoken word poet walk 
+                      into a nondescript apartment block in London. But this is far from fiction."
+          paragraph:  Underneath all of the headline-making 
+                      drama about Brexit, a new creative renaissance has gripped Britain’s capital city; one that brings together 
+                      Jess Young, a painter dealing in tiny brushstrokes applied to our built-up keratin, and Kai-Isaiah Jamal, 
+                      an artist weaving words into emotional exposés of identity. As different as they may seem on the surface, 
+                      both artists have come of age in an era where creative communities 
+                      of color and artist collectives have risen up to make major waves in art scenes long dominated by white, cisgender man. 
+                      Whether that collective is the feminist nail art girls at cult salon WAH Nails that watched Jess grow for the last 
+                      five years or the Bold Brazen Zamis (BBZ) Collective of queer womxn, trans folk and non-binary people of colour 
+                      that Kai has come to embrace as family. 
+
+      nf__intro__text3:
+        elementType: text
+        elementData: 
+          highlight:  "It sounds like the set up to an outlandish story that could only happen in 2019: 
+                      An artist famous on the ‘gram for painting boys’ nails and a Black, queer transgender spoken word poet walk 
+                      into a nondescript apartment block in London. But this is far from fiction."
+          paragraph:  Underneath all of the headline-making 
+                      drama about Brexit, a new creative renaissance has gripped Britain’s capital city; one that brings together 
+                      Jess Young, a painter dealing in tiny brushstrokes applied to our built-up keratin, and Kai-Isaiah Jamal, 
+                      an artist weaving words into emotional exposés of identity. As different as they may seem on the surface, 
+                      both artists have come of age in an era where creative communities 
+                      of color and artist collectives have risen up to make major waves in art scenes long dominated by white, cisgender man. 
+                      Whether that collective is the feminist nail art girls at cult salon WAH Nails that watched Jess grow for the last 
+                      five years or the Bold Brazen Zamis (BBZ) Collective of queer womxn, trans folk and non-binary people of colour 
+                      that Kai has come to embrace as family. 
+
+      nf__intro__text4:
+        elementType: text
+        elementData: 
+          highlight:  "It sounds like the set up to an outlandish story that could only happen in 2019: 
+                      An artist famous on the ‘gram for painting boys’ nails and a Black, queer transgender spoken word poet walk 
+                      into a nondescript apartment block in London. But this is far from fiction."
+          paragraph:  Underneath all of the headline-making 
+                      drama about Brexit, a new creative renaissance has gripped Britain’s capital city; one that brings together 
+                      Jess Young, a painter dealing in tiny brushstrokes applied to our built-up keratin, and Kai-Isaiah Jamal, 
+                      an artist weaving words into emotional exposés of identity. As different as they may seem on the surface, 
+                      both artists have come of age in an era where creative communities 
+                      of color and artist collectives have risen up to make major waves in art scenes long dominated by white, cisgender man. 
+                      Whether that collective is the feminist nail art girls at cult salon WAH Nails that watched Jess grow for the last 
+                      five years or the Bold Brazen Zamis (BBZ) Collective of queer womxn, trans folk and non-binary people of colour 
+                      that Kai has come to embrace as family. 

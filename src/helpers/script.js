@@ -77,3 +77,25 @@
   });
 
 })(window);
+
+/*
+var els = Array.from(document.querySelectorAll('.' + FD[MOD].CLASSES.EL));
+
+        if (els.length !== 0) {
+          _.forEach(els, function(elem, index) {
+            // check for effects
+            console.log(elem);
+            for (var attr in elem.dataset) {
+              console.log('hey', attr, elem.dataset);
+              // if (isAttributeEffect(attr) && elem.dataset[attr]) {
+              //   var applyEffect = self.effects[attr.replace('x_', '')];
+              //   applyEffect( elem, elem.dataset[attr], self.controller );
+              // }
+            }
+          });
+
+          if (constructors[_.lowerCase(MOD)]) {
+            self.modules.push(new constructors[_.lowerCase(MOD)](elem, self.controller));
+          }
+        }
+        */

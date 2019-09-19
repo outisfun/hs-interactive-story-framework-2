@@ -2,10 +2,10 @@
 	<div class = "isf-el_image_group__inner">
 
 		{{#each images}}
-            <picture class = "isf-el_image js--image isf-el_gallery__item js--gallery__item">
-                <source srcset="{{ src }}" media="(min-width: 768px)">
+            <picture class = "isf-el_picture js--picture">
+                <source srcset="{{ src }}"
+                    media="(min-width: 768px)">
                 <img src="{{ src }}" />
-                {{#if caption}}<p class = "caption">{{{ caption }}}</p>{{/if}}
             </picture>
         {{/each}}
 

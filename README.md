@@ -5,6 +5,7 @@ A framework to speed up development of Tier 3 Interactive Stories.
 ## TO DO:
 // remove classes and double check that media uploads work correctly!!!!!
 // general style suggestions: separate chapters with quotes and other common scenarios
+// To do (for me): Add all possible layouts and modules in a preview story.
 
 ## Getting Started
 
@@ -17,11 +18,17 @@ $ npm install -g grunt-cli
 
 ## Creating a story
 
+### Workflow
+
+That's of course, a matter of personal taste, but I find it easiest like this:
+
+#### Setting up the story structure
+
 ```
 $ grunt init-story --story=YYYY-MM-projectName
 ```
 
-The task creates a folder ./stories/YYYY-MM-projectName with build and dist subfolders, and an empty data.yml file, which would contain the structure of your story.
+The task creates a folder ./stories/YYYY-MM-projectName with build and dist subfolders, and an example data.yml file, which would contain the structure of your story.
 To start building the page, add elements in the yml. 
 
 !!! You can check out the data.yml of some of the stories so far, but since we moved to yml a bit later, the ones you can actually use as reference are the ones from June 2019 on (2019-06-... etc.).
@@ -35,7 +42,7 @@ For example, this is a simple page:
 index : // specify the page. so far it's just index
 
   # FIRST SECTION
-  custom_section_id: 
+  custom_section_id: // this can be anything. it's used as a id of the section in the markup. should not be repeated.
     layoutType: SIMPLE 
     layoutData:
       container: container
@@ -64,7 +71,6 @@ index : // specify the page. so far it's just index
           videoId:  M7KADWuo
           playerId: bUaBxxgc
 ```
-!!! To do (for me): Add all possible layouts and modules in a preview story.
 
 Each page (in this case just index.html) is comprised of sections. Each section has three main properties: layoutType (what should it look/work like?), layoutData (this one varies depending on the layoutType - more below!) and layoutContent, which wraps a list of elements.
 Each element, in turn, has its own specific element data.

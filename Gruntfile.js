@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     browserify: {
       options: {
         browserifyOptions: {
-          paths: [ './', './src', './src/js', './stories', './src/modules/layouts', './src/modules/elements' ]
+          paths: [ './', './src', './src/js', './stories', './stories/**/build/', './src/modules/layouts/', './src/modules/elements/', './src/modules/elements/**/' ]
         }
       },
       builder: {
@@ -71,6 +71,40 @@ module.exports = function(grunt) {
       }
     },
 
+    responsive_images: {
+      myTask: {
+        options: {
+          sizes: [
+          {
+            name: 'xs',
+            width: 390,
+            quality: 50
+          },
+          {
+            name: 'md',
+            width: 640,
+            quality: 70
+          },
+          {
+            name: "lg",
+            width: 1024,
+            quality: 70
+          },
+          {
+            name: 'xl',
+            width: 1600,
+            quality: 50
+          }]
+        },
+        files: [{
+          expand: true,
+          src: ['**.{jpg,gif,png}'],
+          cwd: './stories/' + story + '/build/assets/',
+          dest: './stories/' + story + '/dist/assets/'
+        }]
+      }
+    },
+
     sass: {
       options: {
         loadPath: ['./src/scss', './src/modules', './src/modules/elements', './src/modules/layouts', './stories/']
@@ -93,6 +127,23 @@ module.exports = function(grunt) {
           var customDest = this.cwd + src.replace('scss', 'css');
           return customDest;
         }
+      }
+    },
+
+    htmlmin: {                                     // Task
+      dist: {                                      // Target
+        options: {                                 // Target options
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          src: ['./stories/' + story + '/dist/index.html'],
+          rename: function (dest, src) {
+            var customDest = src.replace('index', 'wp');
+            return customDest;
+          }
+        }]
       }
     },
 
@@ -124,7 +175,7 @@ module.exports = function(grunt) {
         configFile: '.eslintrc.json',
         fix: true
       },
-      story: ['./build-files.js', '.src/frameworkdata.js', './src/modules/**/script.js']
+      story: ['./build-files.js', './src/modules/**/*.js']
     },
 
     yaml: {
@@ -162,11 +213,11 @@ module.exports = function(grunt) {
       // recompile handlebars after a change in templates, then rebuild story files
       hbs: {
         files: ['./src/modules/**/template.hbs', './stories/**/**/template.hbs'],
-        tasks: ['handlebars', 'shell:buildStory:' + story]
+        tasks: ['handlebars', 'shell:buildStory:' + story, 'htmlmin']
       },
       yml: {
         files: ['./src/*.yml', './stories/**/*.yml', './src/*.yaml'],
-        tasks: ['shell:buildStory:' + story]
+        tasks: ['shell:buildStory:' + story, 'responsive_images', 'htmlmin']
       }
     },
 
@@ -185,8 +236,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-yaml');
+  grunt.loadNpmTasks('grunt-responsive-images');
 
   grunt.registerTask('lintall', ['eslint']);
 

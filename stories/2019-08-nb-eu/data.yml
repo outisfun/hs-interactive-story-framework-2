@@ -13,61 +13,333 @@ index :
       dc__intro__text:
         elementType: text
         elementData: 
-          highlight:  "Call it a comeback if you will, but DC’s popularity in recent years — due in large part to a refocused strategy and a spate of high-profile 
-                      collaborations — has prompted the California skate brand to revamp its range of heritage sneakers and create a new forum for expression 
-                      through its exclusive DC Reserve program."
-          paragraph:  "Launched just over a year ago, DC Reserve celebrates and expands upon some of DC’s most iconic 
-                      styles by offering limited-edition OG reissues, collabs with some of the most sought after designers and brands, and exclusive new colorways 
-                      — all in a bid to merge its rich history with a refined vision for the future of skateboarding. 
+          highlight:  "Around 2016, London’s Neverland Clan were the talk of the town, attracting the attention of Skepta and Virgil Abloh while drawing 
+                      comparisons to icons with their irreverent music, art, and fashion — according to multiple sources, they would be the next collective 
+                      to blow up."
+          paragraph:  "But despite the occasional music release and successful solo projects, Neverland Clan have been quiet since the 
+                      initial spate of hype and truth be told, we wondered if Neverland Clan had disbanded. We couldn’t have been more wrong.
                       <br><br>
-                      In the early ‘90s, DC pioneered a unique vision of blending skate with fringe cultures that were just coming up, namely graffiti and streetwear, 
-                      and took them mainstream. Now, as DC plans to expand and grow the program with a slate of new releases for 2019 and beyond, we spoke with some 
-                      of the people and brands behind the scenes who were pivotal to DC’s growth to see what they’ve been cooking up.<br><br>"
+                      All great artists know there’s time for talking and there’s time for putting your head down and doing the work. 
+                      Turns out, over the last two years, Neverland Clan have been patiently doing the latter. Whether in the music studio or design studio, 
+                      core crew members Ryan Hawaii, Daniel Triple OG, and Omelet have been in training and crafting mode, perfecting their skill sets 
+                      and readying themselves for the next wave. Daniel Triple OG has even named his upcoming music project Preseason as 
+                      a reflection of the heavy lifting he’s been doing in preparation for what’s to come.
+                      <br><br>
+                      Neverland Clan doesn’t have a label telling them what to do next or imposing unwanted deadlines on their work. Instead, they encourage 
+                      and motivate one another, constantly inspired by one another’s tireless output. “When I see these two doing stuff, it's motivation. 
+                      That's why I go into hiding ‘cause I'm just like ‘let me just work,’” explains Omelet. Like New Balance, Neverland Clan represents 
+                      family, related not by blood but shared passions and goals. They find solidarity in their vision but encourage fearless 
+                      independence. To celebrate the release of New Balance’s 997 Sport, we visited Neverland Clan at one of their South London 
+                      studio spaces to capture them in their natural habitat and discuss what they’ve been quietly working on."
 
-  nbeu__splitsticky:
+  nbeu__splitsticky1:
     layoutType: SPLITSTICKY
     layoutData:
-      backgroundImage: https://interactive-development.hsnb.io/2019-08-dc/dc19.jpg
       stickyPosition: left
+      stickyImage: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_1.gif
+      stickyImageXS: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_1_xs.gif
     layoutContent:
       # Quote
       ellesse__video__quote:
         elementType: quote
         elementData: 
-          quote:  The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. 
-                  No longer are you restricted to having to stick to tailoring or to stick to sportswear.
-          source: Ayishat Akanbi
+          quote:  I do what I love. I know I do what I love. I love music.
+          source: Daniel Triple OG
 
-  nbeuds__splitsticky2:
+  nbeu__splitsticky2:
     layoutType: SPLITSTICKY
     layoutData:
-      backgroundImage: https://interactive-development.hsnb.io/2019-08-dc/dc19.jpg
       stickyPosition: right
+      stickyImage: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_2.gif
+      stickyImageXS: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_2_xs.gif
     layoutContent:
       # Quote
       ellesse__video__quote:
         elementType: quote
         elementData: 
-          quote:  The ways that we wear sportswear and tailoring have changed dramatically, principally in that you can wear them seamlessly together. 
-                  No longer are you restricted to having to stick to tailoring or to stick to sportswear.
-          source: Ayishat Akanbi
+          quote:  I create a new way of seeing the world and a new era of art.
+          source: Ryan Hawaii
+
+  nbeu__splitsticky3:
+    layoutType: SPLITSTICKY
+    layoutData:
+      stickyPosition: left
+      stickyImage: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_3.gif
+      stickyImageXS: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_3_xs.gif
+    layoutContent:
+      # Quote
+      ellesse__video__quote:
+        elementType: quote
+        elementData: 
+          quote:  I make music that's sick and interesting and different.
+          source: Omelet
 
   whatadarkanddrearylife: 
+    layoutType: FLOATER
+    layoutData: 
+      # Text
+      container: container
+      floaterScenes: 
+        -
+          floaterSceneData: coolshoes-1
+          floaterSceneItems:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb9.JPG
+              horizontal_pos: 25
+        -
+          floaterSceneData: coolshoes-2
+          floaterSceneItems:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb18.JPG
+              horizontal_pos: 75
+
+        -
+          floaterSceneData: theguys-1
+          floaterSceneItems:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb37.jpg
+              horizontal_pos: 15
+
+        -
+          floaterSceneData: theguys-2
+          floaterSceneItems:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb46.jpg
+              horizontal_pos: 66
+
+    layoutContent: 
+
+      gif1:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_group_1.gif
+
+      # Text
+      nb__q1:
+        elementType: text
+        elementData: 
+          headline: In Conversation
+          paragraph:  "<strong>Tell us a bit about the Neverland Clan origin story. What are your individual backstories and when did your paths first cross?</strong><br><br>
+
+                    <strong>Ryan: </strong> 
+                    I started Neverland in 2011. I thought of the name in the middle of a Spanish exam and then at the 
+                    beginning it was like me and a couple other members making music and stuff. Me and Omelet met 
+                    through a mutual friend who’s also in Neverland and he started sending me beats, we started 
+                    working on music and made a project together. Around that time, Daniel was doing styling and I 
+                    was designing clothes and stuff, he pulled one of my hoodies from my first brand and the rest is history.<br><br>
+
+                    <strong>Omelet: </strong>
+                    So I was making music before I met Ryan, I started playing piano but I used to get taught by this 
+                    bland guy. I was probably in year six, so what you're like 10? Me and my friends used to chat on 
+                    Skype all the time and share music and someone had a crack for Fruity Loops, so I downloaded 
+                    Fruity Loops on this shitty laptop, and started making beats there and that's when I started. 
+                    I probably met Ryan a year after.<br><br>
+
+                    <strong>Daniel: </strong> 
+                    I've always been into music, I was in the church choir when I was younger, apparently at my 
+                    little brother's christening, I took the mic from whoever was on the mic and started singing. 
+                    That was my first time doing music. But I'm also into a lot of other things. Fashion, like Ryan 
+                    said I used to style, I interned for stylists and PR agencies. I've been getting into modeling 
+                    recently as well, I want to be a representative for plus size people."
+      imgs1:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb1.jpg
+
+      nb__q2:
+        elementType: text
+        elementData: 
+          paragraph: "<strong>What do your parents <span class = 'floater-trigger' data-feature='coolshoes-1'>think you do</span>? What does society think you do? And what do you think you do?</strong><br><br>
+
+                    <strong>Ryan:</strong> My parents know what I do but they think I mess around a lot more than I do. 
+                    Society thinks I'm crazy and just make art and don't sleep and do mad stuff. I think I create a new way of 
+                    seeing the world and a new era of art.<br><br>
+
+                    <strong>Omelet: </strong> My parents think I make music with no aim. Society, I don't know, they probably 
+                    think I make music but I hope they think I’m a nice guy. I think I make music that's sick and interesting 
+                    and different. Not a different perspective, but not what's going on right now and talking about different 
+                    things.<br><br>
+
+                    <strong>Daniel: </strong> Well, my mum thinks I'm a rapper, and society, that's for them to decide, 
+                    but they probably think I'm a troublemaker. I think I do what I love. I know I do what I love. I love music."
+
+      imgs2:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb6.JPG
+
+      nb__q9:
+        elementType: text
+        elementData: 
+          paragraph: "<strong>If a movie was being made about the Neverland Clan, who would direct it, 
+                    who would play each of you and what would be on the soundtrack?</strong><br><br>
+
+                    <strong>Ryan: </strong><span class = 'floater-trigger' data-feature='coolshoes-2'>Tarantino.</span><br><br>
+
+                    <strong>Daniel: </strong>I was going to say Tarantino, I promise you I was going to say Tarantino. 
+                    Soundtrack, us, we'd build a soundtrack ourselves.<br><br>
+
+                    <strong>Omelet: </strong>Who would play me? Lenny Kravitz<br><br>
+
+                    <strong>Daniel: </strong>I know who would play me, the guy who played Biggie in Notorious. 
+                    If he's still active, if he's still looking fit and don't look too old.<br><br>
+
+                    <strong>Daniel: </strong>I’m tryin’ to get the guy from Moonlight, Mahershala Ali.<br><br>"
+
+      imgs5:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb55.jpg
+
+      nb__q3:
+        elementType: text
+        elementData: 
+          paragraph:  "<strong>Why do you think you guys gelled? What was it that helped you all get on?</strong><br><br>
+
+                    <strong>Omelet: </strong> We're not like everybody else. We mix with people who aren’t into the same 
+                    shit as we are but we've always been the ones who're a bit more experimental.<br><br>
+
+                    <strong>“Neverland” brings to mind escapism, a desire to never grow up, 
+                    and mythical/imaginary beings, how does that metaphor relate to all of you?</strong><br><br>
+
+                    <strong>Ryan: </strong> <span class = 'floater-trigger' data-feature='theguys-1'>The concept behind</span> Neverland is eternal youth. 
+                    Trying to stay young and youthful and healthy and curious about the world. 
+                    That's how to stay creative, remain curious.<br><br>
+
+                    <strong>What does it mean to be independent? Why is it important to remain independent?</strong><br><br>
+
+                    <strong>Daniel: </strong> It's good to think for yourself. When I make a decision I only have to think 
+                    about me and my close circle, it’s more clear and concise. I don't have to think about a bunch of other 
+                    things and that enables you to trust yourself and trust your decisions."
+
+      imgs8:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb65.jpg
+
+      nb__q4:
+        elementType: text
+        elementData: 
+          paragraph: "<strong>What are the biggest challenges in taking the independent and DIY approach?</strong><br><br>
+
+                    <strong>Omelet: </strong> Money, 100%.<br><br>
+
+                    <strong>Daniel: </strong> Yeah financing new ideas, but then it doesn't make it impossible, 
+                    it just makes it harder. It's about how much you love what you're doing. If you're passionate 
+                    about what you're doing and want to make a positive change you're going to do it. You're going 
+                    to do whatever it takes to make it happen.<br><br>
+
+                    <strong>Ryan: </strong>For me, I cut out a lot of spending habits. It's discipline and knowing, 
+                    “cool maybe this weekend I'm not going to go out because I need money to do X, Y, and Z.“ I like it 
+                    to be honest because it means I'm in control, no one is telling me what to do and if I want something 
+                    to happen it's me who's going to have to do it.<br><br>
+
+                    <strong>What do you think are the biggest positives and negatives of living in a hyper-connected, digital world?</strong><br><br>
+
+                    <strong>Daniel: </strong> 
+                    Social media reflects reality but it multiplies it by 100. People on social media try to show their best 
+                    life, the perfect life. But social media is great too, like anything, you have to use it how you feel 
+                    fit, how it works best for you. I like to take breaks off social media. It's a great tool but it’s 
+                    also dangerous.
+                    <br><br>
+
+                    <strong>Omelet: </strong> 
+                    I don't like social media because I feel like I'm in someone else's mind all the time. Especially on Twitter, 
+                    I'm always reading someone else’s rubbish that has nothing to do with me and I don't like being in someone 
+                    else’s brain. So sometimes <span class = 'floater-trigger' data-feature='theguys-2'>I take a break</span> from it. At the same time, it's the way everyone connects, it's 
+                    the way I found music, it's the way I found people who are interested in the same shit I am. For me, 
+                    I try to filter out the crap and keep the stuff I want to see."
+
+      imgs12:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/nb91.jpg
+
+      nb__q5:
+        elementType: text
+        elementData: 
+          paragraph: "<strong>What are the biggest things you're all working on right now, independently and as a group?</strong><br><br>
+
+                    <strong>Daniel: </strong> I've got this project I've been working on for two years, maybe more. 
+                    I've put a lot of work into it and it's called Preseason, there are loads of tracks, loads of big 
+                    features but I'm going to wait for it to come out and let it speak for itself.<br><br>
+
+                    <strong>Ryan: </strong>My brand is probably the biggest thing at the moment. It's what I was on the phone about, 
+                    I'm going to Turkey tonight to go to factories, get my samples and that. I've also recorded 20 songs for various 
+                    projects, I'm getting that out, doing videos and stuff. It's a reintroduction for people to my music because 
+                    I've mostly been doing art and fashion.<br><br>
+
+                    <strong>Omelet: </strong>
+                    I've just finished a project I'm calling Duality. I've been making beats for it for like two years and I 
+                    literally finished it a couple days ago. The last project I put out was instrumentals and on this one, 
+                    I'm going to be rapping.<br><br>
+
+                    <strong>Omelet, in a 2016 interview you said, “I make beats when I'm most sad. I think with dark music 
+                    there's more angles with it, whereas there's not so much you can do with happiness. When you're sad 
+                    you can be frustrated, angry, it can take you to so many places.” Is this still the case?</strong><br><br>
+
+                    <strong>Omelet: </strong> 
+                    That's jokes. I was going to call this new project Static but I changed it to Duality because those 
+                    times when I was talking like that I was in a completely different headspace. I was trying to be happy 
+                    but I don't think I was compared to the way I am now. Most of the music I've made from there to now is 
+                    two-sided, some of it is happy but there are dark moments too — that's why I changed it to Duality. It’s 
+                    funny you pulled that up.
+                    <br><br>
+
+                    <strong>What does family mean to each of you?</strong><br><br>
+
+                    <strong>Ryan: </strong> Always sticking up for your family, always sticking up for people when they're down, 
+                    looking after people. The family values your parents teach you like being kind, sharing, and all of 
+                    that stuff. That's what family means to me.<br><br>
+
+                    <strong>Omelet: </strong>Not necessarily being blood-related but having the same morals, having a certain 
+                    vision and helping each other get to that vision. Always trying to keep each other on the same path 
+                    whether it’s music-related or friendship."
+
+      gif2:
+        elementType: imagegroup
+        elementData: 
+          images:
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_group_3.gif
+            -
+              src: https://interactive-development.hsnb.io/2019-08-nb-eu/assets/gif/nb_group_2.gif
+
+  # LAYOUT INTRO
+  dc__conclusion: 
     layoutType: SIMPLE
     layoutData:
       container: container
+      colorScheme: dark
     layoutContent: 
       # Text
-      dc__intrdsso__text:
+      nb__cta__text:
         elementType: text
         elementData: 
-          highlight:  "Call it a comeback if you will, but DC’s popularity in recent years — due in large part to a refocused strategy and a spate of high-profile 
-                      collaborations — has prompted the California skate brand to revamp its range of heritage sneakers and create a new forum for expression 
-                      through its exclusive DC Reserve program."
-          paragraph:  "Launched just over a year ago, DC Reserve celebrates and expands upon some of DC’s most iconic 
-                      styles by offering limited-edition OG reissues, collabs with some of the most sought after designers and brands, and exclusive new colorways 
-                      — all in a bid to merge its rich history with a refined vision for the future of skateboarding. 
-                      <br><br>
-                      In the early ‘90s, DC pioneered a unique vision of blending skate with fringe cultures that were just coming up, namely graffiti and streetwear, 
-                      and took them mainstream. Now, as DC plans to expand and grow the program with a slate of new releases for 2019 and beyond, we spoke with some 
-                      of the people and brands behind the scenes who were pivotal to DC’s growth to see what they’ve been cooking up.<br><br>"
+          paragraph:  Watch out for upcoming <a href = "https://www.instagram.com/neverlandclan/" target = "_blank">Neverland Clan</a>, 
+                      <a href = "https://www.instagram.com/danieltripleog/" target = "_blank">Daniel Triple OG</a>, 
+                      <a href = "https://www.instagram.com/ryanhawaii/" target = "_blank">Ryan Hawaii</a>, 
+                      and <a href = "https://www.instagram.com/omeletyoke/" target = "_blank">Omelet</a> releases by 
+                      following them on Instagram. Shop all the New Balance 997S colorways seen here over at 
+                      <a href = "https://www.newbalance.co.uk/" target = "_blank">New 
+                      Balance’s online store</a>.
+
+
+
+
+
+
+
+
